@@ -1,0 +1,34 @@
+TeileListe Professional DOS
+
+Wenn die Platine AUSSCHLIEßLICH in der 1571 eingestetzt wird,
+dann reicht die Bestückung mit folgenden Bauteilen: 
+
+Bauteil	Typ
+
+C3		10µF
+C5-C10	100nF
+
+IC1		GAL22V10 
+IC10	6502
+
+IC3		74LS00
+
+IC5		74LS157
+IC6		74LS367
+IC7		74LS173
+
+IC8		EPROM 27c256 (oder 27C512)
+IC9		SRAM 6264
+
+
+R5		1k8
+
+RN1		Widerstandsnetzwerk 5 x 4k7
+
+		diverse Jumper
+X1		2x Stiftleiste 20polig
+		1x Sockel 24 polig (GAL)
+		1x Sockel 40 (Prozessor)
+		2x Sockel 28polig (Eprom und RAM)
+
+JP4 und JP5 können ebenfalls wegfallen.

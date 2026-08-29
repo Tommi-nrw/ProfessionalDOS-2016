@@ -1,0 +1,31 @@
+TeileListe Professional Expansion Cartridge
+
+Bauteil	Typ
+
+C1-C6	100nF
+
+IC1		Eprom 2764,27128,27256,27512
+IC2		74LS00
+IC3		74LS30
+
+IC4		6522
+IC5		74LS74
+IC6		74LS21
+
+RN1,RN2	Widerstandsnetzwerk 5 x 4k7
+
+1x Reset-Taster
+
+1x Sockel 40polig (6522)
+1x Sockel 28polig (Eprom)
+
+2x oder 3x DIP-Schalter 4polig
+1x oder 2x Stiftleiste  14polig (7x2)
+
+1x Drahtbrücke ca. 4cm zwischen
+IC3 Pin8 und Expansionsport(Stecker) Pin8
+
+1x 1pol Drahtverbindung mit 2pol Stecker von JP1(Pins sind beide verbunden, 2polig hält aber besser)
+in den C64 hinein entweder an Pin28 des 6510 oder an Pin7 der PLA (Signal "HIRAM").
+Diese Drahtverbindung wird nur für 100% Kernal-Kompatiblität benötigt.  
+		
