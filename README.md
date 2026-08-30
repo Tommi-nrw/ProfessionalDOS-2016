@@ -6,3 +6,5 @@ This is an upgraded version of the rebuilt Professional DOS.
 
 The PCB works with both the 1541 and 1571. 
 In the 1541, the board also lets you switch between Professional DOS, SpeedDOS, and DolphinDOS.
+
+Version 1.42 (2026) eliminates the need for jumper wires.
