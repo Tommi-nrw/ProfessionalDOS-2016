@@ -1,0 +1,1833 @@
+ispLEVER Classic 2.0.00.17.20.15 Linked Equations File
+Copyright(C), 1992-2015, Lattice Semiconductor Corp.
+All Rights Reserved.
+
+Design profdos_prototyp_v11 created Fri Nov 04 13:41:56 2016
+
+
+ P-Terms   Fan-in  Fan-out  Type  Name (attributes)
+---------  ------  -------  ----  -----------------
+  32          9        1    Pin   O0 
+  61         10        1    Pin   O1 
+ 417         10        1    Pin   O2 
+   9         10        1    Pin   O3 
+ 364         10        1    Pin   O4 
+ 145         10        1    Pin   O5 
+  18         10        1    Pin   O6 
+ 297         10        1    Pin   O7 
+ 273         10        1    Pin   O8 
+ 176         10        1    Pin   O9 
+=========
+1792                 P-Term Total: 1792
+                       Total Pins: 20
+                      Total Nodes: 0
+            Average P-Term/Output: 179
+
+
+Equations:
+
+O0 = (!C1571 & off & A15 & A14 & A13 & A12 & A11
+     # !C1571 & !off & A15 & A14 & A13 & A12 & A11
+     # !C1571 & off & !A15 & A14 & A13 & A12 & A11
+     # !C1571 & off & A15 & !A14 & A13 & A12 & A11
+     # !C1571 & !off & A15 & !A14 & A13 & A12 & A11
+     # !C1571 & off & !A15 & !A14 & A13 & A12 & A11
+     # !C1571 & !off & !A15 & !A14 & A13 & A12 & A11
+     # !C1571 & off & A15 & A14 & A13 & !A12 & A11
+     # !C1571 & !off & A15 & A14 & A13 & !A12 & A11
+     # !C1571 & off & !A15 & A14 & A13 & !A12 & A11
+     # !C1571 & off & A15 & !A14 & A13 & !A12 & A11
+     # !C1571 & !off & A15 & !A14 & A13 & !A12 & A11
+     # !C1571 & off & !A15 & !A14 & A13 & !A12 & A11
+     # !C1571 & !off & !A15 & !A14 & A13 & !A12 & A11
+     # !C1571 & off & A15 & A14 & A13 & A12 & !A11
+     # !C1571 & !off & A15 & A14 & A13 & A12 & !A11
+     # !C1571 & off & !A15 & A14 & A13 & A12 & !A11
+     # !C1571 & off & A15 & !A14 & A13 & A12 & !A11
+     # !C1571 & !off & A15 & !A14 & A13 & A12 & !A11
+     # !C1571 & off & !A15 & !A14 & A13 & A12 & !A11
+     # !C1571 & !off & !A15 & !A14 & A13 & A12 & !A11
+     # !C1571 & off & A15 & A14 & A13 & !A12 & !A11
+     # !C1571 & !off & A15 & A14 & A13 & !A12 & !A11
+     # !C1571 & off & !A15 & A14 & A13 & !A12 & !A11
+     # !C1571 & off & A15 & !A14 & A13 & !A12 & !A11
+     # !C1571 & !off & A15 & !A14 & A13 & !A12 & !A11
+     # !C1571 & off & !A15 & !A14 & A13 & !A12 & !A11
+     # !C1571 & !off & !A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & low & ram & !off & !A15 & A14 & A13 & !A12 & A11
+     # C1571 & !low & ram & !off & !A15 & A14 & A13 & !A12 & A11
+     # C1571 & low & !ram & !off & !A15 & A14 & A13 & !A12 & A11
+     # C1571 & !low & !ram & !off & !A15 & A14 & A13 & !A12 & A11);
+
+O1 = (!C1571 & !off & !A15 & A14 & A13 & A12 & A11
+     # !C1571 & !off & !A15 & A14 & !A13 & A12 & A11
+     # !C1571 & !off & !A15 & A14 & A13 & !A12 & A11
+     # !C1571 & !off & !A15 & A14 & !A13 & !A12 & A11
+     # !C1571 & !off & !A15 & A14 & A13 & A12 & !A11
+     # !C1571 & !off & !A15 & A14 & !A13 & A12 & !A11
+     # !C1571 & !off & !A15 & A14 & A13 & !A12 & !A11
+     # C1571 & ram & off & !A15 & !A14 & !A13 & !A12 & !A11
+     # C1571 & ram & !off & !A15 & !A14 & !A13 & !A12 & !A11
+     # C1571 & low & ram & !off & A15 & A14 & A13 & A12 & A11
+     # C1571 & !low & ram & !off & A15 & A14 & A13 & A12 & A11
+     # C1571 & low & !ram & !off & A15 & A14 & A13 & A12 & A11
+     # C1571 & !low & !ram & !off & A15 & A14 & A13 & A12 & A11
+     # C1571 & low & ram & !off & !A15 & A14 & !A13 & A12 & A11
+     # C1571 & !low & ram & !off & !A15 & A14 & !A13 & A12 & A11
+     # C1571 & low & !ram & !off & !A15 & A14 & !A13 & A12 & A11
+     # C1571 & !low & !ram & !off & !A15 & A14 & !A13 & A12 & A11
+     # C1571 & low & ram & !off & A15 & A14 & A13 & !A12 & A11
+     # C1571 & !low & ram & !off & A15 & A14 & A13 & !A12 & A11
+     # C1571 & low & !ram & !off & A15 & A14 & A13 & !A12 & A11
+     # C1571 & !low & !ram & !off & A15 & A14 & A13 & !A12 & A11
+     # C1571 & low & ram & !off & !A15 & A14 & !A13 & !A12 & A11
+     # C1571 & !low & ram & !off & !A15 & A14 & !A13 & !A12 & A11
+     # C1571 & low & !ram & !off & !A15 & A14 & !A13 & !A12 & A11
+     # C1571 & !low & !ram & !off & !A15 & A14 & !A13 & !A12 & A11
+     # C1571 & low & ram & !off & A15 & A14 & A13 & A12 & !A11
+     # C1571 & !low & ram & !off & A15 & A14 & A13 & A12 & !A11
+     # C1571 & low & !ram & !off & A15 & A14 & A13 & A12 & !A11
+     # C1571 & !low & !ram & !off & A15 & A14 & A13 & A12 & !A11
+     # C1571 & low & ram & !off & !A15 & A14 & !A13 & A12 & !A11
+     # C1571 & !low & ram & !off & !A15 & A14 & !A13 & A12 & !A11
+     # C1571 & low & !ram & !off & !A15 & A14 & !A13 & A12 & !A11
+     # C1571 & !low & !ram & !off & !A15 & A14 & !A13 & A12 & !A11
+     # C1571 & low & ram & !off & !A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & !low & ram & !off & !A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & low & !ram & !off & !A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & !low & !ram & !off & !A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & low & ram & !off & A15 & A14 & A13 & !A12 & !A11
+     # C1571 & !low & ram & !off & A15 & A14 & A13 & !A12 & !A11
+     # C1571 & low & !ram & !off & A15 & A14 & A13 & !A12 & !A11
+     # C1571 & !low & !ram & !off & A15 & A14 & A13 & !A12 & !A11
+     # C1571 & low & ram & !off & !A15 & A14 & !A13 & !A12 & !A11
+     # C1571 & !low & ram & !off & !A15 & A14 & !A13 & !A12 & !A11
+     # C1571 & low & !ram & !off & !A15 & A14 & !A13 & !A12 & !A11
+     # C1571 & !low & !ram & !off & !A15 & A14 & !A13 & !A12 & !A11
+     # C1571 & low & ram & off & !high & A15 & A14 & A13 & A12 & A11
+     # C1571 & !low & ram & off & !high & A15 & A14 & A13 & A12 & A11
+     # C1571 & low & !ram & off & !high & A15 & A14 & A13 & A12 & A11
+     # C1571 & !low & !ram & off & !high & A15 & A14 & A13 & A12 & A11
+     # C1571 & low & ram & off & !high & A15 & A14 & A13 & !A12 & A11
+     # C1571 & !low & ram & off & !high & A15 & A14 & A13 & !A12 & A11
+     # C1571 & low & !ram & off & !high & A15 & A14 & A13 & !A12 & A11
+     # C1571 & !low & !ram & off & !high & A15 & A14 & A13 & !A12 & A11
+     # C1571 & low & ram & off & !high & A15 & A14 & A13 & A12 & !A11
+     # C1571 & !low & ram & off & !high & A15 & A14 & A13 & A12 & !A11
+     # C1571 & low & !ram & off & !high & A15 & A14 & A13 & A12 & !A11
+     # C1571 & !low & !ram & off & !high & A15 & A14 & A13 & A12 & !A11
+     # C1571 & low & ram & off & !high & A15 & A14 & A13 & !A12 & !A11
+     # C1571 & !low & ram & off & !high & A15 & A14 & A13 & !A12 & !A11
+     # C1571 & low & !ram & off & !high & A15 & A14 & A13 & !A12 & !A11
+     # C1571 & !low & !ram & off & !high & A15 & A14 & A13 & !A12 & !A11);
+
+O2 = (!C1571 & off & A15 & A14 & A13 & A12 & A11
+     # !C1571 & !off & A15 & A14 & A13 & A12 & A11
+     # !C1571 & off & !A15 & A14 & A13 & A12 & A11
+     # !C1571 & !off & !A15 & A14 & A13 & A12 & A11
+     # !C1571 & off & A15 & !A14 & A13 & A12 & A11
+     # !C1571 & !off & A15 & !A14 & A13 & A12 & A11
+     # !C1571 & off & !A15 & !A14 & A13 & A12 & A11
+     # !C1571 & !off & !A15 & !A14 & A13 & A12 & A11
+     # !C1571 & off & A15 & A14 & !A13 & A12 & A11
+     # !C1571 & !off & A15 & A14 & !A13 & A12 & A11
+     # !C1571 & off & !A15 & A14 & !A13 & A12 & A11
+     # !C1571 & off & A15 & !A14 & !A13 & A12 & A11
+     # !C1571 & !off & A15 & !A14 & !A13 & A12 & A11
+     # !C1571 & off & !A15 & !A14 & !A13 & A12 & A11
+     # !C1571 & !off & !A15 & !A14 & !A13 & A12 & A11
+     # !C1571 & off & A15 & A14 & A13 & !A12 & A11
+     # !C1571 & !off & A15 & A14 & A13 & !A12 & A11
+     # !C1571 & off & !A15 & A14 & A13 & !A12 & A11
+     # !C1571 & !off & !A15 & A14 & A13 & !A12 & A11
+     # !C1571 & off & A15 & !A14 & A13 & !A12 & A11
+     # !C1571 & !off & A15 & !A14 & A13 & !A12 & A11
+     # !C1571 & off & !A15 & !A14 & A13 & !A12 & A11
+     # !C1571 & !off & !A15 & !A14 & A13 & !A12 & A11
+     # !C1571 & off & A15 & A14 & !A13 & !A12 & A11
+     # !C1571 & !off & A15 & A14 & !A13 & !A12 & A11
+     # !C1571 & off & !A15 & A14 & !A13 & !A12 & A11
+     # !C1571 & off & A15 & !A14 & !A13 & !A12 & A11
+     # !C1571 & !off & A15 & !A14 & !A13 & !A12 & A11
+     # !C1571 & off & !A15 & !A14 & !A13 & !A12 & A11
+     # !C1571 & !off & !A15 & !A14 & !A13 & !A12 & A11
+     # !C1571 & off & A15 & A14 & A13 & A12 & !A11
+     # !C1571 & !off & A15 & A14 & A13 & A12 & !A11
+     # !C1571 & off & !A15 & A14 & A13 & A12 & !A11
+     # !C1571 & !off & !A15 & A14 & A13 & A12 & !A11
+     # !C1571 & off & A15 & !A14 & A13 & A12 & !A11
+     # !C1571 & !off & A15 & !A14 & A13 & A12 & !A11
+     # !C1571 & off & !A15 & !A14 & A13 & A12 & !A11
+     # !C1571 & !off & !A15 & !A14 & A13 & A12 & !A11
+     # !C1571 & off & A15 & A14 & !A13 & A12 & !A11
+     # !C1571 & !off & A15 & A14 & !A13 & A12 & !A11
+     # !C1571 & off & !A15 & A14 & !A13 & A12 & !A11
+     # !C1571 & off & A15 & !A14 & !A13 & A12 & !A11
+     # !C1571 & !off & A15 & !A14 & !A13 & A12 & !A11
+     # !C1571 & off & !A15 & !A14 & !A13 & A12 & !A11
+     # !C1571 & !off & !A15 & !A14 & !A13 & A12 & !A11
+     # !C1571 & off & A15 & A14 & A13 & !A12 & !A11
+     # !C1571 & !off & A15 & A14 & A13 & !A12 & !A11
+     # !C1571 & off & !A15 & A14 & A13 & !A12 & !A11
+     # !C1571 & !off & !A15 & A14 & A13 & !A12 & !A11
+     # !C1571 & off & A15 & !A14 & A13 & !A12 & !A11
+     # !C1571 & !off & A15 & !A14 & A13 & !A12 & !A11
+     # !C1571 & off & !A15 & !A14 & A13 & !A12 & !A11
+     # !C1571 & !off & !A15 & !A14 & A13 & !A12 & !A11
+     # !C1571 & off & A15 & A14 & !A13 & !A12 & !A11
+     # !C1571 & !off & A15 & A14 & !A13 & !A12 & !A11
+     # !C1571 & off & !A15 & A14 & !A13 & !A12 & !A11
+     # !C1571 & !off & !A15 & A14 & !A13 & !A12 & !A11
+     # !C1571 & off & A15 & !A14 & !A13 & !A12 & !A11
+     # !C1571 & !off & A15 & !A14 & !A13 & !A12 & !A11
+     # !C1571 & off & !A15 & !A14 & !A13 & !A12 & !A11
+     # !C1571 & !off & !A15 & !A14 & !A13 & !A12 & !A11
+     # C1571 & !ram & off & !A15 & !A14 & !A13 & !A12 & !A11
+     # C1571 & !ram & !off & !A15 & !A14 & !A13 & !A12 & !A11
+     # C1571 & low & ram & !off & A15 & A14 & A13 & A12 & A11
+     # C1571 & !low & ram & !off & A15 & A14 & A13 & A12 & A11
+     # C1571 & low & !ram & !off & A15 & A14 & A13 & A12 & A11
+     # C1571 & !low & !ram & !off & A15 & A14 & A13 & A12 & A11
+     # C1571 & low & ram & !off & !A15 & A14 & A13 & A12 & A11
+     # C1571 & !low & ram & !off & !A15 & A14 & A13 & A12 & A11
+     # C1571 & low & !ram & !off & !A15 & A14 & A13 & A12 & A11
+     # C1571 & !low & !ram & !off & !A15 & A14 & A13 & A12 & A11
+     # C1571 & low & ram & !off & A15 & !A14 & A13 & A12 & A11
+     # C1571 & !low & ram & !off & A15 & !A14 & A13 & A12 & A11
+     # C1571 & low & !ram & !off & A15 & !A14 & A13 & A12 & A11
+     # C1571 & !low & !ram & !off & A15 & !A14 & A13 & A12 & A11
+     # C1571 & low & ram & !off & !A15 & !A14 & A13 & A12 & A11
+     # C1571 & !low & ram & !off & !A15 & !A14 & A13 & A12 & A11
+     # C1571 & low & !ram & !off & !A15 & !A14 & A13 & A12 & A11
+     # C1571 & !low & !ram & !off & !A15 & !A14 & A13 & A12 & A11
+     # C1571 & low & ram & !off & A15 & A14 & !A13 & A12 & A11
+     # C1571 & !low & ram & !off & A15 & A14 & !A13 & A12 & A11
+     # C1571 & low & !ram & !off & A15 & A14 & !A13 & A12 & A11
+     # C1571 & !low & !ram & !off & A15 & A14 & !A13 & A12 & A11
+     # C1571 & low & ram & !off & A15 & !A14 & !A13 & A12 & A11
+     # C1571 & !low & ram & !off & A15 & !A14 & !A13 & A12 & A11
+     # C1571 & low & !ram & !off & A15 & !A14 & !A13 & A12 & A11
+     # C1571 & !low & !ram & !off & A15 & !A14 & !A13 & A12 & A11
+     # C1571 & low & ram & !off & !A15 & !A14 & !A13 & A12 & A11
+     # C1571 & !low & ram & !off & !A15 & !A14 & !A13 & A12 & A11
+     # C1571 & low & !ram & !off & !A15 & !A14 & !A13 & A12 & A11
+     # C1571 & !low & !ram & !off & !A15 & !A14 & !A13 & A12 & A11
+     # C1571 & low & ram & !off & A15 & A14 & A13 & !A12 & A11
+     # C1571 & !low & ram & !off & A15 & A14 & A13 & !A12 & A11
+     # C1571 & low & !ram & !off & A15 & A14 & A13 & !A12 & A11
+     # C1571 & !low & !ram & !off & A15 & A14 & A13 & !A12 & A11
+     # C1571 & low & ram & !off & !A15 & A14 & A13 & !A12 & A11
+     # C1571 & !low & ram & !off & !A15 & A14 & A13 & !A12 & A11
+     # C1571 & low & !ram & !off & !A15 & A14 & A13 & !A12 & A11
+     # C1571 & !low & !ram & !off & !A15 & A14 & A13 & !A12 & A11
+     # C1571 & low & ram & !off & A15 & !A14 & A13 & !A12 & A11
+     # C1571 & !low & ram & !off & A15 & !A14 & A13 & !A12 & A11
+     # C1571 & low & !ram & !off & A15 & !A14 & A13 & !A12 & A11
+     # C1571 & !low & !ram & !off & A15 & !A14 & A13 & !A12 & A11
+     # C1571 & low & ram & !off & !A15 & !A14 & A13 & !A12 & A11
+     # C1571 & !low & ram & !off & !A15 & !A14 & A13 & !A12 & A11
+     # C1571 & low & !ram & !off & !A15 & !A14 & A13 & !A12 & A11
+     # C1571 & !low & !ram & !off & !A15 & !A14 & A13 & !A12 & A11
+     # C1571 & low & ram & !off & A15 & A14 & !A13 & !A12 & A11
+     # C1571 & !low & ram & !off & A15 & A14 & !A13 & !A12 & A11
+     # C1571 & low & !ram & !off & A15 & A14 & !A13 & !A12 & A11
+     # C1571 & !low & !ram & !off & A15 & A14 & !A13 & !A12 & A11
+     # C1571 & low & ram & !off & A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & !low & ram & !off & A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & low & !ram & !off & A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & !low & !ram & !off & A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & low & ram & !off & !A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & !low & ram & !off & !A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & low & !ram & !off & !A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & !low & !ram & !off & !A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & low & ram & !off & A15 & A14 & A13 & A12 & !A11
+     # C1571 & !low & ram & !off & A15 & A14 & A13 & A12 & !A11
+     # C1571 & low & !ram & !off & A15 & A14 & A13 & A12 & !A11
+     # C1571 & !low & !ram & !off & A15 & A14 & A13 & A12 & !A11
+     # C1571 & low & ram & !off & !A15 & A14 & A13 & A12 & !A11
+     # C1571 & !low & ram & !off & !A15 & A14 & A13 & A12 & !A11
+     # C1571 & low & !ram & !off & !A15 & A14 & A13 & A12 & !A11
+     # C1571 & !low & !ram & !off & !A15 & A14 & A13 & A12 & !A11
+     # C1571 & low & ram & !off & A15 & !A14 & A13 & A12 & !A11
+     # C1571 & !low & ram & !off & A15 & !A14 & A13 & A12 & !A11
+     # C1571 & low & !ram & !off & A15 & !A14 & A13 & A12 & !A11
+     # C1571 & !low & !ram & !off & A15 & !A14 & A13 & A12 & !A11
+     # C1571 & low & ram & !off & !A15 & !A14 & A13 & A12 & !A11
+     # C1571 & !low & ram & !off & !A15 & !A14 & A13 & A12 & !A11
+     # C1571 & low & !ram & !off & !A15 & !A14 & A13 & A12 & !A11
+     # C1571 & !low & !ram & !off & !A15 & !A14 & A13 & A12 & !A11
+     # C1571 & low & ram & !off & A15 & A14 & !A13 & A12 & !A11
+     # C1571 & !low & ram & !off & A15 & A14 & !A13 & A12 & !A11
+     # C1571 & low & !ram & !off & A15 & A14 & !A13 & A12 & !A11
+     # C1571 & !low & !ram & !off & A15 & A14 & !A13 & A12 & !A11
+     # C1571 & low & ram & !off & A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & !low & ram & !off & A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & low & !ram & !off & A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & !low & !ram & !off & A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & low & ram & !off & A15 & A14 & A13 & !A12 & !A11
+     # C1571 & !low & ram & !off & A15 & A14 & A13 & !A12 & !A11
+     # C1571 & low & !ram & !off & A15 & A14 & A13 & !A12 & !A11
+     # C1571 & !low & !ram & !off & A15 & A14 & A13 & !A12 & !A11
+     # C1571 & low & ram & !off & !A15 & A14 & A13 & !A12 & !A11
+     # C1571 & !low & ram & !off & !A15 & A14 & A13 & !A12 & !A11
+     # C1571 & low & !ram & !off & !A15 & A14 & A13 & !A12 & !A11
+     # C1571 & !low & !ram & !off & !A15 & A14 & A13 & !A12 & !A11
+     # C1571 & low & ram & !off & A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & !low & ram & !off & A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & low & !ram & !off & A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & !low & !ram & !off & A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & low & ram & !off & !A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & !low & ram & !off & !A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & low & !ram & !off & !A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & !low & !ram & !off & !A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & low & ram & !off & A15 & A14 & !A13 & !A12 & !A11
+     # C1571 & !low & ram & !off & A15 & A14 & !A13 & !A12 & !A11
+     # C1571 & low & !ram & !off & A15 & A14 & !A13 & !A12 & !A11
+     # C1571 & !low & !ram & !off & A15 & A14 & !A13 & !A12 & !A11
+     # C1571 & low & ram & !off & !A15 & A14 & !A13 & !A12 & !A11
+     # C1571 & !low & ram & !off & !A15 & A14 & !A13 & !A12 & !A11
+     # C1571 & low & ram & !off & A15 & !A14 & !A13 & !A12 & !A11
+     # C1571 & !low & ram & !off & A15 & !A14 & !A13 & !A12 & !A11
+     # C1571 & low & !ram & !off & A15 & !A14 & !A13 & !A12 & !A11
+     # C1571 & !low & !ram & !off & A15 & !A14 & !A13 & !A12 & !A11
+     # C1571 & low & ram & off & high & A15 & A14 & A13 & A12 & A11
+     # C1571 & !low & ram & off & high & A15 & A14 & A13 & A12 & A11
+     # C1571 & low & !ram & off & high & A15 & A14 & A13 & A12 & A11
+     # C1571 & !low & !ram & off & high & A15 & A14 & A13 & A12 & A11
+     # C1571 & low & ram & off & !high & A15 & A14 & A13 & A12 & A11
+     # C1571 & !low & ram & off & !high & A15 & A14 & A13 & A12 & A11
+     # C1571 & low & !ram & off & !high & A15 & A14 & A13 & A12 & A11
+     # C1571 & !low & !ram & off & !high & A15 & A14 & A13 & A12 & A11
+     # C1571 & low & ram & off & high & !A15 & A14 & A13 & A12 & A11
+     # C1571 & !low & ram & off & high & !A15 & A14 & A13 & A12 & A11
+     # C1571 & low & !ram & off & high & !A15 & A14 & A13 & A12 & A11
+     # C1571 & !low & !ram & off & high & !A15 & A14 & A13 & A12 & A11
+     # C1571 & low & ram & off & !high & !A15 & A14 & A13 & A12 & A11
+     # C1571 & !low & ram & off & !high & !A15 & A14 & A13 & A12 & A11
+     # C1571 & low & !ram & off & !high & !A15 & A14 & A13 & A12 & A11
+     # C1571 & !low & !ram & off & !high & !A15 & A14 & A13 & A12 & A11
+     # C1571 & low & ram & off & high & A15 & !A14 & A13 & A12 & A11
+     # C1571 & !low & ram & off & high & A15 & !A14 & A13 & A12 & A11
+     # C1571 & low & !ram & off & high & A15 & !A14 & A13 & A12 & A11
+     # C1571 & !low & !ram & off & high & A15 & !A14 & A13 & A12 & A11
+     # C1571 & low & ram & off & !high & A15 & !A14 & A13 & A12 & A11
+     # C1571 & !low & ram & off & !high & A15 & !A14 & A13 & A12 & A11
+     # C1571 & low & !ram & off & !high & A15 & !A14 & A13 & A12 & A11
+     # C1571 & !low & !ram & off & !high & A15 & !A14 & A13 & A12 & A11
+     # C1571 & low & ram & off & high & !A15 & !A14 & A13 & A12 & A11
+     # C1571 & !low & ram & off & high & !A15 & !A14 & A13 & A12 & A11
+     # C1571 & low & !ram & off & high & !A15 & !A14 & A13 & A12 & A11
+     # C1571 & !low & !ram & off & high & !A15 & !A14 & A13 & A12 & A11
+     # C1571 & low & ram & off & !high & !A15 & !A14 & A13 & A12 & A11
+     # C1571 & !low & ram & off & !high & !A15 & !A14 & A13 & A12 & A11
+     # C1571 & low & !ram & off & !high & !A15 & !A14 & A13 & A12 & A11
+     # C1571 & !low & !ram & off & !high & !A15 & !A14 & A13 & A12 & A11
+     # C1571 & low & ram & off & high & A15 & A14 & !A13 & A12 & A11
+     # C1571 & !low & ram & off & high & A15 & A14 & !A13 & A12 & A11
+     # C1571 & low & !ram & off & high & A15 & A14 & !A13 & A12 & A11
+     # C1571 & !low & !ram & off & high & A15 & A14 & !A13 & A12 & A11
+     # C1571 & low & ram & off & !high & A15 & A14 & !A13 & A12 & A11
+     # C1571 & !low & ram & off & !high & A15 & A14 & !A13 & A12 & A11
+     # C1571 & low & !ram & off & !high & A15 & A14 & !A13 & A12 & A11
+     # C1571 & !low & !ram & off & !high & A15 & A14 & !A13 & A12 & A11
+     # C1571 & low & ram & off & high & !A15 & A14 & !A13 & A12 & A11
+     # C1571 & !low & ram & off & high & !A15 & A14 & !A13 & A12 & A11
+     # C1571 & low & !ram & off & high & !A15 & A14 & !A13 & A12 & A11
+     # C1571 & !low & !ram & off & high & !A15 & A14 & !A13 & A12 & A11
+     # C1571 & low & ram & off & !high & !A15 & A14 & !A13 & A12 & A11
+     # C1571 & !low & ram & off & !high & !A15 & A14 & !A13 & A12 & A11
+     # C1571 & low & !ram & off & !high & !A15 & A14 & !A13 & A12 & A11
+     # C1571 & !low & !ram & off & !high & !A15 & A14 & !A13 & A12 & A11
+     # C1571 & low & ram & off & high & A15 & !A14 & !A13 & A12 & A11
+     # C1571 & !low & ram & off & high & A15 & !A14 & !A13 & A12 & A11
+     # C1571 & low & !ram & off & high & A15 & !A14 & !A13 & A12 & A11
+     # C1571 & !low & !ram & off & high & A15 & !A14 & !A13 & A12 & A11
+     # C1571 & low & ram & off & !high & A15 & !A14 & !A13 & A12 & A11
+     # C1571 & !low & ram & off & !high & A15 & !A14 & !A13 & A12 & A11
+     # C1571 & low & !ram & off & !high & A15 & !A14 & !A13 & A12 & A11
+     # C1571 & !low & !ram & off & !high & A15 & !A14 & !A13 & A12 & A11
+     # C1571 & low & ram & off & high & !A15 & !A14 & !A13 & A12 & A11
+     # C1571 & !low & ram & off & high & !A15 & !A14 & !A13 & A12 & A11
+     # C1571 & low & !ram & off & high & !A15 & !A14 & !A13 & A12 & A11
+     # C1571 & !low & !ram & off & high & !A15 & !A14 & !A13 & A12 & A11
+     # C1571 & low & ram & off & !high & !A15 & !A14 & !A13 & A12 & A11
+     # C1571 & !low & ram & off & !high & !A15 & !A14 & !A13 & A12 & A11
+     # C1571 & low & !ram & off & !high & !A15 & !A14 & !A13 & A12 & A11
+     # C1571 & !low & !ram & off & !high & !A15 & !A14 & !A13 & A12 & A11
+     # C1571 & low & ram & off & high & A15 & A14 & A13 & !A12 & A11
+     # C1571 & !low & ram & off & high & A15 & A14 & A13 & !A12 & A11
+     # C1571 & low & !ram & off & high & A15 & A14 & A13 & !A12 & A11
+     # C1571 & !low & !ram & off & high & A15 & A14 & A13 & !A12 & A11
+     # C1571 & low & ram & off & !high & A15 & A14 & A13 & !A12 & A11
+     # C1571 & !low & ram & off & !high & A15 & A14 & A13 & !A12 & A11
+     # C1571 & low & !ram & off & !high & A15 & A14 & A13 & !A12 & A11
+     # C1571 & !low & !ram & off & !high & A15 & A14 & A13 & !A12 & A11
+     # C1571 & low & ram & off & high & !A15 & A14 & A13 & !A12 & A11
+     # C1571 & !low & ram & off & high & !A15 & A14 & A13 & !A12 & A11
+     # C1571 & low & !ram & off & high & !A15 & A14 & A13 & !A12 & A11
+     # C1571 & !low & !ram & off & high & !A15 & A14 & A13 & !A12 & A11
+     # C1571 & low & ram & off & !high & !A15 & A14 & A13 & !A12 & A11
+     # C1571 & !low & ram & off & !high & !A15 & A14 & A13 & !A12 & A11
+     # C1571 & low & !ram & off & !high & !A15 & A14 & A13 & !A12 & A11
+     # C1571 & !low & !ram & off & !high & !A15 & A14 & A13 & !A12 & A11
+     # C1571 & low & ram & off & high & A15 & !A14 & A13 & !A12 & A11
+     # C1571 & !low & ram & off & high & A15 & !A14 & A13 & !A12 & A11
+     # C1571 & low & !ram & off & high & A15 & !A14 & A13 & !A12 & A11
+     # C1571 & !low & !ram & off & high & A15 & !A14 & A13 & !A12 & A11
+     # C1571 & low & ram & off & !high & A15 & !A14 & A13 & !A12 & A11
+     # C1571 & !low & ram & off & !high & A15 & !A14 & A13 & !A12 & A11
+     # C1571 & low & !ram & off & !high & A15 & !A14 & A13 & !A12 & A11
+     # C1571 & !low & !ram & off & !high & A15 & !A14 & A13 & !A12 & A11
+     # C1571 & low & ram & off & high & !A15 & !A14 & A13 & !A12 & A11
+     # C1571 & !low & ram & off & high & !A15 & !A14 & A13 & !A12 & A11
+     # C1571 & low & !ram & off & high & !A15 & !A14 & A13 & !A12 & A11
+     # C1571 & !low & !ram & off & high & !A15 & !A14 & A13 & !A12 & A11
+     # C1571 & low & ram & off & !high & !A15 & !A14 & A13 & !A12 & A11
+     # C1571 & !low & ram & off & !high & !A15 & !A14 & A13 & !A12 & A11
+     # C1571 & low & !ram & off & !high & !A15 & !A14 & A13 & !A12 & A11
+     # C1571 & !low & !ram & off & !high & !A15 & !A14 & A13 & !A12 & A11
+     # C1571 & low & ram & off & high & A15 & A14 & !A13 & !A12 & A11
+     # C1571 & !low & ram & off & high & A15 & A14 & !A13 & !A12 & A11
+     # C1571 & low & !ram & off & high & A15 & A14 & !A13 & !A12 & A11
+     # C1571 & !low & !ram & off & high & A15 & A14 & !A13 & !A12 & A11
+     # C1571 & low & ram & off & !high & A15 & A14 & !A13 & !A12 & A11
+     # C1571 & !low & ram & off & !high & A15 & A14 & !A13 & !A12 & A11
+     # C1571 & low & !ram & off & !high & A15 & A14 & !A13 & !A12 & A11
+     # C1571 & !low & !ram & off & !high & A15 & A14 & !A13 & !A12 & A11
+     # C1571 & low & ram & off & high & !A15 & A14 & !A13 & !A12 & A11
+     # C1571 & !low & ram & off & high & !A15 & A14 & !A13 & !A12 & A11
+     # C1571 & low & !ram & off & high & !A15 & A14 & !A13 & !A12 & A11
+     # C1571 & !low & !ram & off & high & !A15 & A14 & !A13 & !A12 & A11
+     # C1571 & low & ram & off & !high & !A15 & A14 & !A13 & !A12 & A11
+     # C1571 & !low & ram & off & !high & !A15 & A14 & !A13 & !A12 & A11
+     # C1571 & low & !ram & off & !high & !A15 & A14 & !A13 & !A12 & A11
+     # C1571 & !low & !ram & off & !high & !A15 & A14 & !A13 & !A12 & A11
+     # C1571 & low & ram & off & high & A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & !low & ram & off & high & A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & low & !ram & off & high & A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & !low & !ram & off & high & A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & low & ram & off & !high & A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & !low & ram & off & !high & A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & low & !ram & off & !high & A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & !low & !ram & off & !high & A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & low & ram & off & high & !A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & !low & ram & off & high & !A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & low & !ram & off & high & !A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & !low & !ram & off & high & !A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & low & ram & off & !high & !A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & !low & ram & off & !high & !A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & low & !ram & off & !high & !A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & !low & !ram & off & !high & !A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & low & ram & off & high & A15 & A14 & A13 & A12 & !A11
+     # C1571 & !low & ram & off & high & A15 & A14 & A13 & A12 & !A11
+     # C1571 & low & !ram & off & high & A15 & A14 & A13 & A12 & !A11
+     # C1571 & !low & !ram & off & high & A15 & A14 & A13 & A12 & !A11
+     # C1571 & low & ram & off & !high & A15 & A14 & A13 & A12 & !A11
+     # C1571 & !low & ram & off & !high & A15 & A14 & A13 & A12 & !A11
+     # C1571 & low & !ram & off & !high & A15 & A14 & A13 & A12 & !A11
+     # C1571 & !low & !ram & off & !high & A15 & A14 & A13 & A12 & !A11
+     # C1571 & low & ram & off & high & !A15 & A14 & A13 & A12 & !A11
+     # C1571 & !low & ram & off & high & !A15 & A14 & A13 & A12 & !A11
+     # C1571 & low & !ram & off & high & !A15 & A14 & A13 & A12 & !A11
+     # C1571 & !low & !ram & off & high & !A15 & A14 & A13 & A12 & !A11
+     # C1571 & low & ram & off & !high & !A15 & A14 & A13 & A12 & !A11
+     # C1571 & !low & ram & off & !high & !A15 & A14 & A13 & A12 & !A11
+     # C1571 & low & !ram & off & !high & !A15 & A14 & A13 & A12 & !A11
+     # C1571 & !low & !ram & off & !high & !A15 & A14 & A13 & A12 & !A11
+     # C1571 & low & ram & off & high & A15 & !A14 & A13 & A12 & !A11
+     # C1571 & !low & ram & off & high & A15 & !A14 & A13 & A12 & !A11
+     # C1571 & low & !ram & off & high & A15 & !A14 & A13 & A12 & !A11
+     # C1571 & !low & !ram & off & high & A15 & !A14 & A13 & A12 & !A11
+     # C1571 & low & ram & off & !high & A15 & !A14 & A13 & A12 & !A11
+     # C1571 & !low & ram & off & !high & A15 & !A14 & A13 & A12 & !A11
+     # C1571 & low & !ram & off & !high & A15 & !A14 & A13 & A12 & !A11
+     # C1571 & !low & !ram & off & !high & A15 & !A14 & A13 & A12 & !A11
+     # C1571 & low & ram & off & high & !A15 & !A14 & A13 & A12 & !A11
+     # C1571 & !low & ram & off & high & !A15 & !A14 & A13 & A12 & !A11
+     # C1571 & low & !ram & off & high & !A15 & !A14 & A13 & A12 & !A11
+     # C1571 & !low & !ram & off & high & !A15 & !A14 & A13 & A12 & !A11
+     # C1571 & low & ram & off & !high & !A15 & !A14 & A13 & A12 & !A11
+     # C1571 & !low & ram & off & !high & !A15 & !A14 & A13 & A12 & !A11
+     # C1571 & low & !ram & off & !high & !A15 & !A14 & A13 & A12 & !A11
+     # C1571 & !low & !ram & off & !high & !A15 & !A14 & A13 & A12 & !A11
+     # C1571 & low & ram & off & high & A15 & A14 & !A13 & A12 & !A11
+     # C1571 & !low & ram & off & high & A15 & A14 & !A13 & A12 & !A11
+     # C1571 & low & !ram & off & high & A15 & A14 & !A13 & A12 & !A11
+     # C1571 & !low & !ram & off & high & A15 & A14 & !A13 & A12 & !A11
+     # C1571 & low & ram & off & !high & A15 & A14 & !A13 & A12 & !A11
+     # C1571 & !low & ram & off & !high & A15 & A14 & !A13 & A12 & !A11
+     # C1571 & low & !ram & off & !high & A15 & A14 & !A13 & A12 & !A11
+     # C1571 & !low & !ram & off & !high & A15 & A14 & !A13 & A12 & !A11
+     # C1571 & low & ram & off & high & !A15 & A14 & !A13 & A12 & !A11
+     # C1571 & !low & ram & off & high & !A15 & A14 & !A13 & A12 & !A11
+     # C1571 & low & !ram & off & high & !A15 & A14 & !A13 & A12 & !A11
+     # C1571 & !low & !ram & off & high & !A15 & A14 & !A13 & A12 & !A11
+     # C1571 & low & ram & off & !high & !A15 & A14 & !A13 & A12 & !A11
+     # C1571 & !low & ram & off & !high & !A15 & A14 & !A13 & A12 & !A11
+     # C1571 & low & !ram & off & !high & !A15 & A14 & !A13 & A12 & !A11
+     # C1571 & !low & !ram & off & !high & !A15 & A14 & !A13 & A12 & !A11
+     # C1571 & low & ram & off & high & A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & !low & ram & off & high & A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & low & !ram & off & high & A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & !low & !ram & off & high & A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & low & ram & off & !high & A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & !low & ram & off & !high & A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & low & !ram & off & !high & A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & !low & !ram & off & !high & A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & low & ram & off & high & !A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & !low & ram & off & high & !A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & low & !ram & off & high & !A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & !low & !ram & off & high & !A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & low & ram & off & !high & !A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & !low & ram & off & !high & !A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & low & !ram & off & !high & !A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & !low & !ram & off & !high & !A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & low & ram & off & high & A15 & A14 & A13 & !A12 & !A11
+     # C1571 & !low & ram & off & high & A15 & A14 & A13 & !A12 & !A11
+     # C1571 & low & !ram & off & high & A15 & A14 & A13 & !A12 & !A11
+     # C1571 & !low & !ram & off & high & A15 & A14 & A13 & !A12 & !A11
+     # C1571 & low & ram & off & !high & A15 & A14 & A13 & !A12 & !A11
+     # C1571 & !low & ram & off & !high & A15 & A14 & A13 & !A12 & !A11
+     # C1571 & low & !ram & off & !high & A15 & A14 & A13 & !A12 & !A11
+     # C1571 & !low & !ram & off & !high & A15 & A14 & A13 & !A12 & !A11
+     # C1571 & low & ram & off & high & !A15 & A14 & A13 & !A12 & !A11
+     # C1571 & !low & ram & off & high & !A15 & A14 & A13 & !A12 & !A11
+     # C1571 & low & !ram & off & high & !A15 & A14 & A13 & !A12 & !A11
+     # C1571 & !low & !ram & off & high & !A15 & A14 & A13 & !A12 & !A11
+     # C1571 & low & ram & off & !high & !A15 & A14 & A13 & !A12 & !A11
+     # C1571 & !low & ram & off & !high & !A15 & A14 & A13 & !A12 & !A11
+     # C1571 & low & !ram & off & !high & !A15 & A14 & A13 & !A12 & !A11
+     # C1571 & !low & !ram & off & !high & !A15 & A14 & A13 & !A12 & !A11
+     # C1571 & low & ram & off & high & A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & !low & ram & off & high & A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & low & !ram & off & high & A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & !low & !ram & off & high & A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & low & ram & off & !high & A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & !low & ram & off & !high & A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & low & !ram & off & !high & A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & !low & !ram & off & !high & A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & low & ram & off & high & !A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & !low & ram & off & high & !A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & low & !ram & off & high & !A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & !low & !ram & off & high & !A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & low & ram & off & !high & !A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & !low & ram & off & !high & !A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & low & !ram & off & !high & !A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & !low & !ram & off & !high & !A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & low & ram & off & high & A15 & A14 & !A13 & !A12 & !A11
+     # C1571 & !low & ram & off & high & A15 & A14 & !A13 & !A12 & !A11
+     # C1571 & low & !ram & off & high & A15 & A14 & !A13 & !A12 & !A11
+     # C1571 & !low & !ram & off & high & A15 & A14 & !A13 & !A12 & !A11
+     # C1571 & low & ram & off & !high & A15 & A14 & !A13 & !A12 & !A11
+     # C1571 & !low & ram & off & !high & A15 & A14 & !A13 & !A12 & !A11
+     # C1571 & low & !ram & off & !high & A15 & A14 & !A13 & !A12 & !A11
+     # C1571 & !low & !ram & off & !high & A15 & A14 & !A13 & !A12 & !A11
+     # C1571 & low & ram & off & high & !A15 & A14 & !A13 & !A12 & !A11
+     # C1571 & !low & ram & off & high & !A15 & A14 & !A13 & !A12 & !A11
+     # C1571 & low & !ram & off & high & !A15 & A14 & !A13 & !A12 & !A11
+     # C1571 & !low & !ram & off & high & !A15 & A14 & !A13 & !A12 & !A11
+     # C1571 & low & ram & off & !high & !A15 & A14 & !A13 & !A12 & !A11
+     # C1571 & !low & ram & off & !high & !A15 & A14 & !A13 & !A12 & !A11
+     # C1571 & low & !ram & off & !high & !A15 & A14 & !A13 & !A12 & !A11
+     # C1571 & !low & !ram & off & !high & !A15 & A14 & !A13 & !A12 & !A11
+     # C1571 & low & ram & off & high & A15 & !A14 & !A13 & !A12 & !A11
+     # C1571 & !low & ram & off & high & A15 & !A14 & !A13 & !A12 & !A11
+     # C1571 & low & !ram & off & high & A15 & !A14 & !A13 & !A12 & !A11
+     # C1571 & !low & !ram & off & high & A15 & !A14 & !A13 & !A12 & !A11
+     # C1571 & low & ram & off & !high & A15 & !A14 & !A13 & !A12 & !A11
+     # C1571 & !low & ram & off & !high & A15 & !A14 & !A13 & !A12 & !A11
+     # C1571 & low & !ram & off & !high & A15 & !A14 & !A13 & !A12 & !A11
+     # C1571 & !low & !ram & off & !high & A15 & !A14 & !A13 & !A12 & !A11);
+
+O3 = (!C1571 & !off & !A15 & A14 & A13 & A12 & A11
+     # C1571 & low & ram & !off & !A15 & A14 & A13 & A12 & A11
+     # C1571 & !low & ram & !off & !A15 & A14 & A13 & A12 & A11
+     # C1571 & low & !ram & !off & !A15 & A14 & A13 & A12 & A11
+     # C1571 & !low & !ram & !off & !A15 & A14 & A13 & A12 & A11
+     # C1571 & low & ram & off & !high & !A15 & A14 & A13 & A12 & A11
+     # C1571 & !low & ram & off & !high & !A15 & A14 & A13 & A12 & A11
+     # C1571 & low & !ram & off & !high & !A15 & A14 & A13 & A12 & A11
+     # C1571 & !low & !ram & off & !high & !A15 & A14 & A13 & A12 & A11);
+
+O4 = (!C1571 & off & A15 & A14 & A13 & A12 & A11
+     # !C1571 & !off & A15 & A14 & A13 & A12 & A11
+     # !C1571 & off & !A15 & A14 & A13 & A12 & A11
+     # !C1571 & off & A15 & !A14 & A13 & A12 & A11
+     # !C1571 & !off & A15 & !A14 & A13 & A12 & A11
+     # !C1571 & off & !A15 & !A14 & A13 & A12 & A11
+     # !C1571 & !off & !A15 & !A14 & A13 & A12 & A11
+     # !C1571 & off & A15 & A14 & !A13 & A12 & A11
+     # !C1571 & !off & A15 & A14 & !A13 & A12 & A11
+     # !C1571 & off & !A15 & A14 & !A13 & A12 & A11
+     # !C1571 & !off & !A15 & A14 & !A13 & A12 & A11
+     # !C1571 & off & A15 & !A14 & !A13 & A12 & A11
+     # !C1571 & !off & A15 & !A14 & !A13 & A12 & A11
+     # !C1571 & off & !A15 & !A14 & !A13 & A12 & A11
+     # !C1571 & !off & !A15 & !A14 & !A13 & A12 & A11
+     # !C1571 & off & A15 & A14 & A13 & !A12 & A11
+     # !C1571 & !off & A15 & A14 & A13 & !A12 & A11
+     # !C1571 & off & !A15 & A14 & A13 & !A12 & A11
+     # !C1571 & off & A15 & !A14 & A13 & !A12 & A11
+     # !C1571 & !off & A15 & !A14 & A13 & !A12 & A11
+     # !C1571 & off & !A15 & !A14 & A13 & !A12 & A11
+     # !C1571 & !off & !A15 & !A14 & A13 & !A12 & A11
+     # !C1571 & off & A15 & A14 & !A13 & !A12 & A11
+     # !C1571 & !off & A15 & A14 & !A13 & !A12 & A11
+     # !C1571 & off & !A15 & A14 & !A13 & !A12 & A11
+     # !C1571 & !off & !A15 & A14 & !A13 & !A12 & A11
+     # !C1571 & off & A15 & !A14 & !A13 & !A12 & A11
+     # !C1571 & !off & A15 & !A14 & !A13 & !A12 & A11
+     # !C1571 & off & !A15 & !A14 & !A13 & !A12 & A11
+     # !C1571 & !off & !A15 & !A14 & !A13 & !A12 & A11
+     # !C1571 & off & A15 & A14 & A13 & A12 & !A11
+     # !C1571 & !off & A15 & A14 & A13 & A12 & !A11
+     # !C1571 & off & !A15 & A14 & A13 & A12 & !A11
+     # !C1571 & off & A15 & !A14 & A13 & A12 & !A11
+     # !C1571 & !off & A15 & !A14 & A13 & A12 & !A11
+     # !C1571 & off & !A15 & !A14 & A13 & A12 & !A11
+     # !C1571 & !off & !A15 & !A14 & A13 & A12 & !A11
+     # !C1571 & off & A15 & A14 & !A13 & A12 & !A11
+     # !C1571 & !off & A15 & A14 & !A13 & A12 & !A11
+     # !C1571 & off & !A15 & A14 & !A13 & A12 & !A11
+     # !C1571 & !off & !A15 & A14 & !A13 & A12 & !A11
+     # !C1571 & off & A15 & !A14 & !A13 & A12 & !A11
+     # !C1571 & !off & A15 & !A14 & !A13 & A12 & !A11
+     # !C1571 & off & !A15 & !A14 & !A13 & A12 & !A11
+     # !C1571 & !off & !A15 & !A14 & !A13 & A12 & !A11
+     # !C1571 & off & A15 & A14 & A13 & !A12 & !A11
+     # !C1571 & !off & A15 & A14 & A13 & !A12 & !A11
+     # !C1571 & off & !A15 & A14 & A13 & !A12 & !A11
+     # !C1571 & off & A15 & !A14 & A13 & !A12 & !A11
+     # !C1571 & !off & A15 & !A14 & A13 & !A12 & !A11
+     # !C1571 & off & !A15 & !A14 & A13 & !A12 & !A11
+     # !C1571 & !off & !A15 & !A14 & A13 & !A12 & !A11
+     # !C1571 & off & A15 & A14 & !A13 & !A12 & !A11
+     # !C1571 & !off & A15 & A14 & !A13 & !A12 & !A11
+     # !C1571 & off & !A15 & A14 & !A13 & !A12 & !A11
+     # !C1571 & !off & !A15 & A14 & !A13 & !A12 & !A11
+     # !C1571 & off & A15 & !A14 & !A13 & !A12 & !A11
+     # !C1571 & !off & A15 & !A14 & !A13 & !A12 & !A11
+     # !C1571 & off & !A15 & !A14 & !A13 & !A12 & !A11
+     # !C1571 & !off & !A15 & !A14 & !A13 & !A12 & !A11
+     # C1571 & ram & off & !A15 & !A14 & !A13 & !A12 & !A11
+     # C1571 & !ram & off & !A15 & !A14 & !A13 & !A12 & !A11
+     # C1571 & ram & !off & !A15 & !A14 & !A13 & !A12 & !A11
+     # C1571 & !ram & !off & !A15 & !A14 & !A13 & !A12 & !A11
+     # C1571 & low & ram & !off & A15 & !A14 & A13 & A12 & A11
+     # C1571 & !low & ram & !off & A15 & !A14 & A13 & A12 & A11
+     # C1571 & low & !ram & !off & A15 & !A14 & A13 & A12 & A11
+     # C1571 & !low & !ram & !off & A15 & !A14 & A13 & A12 & A11
+     # C1571 & low & ram & !off & !A15 & !A14 & A13 & A12 & A11
+     # C1571 & !low & ram & !off & !A15 & !A14 & A13 & A12 & A11
+     # C1571 & low & !ram & !off & !A15 & !A14 & A13 & A12 & A11
+     # C1571 & !low & !ram & !off & !A15 & !A14 & A13 & A12 & A11
+     # C1571 & !low & ram & !off & A15 & A14 & !A13 & A12 & A11
+     # C1571 & !low & !ram & !off & A15 & A14 & !A13 & A12 & A11
+     # C1571 & low & ram & !off & !A15 & A14 & !A13 & A12 & A11
+     # C1571 & !low & ram & !off & !A15 & A14 & !A13 & A12 & A11
+     # C1571 & low & !ram & !off & !A15 & A14 & !A13 & A12 & A11
+     # C1571 & !low & !ram & !off & !A15 & A14 & !A13 & A12 & A11
+     # C1571 & low & ram & !off & A15 & !A14 & !A13 & A12 & A11
+     # C1571 & !low & ram & !off & A15 & !A14 & !A13 & A12 & A11
+     # C1571 & low & !ram & !off & A15 & !A14 & !A13 & A12 & A11
+     # C1571 & !low & !ram & !off & A15 & !A14 & !A13 & A12 & A11
+     # C1571 & low & ram & !off & !A15 & !A14 & !A13 & A12 & A11
+     # C1571 & !low & ram & !off & !A15 & !A14 & !A13 & A12 & A11
+     # C1571 & low & !ram & !off & !A15 & !A14 & !A13 & A12 & A11
+     # C1571 & !low & !ram & !off & !A15 & !A14 & !A13 & A12 & A11
+     # C1571 & low & ram & !off & A15 & !A14 & A13 & !A12 & A11
+     # C1571 & !low & ram & !off & A15 & !A14 & A13 & !A12 & A11
+     # C1571 & low & !ram & !off & A15 & !A14 & A13 & !A12 & A11
+     # C1571 & !low & !ram & !off & A15 & !A14 & A13 & !A12 & A11
+     # C1571 & low & ram & !off & !A15 & !A14 & A13 & !A12 & A11
+     # C1571 & !low & ram & !off & !A15 & !A14 & A13 & !A12 & A11
+     # C1571 & low & !ram & !off & !A15 & !A14 & A13 & !A12 & A11
+     # C1571 & !low & !ram & !off & !A15 & !A14 & A13 & !A12 & A11
+     # C1571 & !low & ram & !off & A15 & A14 & !A13 & !A12 & A11
+     # C1571 & !low & !ram & !off & A15 & A14 & !A13 & !A12 & A11
+     # C1571 & low & ram & !off & !A15 & A14 & !A13 & !A12 & A11
+     # C1571 & !low & ram & !off & !A15 & A14 & !A13 & !A12 & A11
+     # C1571 & low & !ram & !off & !A15 & A14 & !A13 & !A12 & A11
+     # C1571 & !low & !ram & !off & !A15 & A14 & !A13 & !A12 & A11
+     # C1571 & low & ram & !off & A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & !low & ram & !off & A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & low & !ram & !off & A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & !low & !ram & !off & A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & low & ram & !off & !A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & !low & ram & !off & !A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & low & !ram & !off & !A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & !low & !ram & !off & !A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & low & ram & !off & A15 & !A14 & A13 & A12 & !A11
+     # C1571 & !low & ram & !off & A15 & !A14 & A13 & A12 & !A11
+     # C1571 & low & !ram & !off & A15 & !A14 & A13 & A12 & !A11
+     # C1571 & !low & !ram & !off & A15 & !A14 & A13 & A12 & !A11
+     # C1571 & low & ram & !off & !A15 & !A14 & A13 & A12 & !A11
+     # C1571 & !low & ram & !off & !A15 & !A14 & A13 & A12 & !A11
+     # C1571 & low & !ram & !off & !A15 & !A14 & A13 & A12 & !A11
+     # C1571 & !low & !ram & !off & !A15 & !A14 & A13 & A12 & !A11
+     # C1571 & !low & ram & !off & A15 & A14 & !A13 & A12 & !A11
+     # C1571 & !low & !ram & !off & A15 & A14 & !A13 & A12 & !A11
+     # C1571 & low & ram & !off & !A15 & A14 & !A13 & A12 & !A11
+     # C1571 & !low & ram & !off & !A15 & A14 & !A13 & A12 & !A11
+     # C1571 & low & !ram & !off & !A15 & A14 & !A13 & A12 & !A11
+     # C1571 & !low & !ram & !off & !A15 & A14 & !A13 & A12 & !A11
+     # C1571 & low & ram & !off & A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & !low & ram & !off & A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & low & !ram & !off & A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & !low & !ram & !off & A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & low & ram & !off & !A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & !low & ram & !off & !A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & low & !ram & !off & !A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & !low & !ram & !off & !A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & low & ram & !off & A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & !low & ram & !off & A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & low & !ram & !off & A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & !low & !ram & !off & A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & low & ram & !off & !A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & !low & ram & !off & !A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & low & !ram & !off & !A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & !low & !ram & !off & !A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & !low & ram & !off & A15 & A14 & !A13 & !A12 & !A11
+     # C1571 & !low & !ram & !off & A15 & A14 & !A13 & !A12 & !A11
+     # C1571 & low & ram & !off & !A15 & A14 & !A13 & !A12 & !A11
+     # C1571 & !low & ram & !off & !A15 & A14 & !A13 & !A12 & !A11
+     # C1571 & low & !ram & !off & !A15 & A14 & !A13 & !A12 & !A11
+     # C1571 & !low & !ram & !off & !A15 & A14 & !A13 & !A12 & !A11
+     # C1571 & low & ram & !off & A15 & !A14 & !A13 & !A12 & !A11
+     # C1571 & !low & ram & !off & A15 & !A14 & !A13 & !A12 & !A11
+     # C1571 & low & !ram & !off & A15 & !A14 & !A13 & !A12 & !A11
+     # C1571 & !low & !ram & !off & A15 & !A14 & !A13 & !A12 & !A11
+     # C1571 & low & ram & off & high & A15 & A14 & A13 & A12 & A11
+     # C1571 & !low & ram & off & high & A15 & A14 & A13 & A12 & A11
+     # C1571 & low & !ram & off & high & A15 & A14 & A13 & A12 & A11
+     # C1571 & !low & !ram & off & high & A15 & A14 & A13 & A12 & A11
+     # C1571 & low & ram & off & high & !A15 & A14 & A13 & A12 & A11
+     # C1571 & !low & ram & off & high & !A15 & A14 & A13 & A12 & A11
+     # C1571 & low & !ram & off & high & !A15 & A14 & A13 & A12 & A11
+     # C1571 & !low & !ram & off & high & !A15 & A14 & A13 & A12 & A11
+     # C1571 & low & ram & off & !high & !A15 & A14 & A13 & A12 & A11
+     # C1571 & !low & ram & off & !high & !A15 & A14 & A13 & A12 & A11
+     # C1571 & low & !ram & off & !high & !A15 & A14 & A13 & A12 & A11
+     # C1571 & !low & !ram & off & !high & !A15 & A14 & A13 & A12 & A11
+     # C1571 & low & ram & off & high & A15 & !A14 & A13 & A12 & A11
+     # C1571 & !low & ram & off & high & A15 & !A14 & A13 & A12 & A11
+     # C1571 & low & !ram & off & high & A15 & !A14 & A13 & A12 & A11
+     # C1571 & !low & !ram & off & high & A15 & !A14 & A13 & A12 & A11
+     # C1571 & low & ram & off & !high & A15 & !A14 & A13 & A12 & A11
+     # C1571 & !low & ram & off & !high & A15 & !A14 & A13 & A12 & A11
+     # C1571 & low & !ram & off & !high & A15 & !A14 & A13 & A12 & A11
+     # C1571 & !low & !ram & off & !high & A15 & !A14 & A13 & A12 & A11
+     # C1571 & low & ram & off & high & !A15 & !A14 & A13 & A12 & A11
+     # C1571 & !low & ram & off & high & !A15 & !A14 & A13 & A12 & A11
+     # C1571 & low & !ram & off & high & !A15 & !A14 & A13 & A12 & A11
+     # C1571 & !low & !ram & off & high & !A15 & !A14 & A13 & A12 & A11
+     # C1571 & low & ram & off & !high & !A15 & !A14 & A13 & A12 & A11
+     # C1571 & !low & ram & off & !high & !A15 & !A14 & A13 & A12 & A11
+     # C1571 & low & !ram & off & !high & !A15 & !A14 & A13 & A12 & A11
+     # C1571 & !low & !ram & off & !high & !A15 & !A14 & A13 & A12 & A11
+     # C1571 & !low & ram & off & high & A15 & A14 & !A13 & A12 & A11
+     # C1571 & !low & !ram & off & high & A15 & A14 & !A13 & A12 & A11
+     # C1571 & !low & ram & off & !high & A15 & A14 & !A13 & A12 & A11
+     # C1571 & !low & !ram & off & !high & A15 & A14 & !A13 & A12 & A11
+     # C1571 & low & ram & off & high & !A15 & A14 & !A13 & A12 & A11
+     # C1571 & !low & ram & off & high & !A15 & A14 & !A13 & A12 & A11
+     # C1571 & low & !ram & off & high & !A15 & A14 & !A13 & A12 & A11
+     # C1571 & !low & !ram & off & high & !A15 & A14 & !A13 & A12 & A11
+     # C1571 & low & ram & off & !high & !A15 & A14 & !A13 & A12 & A11
+     # C1571 & !low & ram & off & !high & !A15 & A14 & !A13 & A12 & A11
+     # C1571 & low & !ram & off & !high & !A15 & A14 & !A13 & A12 & A11
+     # C1571 & !low & !ram & off & !high & !A15 & A14 & !A13 & A12 & A11
+     # C1571 & low & ram & off & high & A15 & !A14 & !A13 & A12 & A11
+     # C1571 & !low & ram & off & high & A15 & !A14 & !A13 & A12 & A11
+     # C1571 & low & !ram & off & high & A15 & !A14 & !A13 & A12 & A11
+     # C1571 & !low & !ram & off & high & A15 & !A14 & !A13 & A12 & A11
+     # C1571 & low & ram & off & !high & A15 & !A14 & !A13 & A12 & A11
+     # C1571 & !low & ram & off & !high & A15 & !A14 & !A13 & A12 & A11
+     # C1571 & low & !ram & off & !high & A15 & !A14 & !A13 & A12 & A11
+     # C1571 & !low & !ram & off & !high & A15 & !A14 & !A13 & A12 & A11
+     # C1571 & low & ram & off & high & !A15 & !A14 & !A13 & A12 & A11
+     # C1571 & !low & ram & off & high & !A15 & !A14 & !A13 & A12 & A11
+     # C1571 & low & !ram & off & high & !A15 & !A14 & !A13 & A12 & A11
+     # C1571 & !low & !ram & off & high & !A15 & !A14 & !A13 & A12 & A11
+     # C1571 & low & ram & off & !high & !A15 & !A14 & !A13 & A12 & A11
+     # C1571 & !low & ram & off & !high & !A15 & !A14 & !A13 & A12 & A11
+     # C1571 & low & !ram & off & !high & !A15 & !A14 & !A13 & A12 & A11
+     # C1571 & !low & !ram & off & !high & !A15 & !A14 & !A13 & A12 & A11
+     # C1571 & low & ram & off & high & A15 & A14 & A13 & !A12 & A11
+     # C1571 & !low & ram & off & high & A15 & A14 & A13 & !A12 & A11
+     # C1571 & low & !ram & off & high & A15 & A14 & A13 & !A12 & A11
+     # C1571 & !low & !ram & off & high & A15 & A14 & A13 & !A12 & A11
+     # C1571 & low & ram & off & high & !A15 & A14 & A13 & !A12 & A11
+     # C1571 & !low & ram & off & high & !A15 & A14 & A13 & !A12 & A11
+     # C1571 & low & !ram & off & high & !A15 & A14 & A13 & !A12 & A11
+     # C1571 & !low & !ram & off & high & !A15 & A14 & A13 & !A12 & A11
+     # C1571 & low & ram & off & !high & !A15 & A14 & A13 & !A12 & A11
+     # C1571 & !low & ram & off & !high & !A15 & A14 & A13 & !A12 & A11
+     # C1571 & low & !ram & off & !high & !A15 & A14 & A13 & !A12 & A11
+     # C1571 & !low & !ram & off & !high & !A15 & A14 & A13 & !A12 & A11
+     # C1571 & low & ram & off & high & A15 & !A14 & A13 & !A12 & A11
+     # C1571 & !low & ram & off & high & A15 & !A14 & A13 & !A12 & A11
+     # C1571 & low & !ram & off & high & A15 & !A14 & A13 & !A12 & A11
+     # C1571 & !low & !ram & off & high & A15 & !A14 & A13 & !A12 & A11
+     # C1571 & low & ram & off & !high & A15 & !A14 & A13 & !A12 & A11
+     # C1571 & !low & ram & off & !high & A15 & !A14 & A13 & !A12 & A11
+     # C1571 & low & !ram & off & !high & A15 & !A14 & A13 & !A12 & A11
+     # C1571 & !low & !ram & off & !high & A15 & !A14 & A13 & !A12 & A11
+     # C1571 & low & ram & off & high & !A15 & !A14 & A13 & !A12 & A11
+     # C1571 & !low & ram & off & high & !A15 & !A14 & A13 & !A12 & A11
+     # C1571 & low & !ram & off & high & !A15 & !A14 & A13 & !A12 & A11
+     # C1571 & !low & !ram & off & high & !A15 & !A14 & A13 & !A12 & A11
+     # C1571 & low & ram & off & !high & !A15 & !A14 & A13 & !A12 & A11
+     # C1571 & !low & ram & off & !high & !A15 & !A14 & A13 & !A12 & A11
+     # C1571 & low & !ram & off & !high & !A15 & !A14 & A13 & !A12 & A11
+     # C1571 & !low & !ram & off & !high & !A15 & !A14 & A13 & !A12 & A11
+     # C1571 & !low & ram & off & high & A15 & A14 & !A13 & !A12 & A11
+     # C1571 & !low & !ram & off & high & A15 & A14 & !A13 & !A12 & A11
+     # C1571 & !low & ram & off & !high & A15 & A14 & !A13 & !A12 & A11
+     # C1571 & !low & !ram & off & !high & A15 & A14 & !A13 & !A12 & A11
+     # C1571 & low & ram & off & high & !A15 & A14 & !A13 & !A12 & A11
+     # C1571 & !low & ram & off & high & !A15 & A14 & !A13 & !A12 & A11
+     # C1571 & low & !ram & off & high & !A15 & A14 & !A13 & !A12 & A11
+     # C1571 & !low & !ram & off & high & !A15 & A14 & !A13 & !A12 & A11
+     # C1571 & low & ram & off & !high & !A15 & A14 & !A13 & !A12 & A11
+     # C1571 & !low & ram & off & !high & !A15 & A14 & !A13 & !A12 & A11
+     # C1571 & low & !ram & off & !high & !A15 & A14 & !A13 & !A12 & A11
+     # C1571 & !low & !ram & off & !high & !A15 & A14 & !A13 & !A12 & A11
+     # C1571 & low & ram & off & high & A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & !low & ram & off & high & A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & low & !ram & off & high & A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & !low & !ram & off & high & A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & low & ram & off & !high & A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & !low & ram & off & !high & A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & low & !ram & off & !high & A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & !low & !ram & off & !high & A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & low & ram & off & high & !A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & !low & ram & off & high & !A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & low & !ram & off & high & !A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & !low & !ram & off & high & !A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & low & ram & off & !high & !A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & !low & ram & off & !high & !A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & low & !ram & off & !high & !A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & !low & !ram & off & !high & !A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & low & ram & off & high & A15 & A14 & A13 & A12 & !A11
+     # C1571 & !low & ram & off & high & A15 & A14 & A13 & A12 & !A11
+     # C1571 & low & !ram & off & high & A15 & A14 & A13 & A12 & !A11
+     # C1571 & !low & !ram & off & high & A15 & A14 & A13 & A12 & !A11
+     # C1571 & low & ram & off & high & !A15 & A14 & A13 & A12 & !A11
+     # C1571 & !low & ram & off & high & !A15 & A14 & A13 & A12 & !A11
+     # C1571 & low & !ram & off & high & !A15 & A14 & A13 & A12 & !A11
+     # C1571 & !low & !ram & off & high & !A15 & A14 & A13 & A12 & !A11
+     # C1571 & low & ram & off & !high & !A15 & A14 & A13 & A12 & !A11
+     # C1571 & !low & ram & off & !high & !A15 & A14 & A13 & A12 & !A11
+     # C1571 & low & !ram & off & !high & !A15 & A14 & A13 & A12 & !A11
+     # C1571 & !low & !ram & off & !high & !A15 & A14 & A13 & A12 & !A11
+     # C1571 & low & ram & off & high & A15 & !A14 & A13 & A12 & !A11
+     # C1571 & !low & ram & off & high & A15 & !A14 & A13 & A12 & !A11
+     # C1571 & low & !ram & off & high & A15 & !A14 & A13 & A12 & !A11
+     # C1571 & !low & !ram & off & high & A15 & !A14 & A13 & A12 & !A11
+     # C1571 & low & ram & off & !high & A15 & !A14 & A13 & A12 & !A11
+     # C1571 & !low & ram & off & !high & A15 & !A14 & A13 & A12 & !A11
+     # C1571 & low & !ram & off & !high & A15 & !A14 & A13 & A12 & !A11
+     # C1571 & !low & !ram & off & !high & A15 & !A14 & A13 & A12 & !A11
+     # C1571 & low & ram & off & high & !A15 & !A14 & A13 & A12 & !A11
+     # C1571 & !low & ram & off & high & !A15 & !A14 & A13 & A12 & !A11
+     # C1571 & low & !ram & off & high & !A15 & !A14 & A13 & A12 & !A11
+     # C1571 & !low & !ram & off & high & !A15 & !A14 & A13 & A12 & !A11
+     # C1571 & low & ram & off & !high & !A15 & !A14 & A13 & A12 & !A11
+     # C1571 & !low & ram & off & !high & !A15 & !A14 & A13 & A12 & !A11
+     # C1571 & low & !ram & off & !high & !A15 & !A14 & A13 & A12 & !A11
+     # C1571 & !low & !ram & off & !high & !A15 & !A14 & A13 & A12 & !A11
+     # C1571 & !low & ram & off & high & A15 & A14 & !A13 & A12 & !A11
+     # C1571 & !low & !ram & off & high & A15 & A14 & !A13 & A12 & !A11
+     # C1571 & !low & ram & off & !high & A15 & A14 & !A13 & A12 & !A11
+     # C1571 & !low & !ram & off & !high & A15 & A14 & !A13 & A12 & !A11
+     # C1571 & low & ram & off & high & !A15 & A14 & !A13 & A12 & !A11
+     # C1571 & !low & ram & off & high & !A15 & A14 & !A13 & A12 & !A11
+     # C1571 & low & !ram & off & high & !A15 & A14 & !A13 & A12 & !A11
+     # C1571 & !low & !ram & off & high & !A15 & A14 & !A13 & A12 & !A11
+     # C1571 & low & ram & off & !high & !A15 & A14 & !A13 & A12 & !A11
+     # C1571 & !low & ram & off & !high & !A15 & A14 & !A13 & A12 & !A11
+     # C1571 & low & !ram & off & !high & !A15 & A14 & !A13 & A12 & !A11
+     # C1571 & !low & !ram & off & !high & !A15 & A14 & !A13 & A12 & !A11
+     # C1571 & low & ram & off & high & A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & !low & ram & off & high & A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & low & !ram & off & high & A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & !low & !ram & off & high & A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & low & ram & off & !high & A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & !low & ram & off & !high & A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & low & !ram & off & !high & A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & !low & !ram & off & !high & A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & low & ram & off & high & !A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & !low & ram & off & high & !A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & low & !ram & off & high & !A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & !low & !ram & off & high & !A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & low & ram & off & !high & !A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & !low & ram & off & !high & !A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & low & !ram & off & !high & !A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & !low & !ram & off & !high & !A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & low & ram & off & high & A15 & A14 & A13 & !A12 & !A11
+     # C1571 & !low & ram & off & high & A15 & A14 & A13 & !A12 & !A11
+     # C1571 & low & !ram & off & high & A15 & A14 & A13 & !A12 & !A11
+     # C1571 & !low & !ram & off & high & A15 & A14 & A13 & !A12 & !A11
+     # C1571 & low & ram & off & high & !A15 & A14 & A13 & !A12 & !A11
+     # C1571 & !low & ram & off & high & !A15 & A14 & A13 & !A12 & !A11
+     # C1571 & low & !ram & off & high & !A15 & A14 & A13 & !A12 & !A11
+     # C1571 & !low & !ram & off & high & !A15 & A14 & A13 & !A12 & !A11
+     # C1571 & low & ram & off & !high & !A15 & A14 & A13 & !A12 & !A11
+     # C1571 & !low & ram & off & !high & !A15 & A14 & A13 & !A12 & !A11
+     # C1571 & low & !ram & off & !high & !A15 & A14 & A13 & !A12 & !A11
+     # C1571 & !low & !ram & off & !high & !A15 & A14 & A13 & !A12 & !A11
+     # C1571 & low & ram & off & high & A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & !low & ram & off & high & A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & low & !ram & off & high & A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & !low & !ram & off & high & A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & low & ram & off & !high & A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & !low & ram & off & !high & A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & low & !ram & off & !high & A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & !low & !ram & off & !high & A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & low & ram & off & high & !A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & !low & ram & off & high & !A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & low & !ram & off & high & !A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & !low & !ram & off & high & !A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & low & ram & off & !high & !A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & !low & ram & off & !high & !A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & low & !ram & off & !high & !A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & !low & !ram & off & !high & !A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & !low & ram & off & high & A15 & A14 & !A13 & !A12 & !A11
+     # C1571 & !low & !ram & off & high & A15 & A14 & !A13 & !A12 & !A11
+     # C1571 & !low & ram & off & !high & A15 & A14 & !A13 & !A12 & !A11
+     # C1571 & !low & !ram & off & !high & A15 & A14 & !A13 & !A12 & !A11
+     # C1571 & low & ram & off & high & !A15 & A14 & !A13 & !A12 & !A11
+     # C1571 & !low & ram & off & high & !A15 & A14 & !A13 & !A12 & !A11
+     # C1571 & low & !ram & off & high & !A15 & A14 & !A13 & !A12 & !A11
+     # C1571 & !low & !ram & off & high & !A15 & A14 & !A13 & !A12 & !A11
+     # C1571 & low & ram & off & !high & !A15 & A14 & !A13 & !A12 & !A11
+     # C1571 & !low & ram & off & !high & !A15 & A14 & !A13 & !A12 & !A11
+     # C1571 & low & !ram & off & !high & !A15 & A14 & !A13 & !A12 & !A11
+     # C1571 & !low & !ram & off & !high & !A15 & A14 & !A13 & !A12 & !A11
+     # C1571 & low & ram & off & high & A15 & !A14 & !A13 & !A12 & !A11
+     # C1571 & !low & ram & off & high & A15 & !A14 & !A13 & !A12 & !A11
+     # C1571 & low & !ram & off & high & A15 & !A14 & !A13 & !A12 & !A11
+     # C1571 & !low & !ram & off & high & A15 & !A14 & !A13 & !A12 & !A11
+     # C1571 & low & ram & off & !high & A15 & !A14 & !A13 & !A12 & !A11
+     # C1571 & !low & ram & off & !high & A15 & !A14 & !A13 & !A12 & !A11
+     # C1571 & low & !ram & off & !high & A15 & !A14 & !A13 & !A12 & !A11
+     # C1571 & !low & !ram & off & !high & A15 & !A14 & !A13 & !A12 & !A11);
+
+O5 = (!C1571 & off & A15 & A14 & A13 & A12 & A11
+     # !C1571 & !off & A15 & A14 & A13 & A12 & A11
+     # !C1571 & off & !A15 & A14 & A13 & A12 & A11
+     # !C1571 & off & A15 & A14 & !A13 & A12 & A11
+     # !C1571 & !off & A15 & A14 & !A13 & A12 & A11
+     # !C1571 & off & !A15 & A14 & !A13 & A12 & A11
+     # !C1571 & off & A15 & A14 & A13 & !A12 & A11
+     # !C1571 & !off & A15 & A14 & A13 & !A12 & A11
+     # !C1571 & off & !A15 & A14 & A13 & !A12 & A11
+     # !C1571 & off & A15 & A14 & !A13 & !A12 & A11
+     # !C1571 & !off & A15 & A14 & !A13 & !A12 & A11
+     # !C1571 & off & !A15 & A14 & !A13 & !A12 & A11
+     # !C1571 & off & A15 & A14 & A13 & A12 & !A11
+     # !C1571 & !off & A15 & A14 & A13 & A12 & !A11
+     # !C1571 & off & !A15 & A14 & A13 & A12 & !A11
+     # !C1571 & off & A15 & A14 & !A13 & A12 & !A11
+     # !C1571 & !off & A15 & A14 & !A13 & A12 & !A11
+     # !C1571 & off & !A15 & A14 & !A13 & A12 & !A11
+     # !C1571 & off & A15 & A14 & A13 & !A12 & !A11
+     # !C1571 & !off & A15 & A14 & A13 & !A12 & !A11
+     # !C1571 & off & !A15 & A14 & A13 & !A12 & !A11
+     # !C1571 & off & A15 & A14 & !A13 & !A12 & !A11
+     # !C1571 & !off & A15 & A14 & !A13 & !A12 & !A11
+     # !C1571 & off & !A15 & A14 & !A13 & !A12 & !A11
+     # !C1571 & !off & !A15 & A14 & !A13 & !A12 & !A11
+     # C1571 & !low & ram & !off & A15 & A14 & !A13 & A12 & A11
+     # C1571 & !low & !ram & !off & A15 & A14 & !A13 & A12 & A11
+     # C1571 & low & ram & !off & A15 & !A14 & !A13 & A12 & A11
+     # C1571 & !low & ram & !off & A15 & !A14 & !A13 & A12 & A11
+     # C1571 & low & !ram & !off & A15 & !A14 & !A13 & A12 & A11
+     # C1571 & !low & !ram & !off & A15 & !A14 & !A13 & A12 & A11
+     # C1571 & !low & ram & !off & A15 & A14 & !A13 & !A12 & A11
+     # C1571 & !low & !ram & !off & A15 & A14 & !A13 & !A12 & A11
+     # C1571 & low & ram & !off & A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & !low & ram & !off & A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & low & !ram & !off & A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & !low & !ram & !off & A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & !low & ram & !off & A15 & A14 & !A13 & A12 & !A11
+     # C1571 & !low & !ram & !off & A15 & A14 & !A13 & A12 & !A11
+     # C1571 & low & ram & !off & A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & !low & ram & !off & A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & low & !ram & !off & A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & !low & !ram & !off & A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & !low & ram & !off & A15 & A14 & !A13 & !A12 & !A11
+     # C1571 & !low & !ram & !off & A15 & A14 & !A13 & !A12 & !A11
+     # C1571 & low & ram & !off & A15 & !A14 & !A13 & !A12 & !A11
+     # C1571 & !low & ram & !off & A15 & !A14 & !A13 & !A12 & !A11
+     # C1571 & low & !ram & !off & A15 & !A14 & !A13 & !A12 & !A11
+     # C1571 & !low & !ram & !off & A15 & !A14 & !A13 & !A12 & !A11
+     # C1571 & low & ram & off & high & A15 & A14 & A13 & A12 & A11
+     # C1571 & !low & ram & off & high & A15 & A14 & A13 & A12 & A11
+     # C1571 & low & !ram & off & high & A15 & A14 & A13 & A12 & A11
+     # C1571 & !low & !ram & off & high & A15 & A14 & A13 & A12 & A11
+     # C1571 & low & ram & off & high & A15 & !A14 & A13 & A12 & A11
+     # C1571 & !low & ram & off & high & A15 & !A14 & A13 & A12 & A11
+     # C1571 & low & !ram & off & high & A15 & !A14 & A13 & A12 & A11
+     # C1571 & !low & !ram & off & high & A15 & !A14 & A13 & A12 & A11
+     # C1571 & low & ram & off & !high & A15 & !A14 & A13 & A12 & A11
+     # C1571 & !low & ram & off & !high & A15 & !A14 & A13 & A12 & A11
+     # C1571 & low & !ram & off & !high & A15 & !A14 & A13 & A12 & A11
+     # C1571 & !low & !ram & off & !high & A15 & !A14 & A13 & A12 & A11
+     # C1571 & !low & ram & off & high & A15 & A14 & !A13 & A12 & A11
+     # C1571 & !low & !ram & off & high & A15 & A14 & !A13 & A12 & A11
+     # C1571 & !low & ram & off & !high & A15 & A14 & !A13 & A12 & A11
+     # C1571 & !low & !ram & off & !high & A15 & A14 & !A13 & A12 & A11
+     # C1571 & low & ram & off & high & A15 & !A14 & !A13 & A12 & A11
+     # C1571 & !low & ram & off & high & A15 & !A14 & !A13 & A12 & A11
+     # C1571 & low & !ram & off & high & A15 & !A14 & !A13 & A12 & A11
+     # C1571 & !low & !ram & off & high & A15 & !A14 & !A13 & A12 & A11
+     # C1571 & low & ram & off & !high & A15 & !A14 & !A13 & A12 & A11
+     # C1571 & !low & ram & off & !high & A15 & !A14 & !A13 & A12 & A11
+     # C1571 & low & !ram & off & !high & A15 & !A14 & !A13 & A12 & A11
+     # C1571 & !low & !ram & off & !high & A15 & !A14 & !A13 & A12 & A11
+     # C1571 & low & ram & off & high & A15 & A14 & A13 & !A12 & A11
+     # C1571 & !low & ram & off & high & A15 & A14 & A13 & !A12 & A11
+     # C1571 & low & !ram & off & high & A15 & A14 & A13 & !A12 & A11
+     # C1571 & !low & !ram & off & high & A15 & A14 & A13 & !A12 & A11
+     # C1571 & low & ram & off & high & A15 & !A14 & A13 & !A12 & A11
+     # C1571 & !low & ram & off & high & A15 & !A14 & A13 & !A12 & A11
+     # C1571 & low & !ram & off & high & A15 & !A14 & A13 & !A12 & A11
+     # C1571 & !low & !ram & off & high & A15 & !A14 & A13 & !A12 & A11
+     # C1571 & low & ram & off & !high & A15 & !A14 & A13 & !A12 & A11
+     # C1571 & !low & ram & off & !high & A15 & !A14 & A13 & !A12 & A11
+     # C1571 & low & !ram & off & !high & A15 & !A14 & A13 & !A12 & A11
+     # C1571 & !low & !ram & off & !high & A15 & !A14 & A13 & !A12 & A11
+     # C1571 & !low & ram & off & high & A15 & A14 & !A13 & !A12 & A11
+     # C1571 & !low & !ram & off & high & A15 & A14 & !A13 & !A12 & A11
+     # C1571 & !low & ram & off & !high & A15 & A14 & !A13 & !A12 & A11
+     # C1571 & !low & !ram & off & !high & A15 & A14 & !A13 & !A12 & A11
+     # C1571 & low & ram & off & high & A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & !low & ram & off & high & A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & low & !ram & off & high & A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & !low & !ram & off & high & A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & low & ram & off & !high & A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & !low & ram & off & !high & A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & low & !ram & off & !high & A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & !low & !ram & off & !high & A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & low & ram & off & high & A15 & A14 & A13 & A12 & !A11
+     # C1571 & !low & ram & off & high & A15 & A14 & A13 & A12 & !A11
+     # C1571 & low & !ram & off & high & A15 & A14 & A13 & A12 & !A11
+     # C1571 & !low & !ram & off & high & A15 & A14 & A13 & A12 & !A11
+     # C1571 & low & ram & off & high & A15 & !A14 & A13 & A12 & !A11
+     # C1571 & !low & ram & off & high & A15 & !A14 & A13 & A12 & !A11
+     # C1571 & low & !ram & off & high & A15 & !A14 & A13 & A12 & !A11
+     # C1571 & !low & !ram & off & high & A15 & !A14 & A13 & A12 & !A11
+     # C1571 & low & ram & off & !high & A15 & !A14 & A13 & A12 & !A11
+     # C1571 & !low & ram & off & !high & A15 & !A14 & A13 & A12 & !A11
+     # C1571 & low & !ram & off & !high & A15 & !A14 & A13 & A12 & !A11
+     # C1571 & !low & !ram & off & !high & A15 & !A14 & A13 & A12 & !A11
+     # C1571 & !low & ram & off & high & A15 & A14 & !A13 & A12 & !A11
+     # C1571 & !low & !ram & off & high & A15 & A14 & !A13 & A12 & !A11
+     # C1571 & !low & ram & off & !high & A15 & A14 & !A13 & A12 & !A11
+     # C1571 & !low & !ram & off & !high & A15 & A14 & !A13 & A12 & !A11
+     # C1571 & low & ram & off & high & A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & !low & ram & off & high & A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & low & !ram & off & high & A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & !low & !ram & off & high & A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & low & ram & off & !high & A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & !low & ram & off & !high & A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & low & !ram & off & !high & A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & !low & !ram & off & !high & A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & low & ram & off & high & A15 & A14 & A13 & !A12 & !A11
+     # C1571 & !low & ram & off & high & A15 & A14 & A13 & !A12 & !A11
+     # C1571 & low & !ram & off & high & A15 & A14 & A13 & !A12 & !A11
+     # C1571 & !low & !ram & off & high & A15 & A14 & A13 & !A12 & !A11
+     # C1571 & low & ram & off & high & A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & !low & ram & off & high & A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & low & !ram & off & high & A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & !low & !ram & off & high & A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & low & ram & off & !high & A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & !low & ram & off & !high & A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & low & !ram & off & !high & A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & !low & !ram & off & !high & A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & !low & ram & off & high & A15 & A14 & !A13 & !A12 & !A11
+     # C1571 & !low & !ram & off & high & A15 & A14 & !A13 & !A12 & !A11
+     # C1571 & !low & ram & off & !high & A15 & A14 & !A13 & !A12 & !A11
+     # C1571 & !low & !ram & off & !high & A15 & A14 & !A13 & !A12 & !A11
+     # C1571 & low & ram & off & high & A15 & !A14 & !A13 & !A12 & !A11
+     # C1571 & !low & ram & off & high & A15 & !A14 & !A13 & !A12 & !A11
+     # C1571 & low & !ram & off & high & A15 & !A14 & !A13 & !A12 & !A11
+     # C1571 & !low & !ram & off & high & A15 & !A14 & !A13 & !A12 & !A11
+     # C1571 & low & ram & off & !high & A15 & !A14 & !A13 & !A12 & !A11
+     # C1571 & !low & ram & off & !high & A15 & !A14 & !A13 & !A12 & !A11
+     # C1571 & low & !ram & off & !high & A15 & !A14 & !A13 & !A12 & !A11
+     # C1571 & !low & !ram & off & !high & A15 & !A14 & !A13 & !A12 & !A11);
+
+O6 = (!C1571 & !off & !A15 & A14 & A13 & A12 & A11
+     # !C1571 & !off & !A15 & A14 & A13 & A12 & !A11
+     # C1571 & low & ram & !off & !A15 & A14 & A13 & A12 & A11
+     # C1571 & !low & ram & !off & !A15 & A14 & A13 & A12 & A11
+     # C1571 & low & !ram & !off & !A15 & A14 & A13 & A12 & A11
+     # C1571 & !low & !ram & !off & !A15 & A14 & A13 & A12 & A11
+     # C1571 & low & ram & !off & !A15 & A14 & A13 & A12 & !A11
+     # C1571 & !low & ram & !off & !A15 & A14 & A13 & A12 & !A11
+     # C1571 & low & !ram & !off & !A15 & A14 & A13 & A12 & !A11
+     # C1571 & !low & !ram & !off & !A15 & A14 & A13 & A12 & !A11
+     # C1571 & low & ram & off & !high & !A15 & A14 & A13 & A12 & A11
+     # C1571 & !low & ram & off & !high & !A15 & A14 & A13 & A12 & A11
+     # C1571 & low & !ram & off & !high & !A15 & A14 & A13 & A12 & A11
+     # C1571 & !low & !ram & off & !high & !A15 & A14 & A13 & A12 & A11
+     # C1571 & low & ram & off & !high & !A15 & A14 & A13 & A12 & !A11
+     # C1571 & !low & ram & off & !high & !A15 & A14 & A13 & A12 & !A11
+     # C1571 & low & !ram & off & !high & !A15 & A14 & A13 & A12 & !A11
+     # C1571 & !low & !ram & off & !high & !A15 & A14 & A13 & A12 & !A11);
+
+O7 = (C1571 & low & ram & !off & A15 & A14 & A13 & A12 & A11
+     # C1571 & !low & ram & !off & A15 & A14 & A13 & A12 & A11
+     # C1571 & low & !ram & !off & A15 & A14 & A13 & A12 & A11
+     # C1571 & !low & !ram & !off & A15 & A14 & A13 & A12 & A11
+     # C1571 & low & ram & !off & !A15 & A14 & A13 & A12 & A11
+     # C1571 & !low & ram & !off & !A15 & A14 & A13 & A12 & A11
+     # C1571 & low & !ram & !off & !A15 & A14 & A13 & A12 & A11
+     # C1571 & !low & !ram & !off & !A15 & A14 & A13 & A12 & A11
+     # C1571 & low & ram & !off & A15 & !A14 & A13 & A12 & A11
+     # C1571 & !low & ram & !off & A15 & !A14 & A13 & A12 & A11
+     # C1571 & low & !ram & !off & A15 & !A14 & A13 & A12 & A11
+     # C1571 & !low & !ram & !off & A15 & !A14 & A13 & A12 & A11
+     # C1571 & low & ram & !off & !A15 & !A14 & A13 & A12 & A11
+     # C1571 & !low & ram & !off & !A15 & !A14 & A13 & A12 & A11
+     # C1571 & low & !ram & !off & !A15 & !A14 & A13 & A12 & A11
+     # C1571 & !low & !ram & !off & !A15 & !A14 & A13 & A12 & A11
+     # C1571 & !low & ram & !off & A15 & A14 & !A13 & A12 & A11
+     # C1571 & !low & !ram & !off & A15 & A14 & !A13 & A12 & A11
+     # C1571 & low & ram & !off & !A15 & A14 & !A13 & A12 & A11
+     # C1571 & !low & ram & !off & !A15 & A14 & !A13 & A12 & A11
+     # C1571 & low & !ram & !off & !A15 & A14 & !A13 & A12 & A11
+     # C1571 & !low & !ram & !off & !A15 & A14 & !A13 & A12 & A11
+     # C1571 & low & ram & !off & A15 & !A14 & !A13 & A12 & A11
+     # C1571 & !low & ram & !off & A15 & !A14 & !A13 & A12 & A11
+     # C1571 & low & !ram & !off & A15 & !A14 & !A13 & A12 & A11
+     # C1571 & !low & !ram & !off & A15 & !A14 & !A13 & A12 & A11
+     # C1571 & low & ram & !off & !A15 & !A14 & !A13 & A12 & A11
+     # C1571 & !low & ram & !off & !A15 & !A14 & !A13 & A12 & A11
+     # C1571 & low & !ram & !off & !A15 & !A14 & !A13 & A12 & A11
+     # C1571 & !low & !ram & !off & !A15 & !A14 & !A13 & A12 & A11
+     # C1571 & low & ram & !off & A15 & A14 & A13 & !A12 & A11
+     # C1571 & !low & ram & !off & A15 & A14 & A13 & !A12 & A11
+     # C1571 & low & !ram & !off & A15 & A14 & A13 & !A12 & A11
+     # C1571 & !low & !ram & !off & A15 & A14 & A13 & !A12 & A11
+     # C1571 & low & ram & !off & !A15 & A14 & A13 & !A12 & A11
+     # C1571 & !low & ram & !off & !A15 & A14 & A13 & !A12 & A11
+     # C1571 & low & !ram & !off & !A15 & A14 & A13 & !A12 & A11
+     # C1571 & !low & !ram & !off & !A15 & A14 & A13 & !A12 & A11
+     # C1571 & low & ram & !off & A15 & !A14 & A13 & !A12 & A11
+     # C1571 & !low & ram & !off & A15 & !A14 & A13 & !A12 & A11
+     # C1571 & low & !ram & !off & A15 & !A14 & A13 & !A12 & A11
+     # C1571 & !low & !ram & !off & A15 & !A14 & A13 & !A12 & A11
+     # C1571 & low & ram & !off & !A15 & !A14 & A13 & !A12 & A11
+     # C1571 & !low & ram & !off & !A15 & !A14 & A13 & !A12 & A11
+     # C1571 & low & !ram & !off & !A15 & !A14 & A13 & !A12 & A11
+     # C1571 & !low & !ram & !off & !A15 & !A14 & A13 & !A12 & A11
+     # C1571 & !low & ram & !off & A15 & A14 & !A13 & !A12 & A11
+     # C1571 & !low & !ram & !off & A15 & A14 & !A13 & !A12 & A11
+     # C1571 & low & ram & !off & !A15 & A14 & !A13 & !A12 & A11
+     # C1571 & !low & ram & !off & !A15 & A14 & !A13 & !A12 & A11
+     # C1571 & low & !ram & !off & !A15 & A14 & !A13 & !A12 & A11
+     # C1571 & !low & !ram & !off & !A15 & A14 & !A13 & !A12 & A11
+     # C1571 & low & ram & !off & A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & !low & ram & !off & A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & low & !ram & !off & A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & !low & !ram & !off & A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & low & ram & !off & !A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & !low & ram & !off & !A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & low & !ram & !off & !A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & !low & !ram & !off & !A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & low & ram & !off & A15 & A14 & A13 & A12 & !A11
+     # C1571 & !low & ram & !off & A15 & A14 & A13 & A12 & !A11
+     # C1571 & low & !ram & !off & A15 & A14 & A13 & A12 & !A11
+     # C1571 & !low & !ram & !off & A15 & A14 & A13 & A12 & !A11
+     # C1571 & low & ram & !off & !A15 & A14 & A13 & A12 & !A11
+     # C1571 & !low & ram & !off & !A15 & A14 & A13 & A12 & !A11
+     # C1571 & low & !ram & !off & !A15 & A14 & A13 & A12 & !A11
+     # C1571 & !low & !ram & !off & !A15 & A14 & A13 & A12 & !A11
+     # C1571 & low & ram & !off & A15 & !A14 & A13 & A12 & !A11
+     # C1571 & !low & ram & !off & A15 & !A14 & A13 & A12 & !A11
+     # C1571 & low & !ram & !off & A15 & !A14 & A13 & A12 & !A11
+     # C1571 & !low & !ram & !off & A15 & !A14 & A13 & A12 & !A11
+     # C1571 & low & ram & !off & !A15 & !A14 & A13 & A12 & !A11
+     # C1571 & !low & ram & !off & !A15 & !A14 & A13 & A12 & !A11
+     # C1571 & low & !ram & !off & !A15 & !A14 & A13 & A12 & !A11
+     # C1571 & !low & !ram & !off & !A15 & !A14 & A13 & A12 & !A11
+     # C1571 & !low & ram & !off & A15 & A14 & !A13 & A12 & !A11
+     # C1571 & !low & !ram & !off & A15 & A14 & !A13 & A12 & !A11
+     # C1571 & low & ram & !off & !A15 & A14 & !A13 & A12 & !A11
+     # C1571 & !low & ram & !off & !A15 & A14 & !A13 & A12 & !A11
+     # C1571 & low & !ram & !off & !A15 & A14 & !A13 & A12 & !A11
+     # C1571 & !low & !ram & !off & !A15 & A14 & !A13 & A12 & !A11
+     # C1571 & low & ram & !off & A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & !low & ram & !off & A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & low & !ram & !off & A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & !low & !ram & !off & A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & low & ram & !off & !A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & !low & ram & !off & !A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & low & !ram & !off & !A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & !low & !ram & !off & !A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & low & ram & !off & A15 & A14 & A13 & !A12 & !A11
+     # C1571 & !low & ram & !off & A15 & A14 & A13 & !A12 & !A11
+     # C1571 & low & !ram & !off & A15 & A14 & A13 & !A12 & !A11
+     # C1571 & !low & !ram & !off & A15 & A14 & A13 & !A12 & !A11
+     # C1571 & low & ram & !off & !A15 & A14 & A13 & !A12 & !A11
+     # C1571 & !low & ram & !off & !A15 & A14 & A13 & !A12 & !A11
+     # C1571 & low & !ram & !off & !A15 & A14 & A13 & !A12 & !A11
+     # C1571 & !low & !ram & !off & !A15 & A14 & A13 & !A12 & !A11
+     # C1571 & low & ram & !off & A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & !low & ram & !off & A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & low & !ram & !off & A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & !low & !ram & !off & A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & low & ram & !off & !A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & !low & ram & !off & !A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & low & !ram & !off & !A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & !low & !ram & !off & !A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & !low & ram & !off & A15 & A14 & !A13 & !A12 & !A11
+     # C1571 & !low & !ram & !off & A15 & A14 & !A13 & !A12 & !A11
+     # C1571 & low & ram & !off & !A15 & A14 & !A13 & !A12 & !A11
+     # C1571 & !low & ram & !off & !A15 & A14 & !A13 & !A12 & !A11
+     # C1571 & low & !ram & !off & !A15 & A14 & !A13 & !A12 & !A11
+     # C1571 & !low & !ram & !off & !A15 & A14 & !A13 & !A12 & !A11
+     # C1571 & low & ram & !off & A15 & !A14 & !A13 & !A12 & !A11
+     # C1571 & !low & ram & !off & A15 & !A14 & !A13 & !A12 & !A11
+     # C1571 & low & !ram & !off & A15 & !A14 & !A13 & !A12 & !A11
+     # C1571 & !low & !ram & !off & A15 & !A14 & !A13 & !A12 & !A11
+     # C1571 & low & ram & off & high & !A15 & A14 & A13 & A12 & A11
+     # C1571 & !low & ram & off & high & !A15 & A14 & A13 & A12 & A11
+     # C1571 & low & !ram & off & high & !A15 & A14 & A13 & A12 & A11
+     # C1571 & !low & !ram & off & high & !A15 & A14 & A13 & A12 & A11
+     # C1571 & low & ram & off & !high & !A15 & A14 & A13 & A12 & A11
+     # C1571 & !low & ram & off & !high & !A15 & A14 & A13 & A12 & A11
+     # C1571 & low & !ram & off & !high & !A15 & A14 & A13 & A12 & A11
+     # C1571 & !low & !ram & off & !high & !A15 & A14 & A13 & A12 & A11
+     # C1571 & low & ram & off & high & A15 & !A14 & A13 & A12 & A11
+     # C1571 & !low & ram & off & high & A15 & !A14 & A13 & A12 & A11
+     # C1571 & low & !ram & off & high & A15 & !A14 & A13 & A12 & A11
+     # C1571 & !low & !ram & off & high & A15 & !A14 & A13 & A12 & A11
+     # C1571 & low & ram & off & !high & A15 & !A14 & A13 & A12 & A11
+     # C1571 & !low & ram & off & !high & A15 & !A14 & A13 & A12 & A11
+     # C1571 & low & !ram & off & !high & A15 & !A14 & A13 & A12 & A11
+     # C1571 & !low & !ram & off & !high & A15 & !A14 & A13 & A12 & A11
+     # C1571 & low & ram & off & high & !A15 & !A14 & A13 & A12 & A11
+     # C1571 & !low & ram & off & high & !A15 & !A14 & A13 & A12 & A11
+     # C1571 & low & !ram & off & high & !A15 & !A14 & A13 & A12 & A11
+     # C1571 & !low & !ram & off & high & !A15 & !A14 & A13 & A12 & A11
+     # C1571 & low & ram & off & !high & !A15 & !A14 & A13 & A12 & A11
+     # C1571 & !low & ram & off & !high & !A15 & !A14 & A13 & A12 & A11
+     # C1571 & low & !ram & off & !high & !A15 & !A14 & A13 & A12 & A11
+     # C1571 & !low & !ram & off & !high & !A15 & !A14 & A13 & A12 & A11
+     # C1571 & low & ram & off & high & !A15 & A14 & !A13 & A12 & A11
+     # C1571 & !low & ram & off & high & !A15 & A14 & !A13 & A12 & A11
+     # C1571 & low & !ram & off & high & !A15 & A14 & !A13 & A12 & A11
+     # C1571 & !low & !ram & off & high & !A15 & A14 & !A13 & A12 & A11
+     # C1571 & low & ram & off & !high & !A15 & A14 & !A13 & A12 & A11
+     # C1571 & !low & ram & off & !high & !A15 & A14 & !A13 & A12 & A11
+     # C1571 & low & !ram & off & !high & !A15 & A14 & !A13 & A12 & A11
+     # C1571 & !low & !ram & off & !high & !A15 & A14 & !A13 & A12 & A11
+     # C1571 & low & ram & off & high & A15 & !A14 & !A13 & A12 & A11
+     # C1571 & !low & ram & off & high & A15 & !A14 & !A13 & A12 & A11
+     # C1571 & low & !ram & off & high & A15 & !A14 & !A13 & A12 & A11
+     # C1571 & !low & !ram & off & high & A15 & !A14 & !A13 & A12 & A11
+     # C1571 & low & ram & off & !high & A15 & !A14 & !A13 & A12 & A11
+     # C1571 & !low & ram & off & !high & A15 & !A14 & !A13 & A12 & A11
+     # C1571 & low & !ram & off & !high & A15 & !A14 & !A13 & A12 & A11
+     # C1571 & !low & !ram & off & !high & A15 & !A14 & !A13 & A12 & A11
+     # C1571 & low & ram & off & high & !A15 & !A14 & !A13 & A12 & A11
+     # C1571 & !low & ram & off & high & !A15 & !A14 & !A13 & A12 & A11
+     # C1571 & low & !ram & off & high & !A15 & !A14 & !A13 & A12 & A11
+     # C1571 & !low & !ram & off & high & !A15 & !A14 & !A13 & A12 & A11
+     # C1571 & low & ram & off & !high & !A15 & !A14 & !A13 & A12 & A11
+     # C1571 & !low & ram & off & !high & !A15 & !A14 & !A13 & A12 & A11
+     # C1571 & !low & !ram & off & !high & !A15 & !A14 & !A13 & A12 & A11
+     # C1571 & low & ram & off & high & !A15 & A14 & A13 & !A12 & A11
+     # C1571 & !low & ram & off & high & !A15 & A14 & A13 & !A12 & A11
+     # C1571 & low & !ram & off & high & !A15 & A14 & A13 & !A12 & A11
+     # C1571 & !low & !ram & off & high & !A15 & A14 & A13 & !A12 & A11
+     # C1571 & low & ram & off & !high & !A15 & A14 & A13 & !A12 & A11
+     # C1571 & !low & ram & off & !high & !A15 & A14 & A13 & !A12 & A11
+     # C1571 & low & !ram & off & !high & !A15 & A14 & A13 & !A12 & A11
+     # C1571 & !low & !ram & off & !high & !A15 & A14 & A13 & !A12 & A11
+     # C1571 & low & ram & off & high & A15 & !A14 & A13 & !A12 & A11
+     # C1571 & !low & ram & off & high & A15 & !A14 & A13 & !A12 & A11
+     # C1571 & low & !ram & off & high & A15 & !A14 & A13 & !A12 & A11
+     # C1571 & !low & !ram & off & high & A15 & !A14 & A13 & !A12 & A11
+     # C1571 & low & ram & off & !high & A15 & !A14 & A13 & !A12 & A11
+     # C1571 & !low & ram & off & !high & A15 & !A14 & A13 & !A12 & A11
+     # C1571 & low & !ram & off & !high & A15 & !A14 & A13 & !A12 & A11
+     # C1571 & !low & !ram & off & !high & A15 & !A14 & A13 & !A12 & A11
+     # C1571 & low & ram & off & high & !A15 & !A14 & A13 & !A12 & A11
+     # C1571 & !low & ram & off & high & !A15 & !A14 & A13 & !A12 & A11
+     # C1571 & low & !ram & off & high & !A15 & !A14 & A13 & !A12 & A11
+     # C1571 & !low & !ram & off & high & !A15 & !A14 & A13 & !A12 & A11
+     # C1571 & low & ram & off & !high & !A15 & !A14 & A13 & !A12 & A11
+     # C1571 & !low & ram & off & !high & !A15 & !A14 & A13 & !A12 & A11
+     # C1571 & low & !ram & off & !high & !A15 & !A14 & A13 & !A12 & A11
+     # C1571 & !low & !ram & off & !high & !A15 & !A14 & A13 & !A12 & A11
+     # C1571 & low & ram & off & high & !A15 & A14 & !A13 & !A12 & A11
+     # C1571 & !low & ram & off & high & !A15 & A14 & !A13 & !A12 & A11
+     # C1571 & low & !ram & off & high & !A15 & A14 & !A13 & !A12 & A11
+     # C1571 & !low & !ram & off & high & !A15 & A14 & !A13 & !A12 & A11
+     # C1571 & low & ram & off & !high & !A15 & A14 & !A13 & !A12 & A11
+     # C1571 & !low & ram & off & !high & !A15 & A14 & !A13 & !A12 & A11
+     # C1571 & low & !ram & off & !high & !A15 & A14 & !A13 & !A12 & A11
+     # C1571 & !low & !ram & off & !high & !A15 & A14 & !A13 & !A12 & A11
+     # C1571 & low & ram & off & high & A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & !low & ram & off & high & A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & low & !ram & off & high & A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & !low & !ram & off & high & A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & low & ram & off & !high & A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & !low & ram & off & !high & A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & low & !ram & off & !high & A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & !low & !ram & off & !high & A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & low & ram & off & high & !A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & !low & ram & off & high & !A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & low & !ram & off & high & !A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & !low & !ram & off & high & !A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & low & ram & off & !high & !A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & !low & ram & off & !high & !A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & !low & !ram & off & !high & !A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & low & ram & off & high & !A15 & A14 & A13 & A12 & !A11
+     # C1571 & !low & ram & off & high & !A15 & A14 & A13 & A12 & !A11
+     # C1571 & low & !ram & off & high & !A15 & A14 & A13 & A12 & !A11
+     # C1571 & !low & !ram & off & high & !A15 & A14 & A13 & A12 & !A11
+     # C1571 & low & ram & off & !high & !A15 & A14 & A13 & A12 & !A11
+     # C1571 & !low & ram & off & !high & !A15 & A14 & A13 & A12 & !A11
+     # C1571 & low & !ram & off & !high & !A15 & A14 & A13 & A12 & !A11
+     # C1571 & !low & !ram & off & !high & !A15 & A14 & A13 & A12 & !A11
+     # C1571 & low & ram & off & high & A15 & !A14 & A13 & A12 & !A11
+     # C1571 & !low & ram & off & high & A15 & !A14 & A13 & A12 & !A11
+     # C1571 & low & !ram & off & high & A15 & !A14 & A13 & A12 & !A11
+     # C1571 & !low & !ram & off & high & A15 & !A14 & A13 & A12 & !A11
+     # C1571 & low & ram & off & !high & A15 & !A14 & A13 & A12 & !A11
+     # C1571 & !low & ram & off & !high & A15 & !A14 & A13 & A12 & !A11
+     # C1571 & low & !ram & off & !high & A15 & !A14 & A13 & A12 & !A11
+     # C1571 & !low & !ram & off & !high & A15 & !A14 & A13 & A12 & !A11
+     # C1571 & low & ram & off & high & !A15 & !A14 & A13 & A12 & !A11
+     # C1571 & !low & ram & off & high & !A15 & !A14 & A13 & A12 & !A11
+     # C1571 & low & !ram & off & high & !A15 & !A14 & A13 & A12 & !A11
+     # C1571 & !low & !ram & off & high & !A15 & !A14 & A13 & A12 & !A11
+     # C1571 & low & ram & off & !high & !A15 & !A14 & A13 & A12 & !A11
+     # C1571 & !low & ram & off & !high & !A15 & !A14 & A13 & A12 & !A11
+     # C1571 & low & !ram & off & !high & !A15 & !A14 & A13 & A12 & !A11
+     # C1571 & !low & !ram & off & !high & !A15 & !A14 & A13 & A12 & !A11
+     # C1571 & low & ram & off & high & !A15 & A14 & !A13 & A12 & !A11
+     # C1571 & !low & ram & off & high & !A15 & A14 & !A13 & A12 & !A11
+     # C1571 & low & !ram & off & high & !A15 & A14 & !A13 & A12 & !A11
+     # C1571 & !low & !ram & off & high & !A15 & A14 & !A13 & A12 & !A11
+     # C1571 & low & ram & off & !high & !A15 & A14 & !A13 & A12 & !A11
+     # C1571 & !low & ram & off & !high & !A15 & A14 & !A13 & A12 & !A11
+     # C1571 & low & !ram & off & !high & !A15 & A14 & !A13 & A12 & !A11
+     # C1571 & !low & !ram & off & !high & !A15 & A14 & !A13 & A12 & !A11
+     # C1571 & low & ram & off & high & A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & !low & ram & off & high & A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & low & !ram & off & high & A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & !low & !ram & off & high & A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & low & ram & off & !high & A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & !low & ram & off & !high & A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & low & !ram & off & !high & A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & !low & !ram & off & !high & A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & low & ram & off & high & !A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & !low & ram & off & high & !A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & low & !ram & off & high & !A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & !low & !ram & off & high & !A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & low & ram & off & !high & !A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & !low & ram & off & !high & !A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & !low & !ram & off & !high & !A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & low & ram & off & high & !A15 & A14 & A13 & !A12 & !A11
+     # C1571 & !low & ram & off & high & !A15 & A14 & A13 & !A12 & !A11
+     # C1571 & low & !ram & off & high & !A15 & A14 & A13 & !A12 & !A11
+     # C1571 & !low & !ram & off & high & !A15 & A14 & A13 & !A12 & !A11
+     # C1571 & low & ram & off & !high & !A15 & A14 & A13 & !A12 & !A11
+     # C1571 & !low & ram & off & !high & !A15 & A14 & A13 & !A12 & !A11
+     # C1571 & low & !ram & off & !high & !A15 & A14 & A13 & !A12 & !A11
+     # C1571 & !low & !ram & off & !high & !A15 & A14 & A13 & !A12 & !A11
+     # C1571 & low & ram & off & high & A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & !low & ram & off & high & A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & low & !ram & off & high & A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & !low & !ram & off & high & A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & low & ram & off & !high & A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & !low & ram & off & !high & A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & low & !ram & off & !high & A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & !low & !ram & off & !high & A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & low & ram & off & high & !A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & !low & ram & off & high & !A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & low & !ram & off & high & !A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & !low & !ram & off & high & !A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & low & ram & off & !high & !A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & !low & ram & off & !high & !A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & low & !ram & off & !high & !A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & !low & !ram & off & !high & !A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & low & ram & off & high & !A15 & A14 & !A13 & !A12 & !A11
+     # C1571 & !low & ram & off & high & !A15 & A14 & !A13 & !A12 & !A11
+     # C1571 & low & !ram & off & high & !A15 & A14 & !A13 & !A12 & !A11
+     # C1571 & !low & !ram & off & high & !A15 & A14 & !A13 & !A12 & !A11
+     # C1571 & low & ram & off & !high & !A15 & A14 & !A13 & !A12 & !A11
+     # C1571 & !low & ram & off & !high & !A15 & A14 & !A13 & !A12 & !A11
+     # C1571 & low & !ram & off & !high & !A15 & A14 & !A13 & !A12 & !A11
+     # C1571 & !low & !ram & off & !high & !A15 & A14 & !A13 & !A12 & !A11
+     # C1571 & low & ram & off & high & A15 & !A14 & !A13 & !A12 & !A11
+     # C1571 & !low & ram & off & high & A15 & !A14 & !A13 & !A12 & !A11
+     # C1571 & low & !ram & off & high & A15 & !A14 & !A13 & !A12 & !A11
+     # C1571 & !low & !ram & off & high & A15 & !A14 & !A13 & !A12 & !A11
+     # C1571 & low & ram & off & !high & A15 & !A14 & !A13 & !A12 & !A11
+     # C1571 & !low & ram & off & !high & A15 & !A14 & !A13 & !A12 & !A11
+     # C1571 & low & !ram & off & !high & A15 & !A14 & !A13 & !A12 & !A11
+     # C1571 & !low & !ram & off & !high & A15 & !A14 & !A13 & !A12 & !A11);
+
+O8 = (!C1571 & off & A15 & A14 & A13 & A12 & A11
+     # !C1571 & !off & A15 & A14 & A13 & A12 & A11
+     # !C1571 & off & !A15 & A14 & A13 & A12 & A11
+     # !C1571 & !off & !A15 & A14 & A13 & A12 & A11
+     # !C1571 & off & A15 & !A14 & A13 & A12 & A11
+     # !C1571 & !off & A15 & !A14 & A13 & A12 & A11
+     # !C1571 & off & !A15 & !A14 & A13 & A12 & A11
+     # !C1571 & !off & !A15 & !A14 & A13 & A12 & A11
+     # !C1571 & off & A15 & A14 & !A13 & A12 & A11
+     # !C1571 & !off & A15 & A14 & !A13 & A12 & A11
+     # !C1571 & off & !A15 & A14 & !A13 & A12 & A11
+     # !C1571 & !off & !A15 & A14 & !A13 & A12 & A11
+     # !C1571 & off & A15 & !A14 & !A13 & A12 & A11
+     # !C1571 & !off & A15 & !A14 & !A13 & A12 & A11
+     # !C1571 & off & !A15 & !A14 & !A13 & A12 & A11
+     # !C1571 & !off & !A15 & !A14 & !A13 & A12 & A11
+     # !C1571 & !off & !A15 & A14 & A13 & !A12 & A11
+     # !C1571 & !off & !A15 & A14 & !A13 & !A12 & A11
+     # !C1571 & off & A15 & A14 & A13 & A12 & !A11
+     # !C1571 & !off & A15 & A14 & A13 & A12 & !A11
+     # !C1571 & off & !A15 & A14 & A13 & A12 & !A11
+     # !C1571 & !off & !A15 & A14 & A13 & A12 & !A11
+     # !C1571 & off & A15 & !A14 & A13 & A12 & !A11
+     # !C1571 & !off & A15 & !A14 & A13 & A12 & !A11
+     # !C1571 & off & !A15 & !A14 & A13 & A12 & !A11
+     # !C1571 & !off & !A15 & !A14 & A13 & A12 & !A11
+     # !C1571 & off & A15 & A14 & !A13 & A12 & !A11
+     # !C1571 & !off & A15 & A14 & !A13 & A12 & !A11
+     # !C1571 & off & !A15 & A14 & !A13 & A12 & !A11
+     # !C1571 & !off & !A15 & A14 & !A13 & A12 & !A11
+     # !C1571 & off & A15 & !A14 & !A13 & A12 & !A11
+     # !C1571 & !off & A15 & !A14 & !A13 & A12 & !A11
+     # !C1571 & off & !A15 & !A14 & !A13 & A12 & !A11
+     # !C1571 & !off & !A15 & !A14 & !A13 & A12 & !A11
+     # !C1571 & !off & !A15 & A14 & A13 & !A12 & !A11
+     # C1571 & ram & off & !A15 & !A14 & !A13 & !A12 & !A11
+     # C1571 & ram & !off & !A15 & !A14 & !A13 & !A12 & !A11
+     # C1571 & low & ram & !off & A15 & A14 & A13 & A12 & A11
+     # C1571 & !low & ram & !off & A15 & A14 & A13 & A12 & A11
+     # C1571 & low & !ram & !off & A15 & A14 & A13 & A12 & A11
+     # C1571 & !low & !ram & !off & A15 & A14 & A13 & A12 & A11
+     # C1571 & low & ram & !off & !A15 & A14 & A13 & A12 & A11
+     # C1571 & !low & ram & !off & !A15 & A14 & A13 & A12 & A11
+     # C1571 & low & !ram & !off & !A15 & A14 & A13 & A12 & A11
+     # C1571 & !low & !ram & !off & !A15 & A14 & A13 & A12 & A11
+     # C1571 & low & ram & !off & !A15 & !A14 & A13 & A12 & A11
+     # C1571 & !low & ram & !off & !A15 & !A14 & A13 & A12 & A11
+     # C1571 & low & !ram & !off & !A15 & !A14 & A13 & A12 & A11
+     # C1571 & !low & !ram & !off & !A15 & !A14 & A13 & A12 & A11
+     # C1571 & low & ram & !off & A15 & A14 & !A13 & A12 & A11
+     # C1571 & !low & ram & !off & A15 & A14 & !A13 & A12 & A11
+     # C1571 & low & !ram & !off & A15 & A14 & !A13 & A12 & A11
+     # C1571 & !low & !ram & !off & A15 & A14 & !A13 & A12 & A11
+     # C1571 & low & ram & !off & !A15 & A14 & !A13 & A12 & A11
+     # C1571 & !low & ram & !off & !A15 & A14 & !A13 & A12 & A11
+     # C1571 & low & !ram & !off & !A15 & A14 & !A13 & A12 & A11
+     # C1571 & !low & !ram & !off & !A15 & A14 & !A13 & A12 & A11
+     # C1571 & low & ram & !off & A15 & !A14 & !A13 & A12 & A11
+     # C1571 & !low & ram & !off & A15 & !A14 & !A13 & A12 & A11
+     # C1571 & low & !ram & !off & A15 & !A14 & !A13 & A12 & A11
+     # C1571 & !low & !ram & !off & A15 & !A14 & !A13 & A12 & A11
+     # C1571 & low & ram & !off & !A15 & !A14 & !A13 & A12 & A11
+     # C1571 & !low & ram & !off & !A15 & !A14 & !A13 & A12 & A11
+     # C1571 & low & !ram & !off & !A15 & !A14 & !A13 & A12 & A11
+     # C1571 & !low & !ram & !off & !A15 & !A14 & !A13 & A12 & A11
+     # C1571 & low & ram & !off & A15 & A14 & A13 & !A12 & A11
+     # C1571 & !low & ram & !off & A15 & A14 & A13 & !A12 & A11
+     # C1571 & low & !ram & !off & A15 & A14 & A13 & !A12 & A11
+     # C1571 & !low & !ram & !off & A15 & A14 & A13 & !A12 & A11
+     # C1571 & low & ram & !off & !A15 & A14 & A13 & !A12 & A11
+     # C1571 & !low & ram & !off & !A15 & A14 & A13 & !A12 & A11
+     # C1571 & low & !ram & !off & !A15 & A14 & A13 & !A12 & A11
+     # C1571 & !low & !ram & !off & !A15 & A14 & A13 & !A12 & A11
+     # C1571 & low & ram & !off & A15 & A14 & !A13 & !A12 & A11
+     # C1571 & low & !ram & !off & A15 & A14 & !A13 & !A12 & A11
+     # C1571 & low & ram & !off & !A15 & A14 & !A13 & !A12 & A11
+     # C1571 & !low & ram & !off & !A15 & A14 & !A13 & !A12 & A11
+     # C1571 & low & !ram & !off & !A15 & A14 & !A13 & !A12 & A11
+     # C1571 & !low & !ram & !off & !A15 & A14 & !A13 & !A12 & A11
+     # C1571 & low & ram & !off & A15 & A14 & A13 & A12 & !A11
+     # C1571 & !low & ram & !off & A15 & A14 & A13 & A12 & !A11
+     # C1571 & low & !ram & !off & A15 & A14 & A13 & A12 & !A11
+     # C1571 & !low & !ram & !off & A15 & A14 & A13 & A12 & !A11
+     # C1571 & low & ram & !off & !A15 & A14 & A13 & A12 & !A11
+     # C1571 & !low & ram & !off & !A15 & A14 & A13 & A12 & !A11
+     # C1571 & low & !ram & !off & !A15 & A14 & A13 & A12 & !A11
+     # C1571 & !low & !ram & !off & !A15 & A14 & A13 & A12 & !A11
+     # C1571 & low & ram & !off & A15 & !A14 & A13 & A12 & !A11
+     # C1571 & !low & ram & !off & A15 & !A14 & A13 & A12 & !A11
+     # C1571 & low & !ram & !off & A15 & !A14 & A13 & A12 & !A11
+     # C1571 & !low & !ram & !off & A15 & !A14 & A13 & A12 & !A11
+     # C1571 & low & ram & !off & !A15 & !A14 & A13 & A12 & !A11
+     # C1571 & !low & ram & !off & !A15 & !A14 & A13 & A12 & !A11
+     # C1571 & low & !ram & !off & !A15 & !A14 & A13 & A12 & !A11
+     # C1571 & !low & !ram & !off & !A15 & !A14 & A13 & A12 & !A11
+     # C1571 & low & ram & !off & A15 & A14 & !A13 & A12 & !A11
+     # C1571 & !low & ram & !off & A15 & A14 & !A13 & A12 & !A11
+     # C1571 & low & !ram & !off & A15 & A14 & !A13 & A12 & !A11
+     # C1571 & !low & !ram & !off & A15 & A14 & !A13 & A12 & !A11
+     # C1571 & low & ram & !off & !A15 & A14 & !A13 & A12 & !A11
+     # C1571 & !low & ram & !off & !A15 & A14 & !A13 & A12 & !A11
+     # C1571 & low & !ram & !off & !A15 & A14 & !A13 & A12 & !A11
+     # C1571 & !low & !ram & !off & !A15 & A14 & !A13 & A12 & !A11
+     # C1571 & low & ram & !off & A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & !low & ram & !off & A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & low & !ram & !off & A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & !low & !ram & !off & A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & low & ram & !off & !A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & !low & ram & !off & !A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & low & !ram & !off & !A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & !low & !ram & !off & !A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & low & ram & !off & A15 & A14 & A13 & !A12 & !A11
+     # C1571 & !low & ram & !off & A15 & A14 & A13 & !A12 & !A11
+     # C1571 & low & !ram & !off & A15 & A14 & A13 & !A12 & !A11
+     # C1571 & !low & !ram & !off & A15 & A14 & A13 & !A12 & !A11
+     # C1571 & low & ram & !off & !A15 & A14 & A13 & !A12 & !A11
+     # C1571 & !low & ram & !off & !A15 & A14 & A13 & !A12 & !A11
+     # C1571 & low & !ram & !off & !A15 & A14 & A13 & !A12 & !A11
+     # C1571 & !low & !ram & !off & !A15 & A14 & A13 & !A12 & !A11
+     # C1571 & low & ram & !off & A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & !low & ram & !off & A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & low & !ram & !off & A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & !low & !ram & !off & A15 & !A14 & A13 & !A12 & !A11
+     # C1571 & low & ram & !off & A15 & A14 & !A13 & !A12 & !A11
+     # C1571 & low & !ram & !off & A15 & A14 & !A13 & !A12 & !A11
+     # C1571 & low & ram & !off & !A15 & A14 & !A13 & !A12 & !A11
+     # C1571 & !low & ram & !off & !A15 & A14 & !A13 & !A12 & !A11
+     # C1571 & low & !ram & !off & !A15 & A14 & !A13 & !A12 & !A11
+     # C1571 & !low & !ram & !off & !A15 & A14 & !A13 & !A12 & !A11
+     # C1571 & low & ram & off & high & A15 & A14 & A13 & A12 & A11
+     # C1571 & !low & ram & off & high & A15 & A14 & A13 & A12 & A11
+     # C1571 & low & !ram & off & high & A15 & A14 & A13 & A12 & A11
+     # C1571 & !low & !ram & off & high & A15 & A14 & A13 & A12 & A11
+     # C1571 & low & ram & off & !high & A15 & A14 & A13 & A12 & A11
+     # C1571 & !low & ram & off & !high & A15 & A14 & A13 & A12 & A11
+     # C1571 & low & !ram & off & !high & A15 & A14 & A13 & A12 & A11
+     # C1571 & !low & !ram & off & !high & A15 & A14 & A13 & A12 & A11
+     # C1571 & low & ram & off & high & !A15 & A14 & A13 & A12 & A11
+     # C1571 & !low & ram & off & high & !A15 & A14 & A13 & A12 & A11
+     # C1571 & low & !ram & off & high & !A15 & A14 & A13 & A12 & A11
+     # C1571 & !low & !ram & off & high & !A15 & A14 & A13 & A12 & A11
+     # C1571 & low & ram & off & !high & !A15 & A14 & A13 & A12 & A11
+     # C1571 & !low & ram & off & !high & !A15 & A14 & A13 & A12 & A11
+     # C1571 & low & !ram & off & !high & !A15 & A14 & A13 & A12 & A11
+     # C1571 & !low & !ram & off & !high & !A15 & A14 & A13 & A12 & A11
+     # C1571 & low & ram & off & high & A15 & !A14 & A13 & A12 & A11
+     # C1571 & !low & ram & off & high & A15 & !A14 & A13 & A12 & A11
+     # C1571 & low & !ram & off & high & A15 & !A14 & A13 & A12 & A11
+     # C1571 & !low & !ram & off & high & A15 & !A14 & A13 & A12 & A11
+     # C1571 & low & ram & off & !high & A15 & !A14 & A13 & A12 & A11
+     # C1571 & !low & ram & off & !high & A15 & !A14 & A13 & A12 & A11
+     # C1571 & low & !ram & off & !high & A15 & !A14 & A13 & A12 & A11
+     # C1571 & !low & !ram & off & !high & A15 & !A14 & A13 & A12 & A11
+     # C1571 & low & ram & off & high & !A15 & !A14 & A13 & A12 & A11
+     # C1571 & !low & ram & off & high & !A15 & !A14 & A13 & A12 & A11
+     # C1571 & low & !ram & off & high & !A15 & !A14 & A13 & A12 & A11
+     # C1571 & !low & !ram & off & high & !A15 & !A14 & A13 & A12 & A11
+     # C1571 & low & ram & off & !high & !A15 & !A14 & A13 & A12 & A11
+     # C1571 & !low & ram & off & !high & !A15 & !A14 & A13 & A12 & A11
+     # C1571 & low & !ram & off & !high & !A15 & !A14 & A13 & A12 & A11
+     # C1571 & !low & !ram & off & !high & !A15 & !A14 & A13 & A12 & A11
+     # C1571 & low & ram & off & high & A15 & A14 & !A13 & A12 & A11
+     # C1571 & !low & ram & off & high & A15 & A14 & !A13 & A12 & A11
+     # C1571 & low & !ram & off & high & A15 & A14 & !A13 & A12 & A11
+     # C1571 & !low & !ram & off & high & A15 & A14 & !A13 & A12 & A11
+     # C1571 & low & ram & off & !high & A15 & A14 & !A13 & A12 & A11
+     # C1571 & !low & ram & off & !high & A15 & A14 & !A13 & A12 & A11
+     # C1571 & low & !ram & off & !high & A15 & A14 & !A13 & A12 & A11
+     # C1571 & !low & !ram & off & !high & A15 & A14 & !A13 & A12 & A11
+     # C1571 & low & ram & off & high & !A15 & A14 & !A13 & A12 & A11
+     # C1571 & !low & ram & off & high & !A15 & A14 & !A13 & A12 & A11
+     # C1571 & low & !ram & off & high & !A15 & A14 & !A13 & A12 & A11
+     # C1571 & !low & !ram & off & high & !A15 & A14 & !A13 & A12 & A11
+     # C1571 & low & ram & off & !high & !A15 & A14 & !A13 & A12 & A11
+     # C1571 & !low & ram & off & !high & !A15 & A14 & !A13 & A12 & A11
+     # C1571 & low & !ram & off & !high & !A15 & A14 & !A13 & A12 & A11
+     # C1571 & !low & !ram & off & !high & !A15 & A14 & !A13 & A12 & A11
+     # C1571 & low & ram & off & high & A15 & !A14 & !A13 & A12 & A11
+     # C1571 & !low & ram & off & high & A15 & !A14 & !A13 & A12 & A11
+     # C1571 & low & !ram & off & high & A15 & !A14 & !A13 & A12 & A11
+     # C1571 & !low & !ram & off & high & A15 & !A14 & !A13 & A12 & A11
+     # C1571 & low & ram & off & !high & A15 & !A14 & !A13 & A12 & A11
+     # C1571 & !low & ram & off & !high & A15 & !A14 & !A13 & A12 & A11
+     # C1571 & low & !ram & off & !high & A15 & !A14 & !A13 & A12 & A11
+     # C1571 & !low & !ram & off & !high & A15 & !A14 & !A13 & A12 & A11
+     # C1571 & low & ram & off & high & !A15 & !A14 & !A13 & A12 & A11
+     # C1571 & !low & ram & off & high & !A15 & !A14 & !A13 & A12 & A11
+     # C1571 & low & !ram & off & high & !A15 & !A14 & !A13 & A12 & A11
+     # C1571 & !low & !ram & off & high & !A15 & !A14 & !A13 & A12 & A11
+     # C1571 & low & ram & off & !high & !A15 & !A14 & !A13 & A12 & A11
+     # C1571 & !low & ram & off & !high & !A15 & !A14 & !A13 & A12 & A11
+     # C1571 & low & !ram & off & !high & !A15 & !A14 & !A13 & A12 & A11
+     # C1571 & !low & !ram & off & !high & !A15 & !A14 & !A13 & A12 & A11
+     # C1571 & low & ram & off & !high & A15 & A14 & A13 & !A12 & A11
+     # C1571 & !low & ram & off & !high & A15 & A14 & A13 & !A12 & A11
+     # C1571 & low & !ram & off & !high & A15 & A14 & A13 & !A12 & A11
+     # C1571 & !low & !ram & off & !high & A15 & A14 & A13 & !A12 & A11
+     # C1571 & low & ram & off & high & A15 & A14 & !A13 & !A12 & A11
+     # C1571 & low & !ram & off & high & A15 & A14 & !A13 & !A12 & A11
+     # C1571 & low & ram & off & !high & A15 & A14 & !A13 & !A12 & A11
+     # C1571 & low & !ram & off & !high & A15 & A14 & !A13 & !A12 & A11
+     # C1571 & low & ram & off & high & A15 & A14 & A13 & A12 & !A11
+     # C1571 & !low & ram & off & high & A15 & A14 & A13 & A12 & !A11
+     # C1571 & low & !ram & off & high & A15 & A14 & A13 & A12 & !A11
+     # C1571 & !low & !ram & off & high & A15 & A14 & A13 & A12 & !A11
+     # C1571 & low & ram & off & !high & A15 & A14 & A13 & A12 & !A11
+     # C1571 & !low & ram & off & !high & A15 & A14 & A13 & A12 & !A11
+     # C1571 & low & !ram & off & !high & A15 & A14 & A13 & A12 & !A11
+     # C1571 & !low & !ram & off & !high & A15 & A14 & A13 & A12 & !A11
+     # C1571 & low & ram & off & high & !A15 & A14 & A13 & A12 & !A11
+     # C1571 & !low & ram & off & high & !A15 & A14 & A13 & A12 & !A11
+     # C1571 & low & !ram & off & high & !A15 & A14 & A13 & A12 & !A11
+     # C1571 & !low & !ram & off & high & !A15 & A14 & A13 & A12 & !A11
+     # C1571 & low & ram & off & !high & !A15 & A14 & A13 & A12 & !A11
+     # C1571 & !low & ram & off & !high & !A15 & A14 & A13 & A12 & !A11
+     # C1571 & low & !ram & off & !high & !A15 & A14 & A13 & A12 & !A11
+     # C1571 & !low & !ram & off & !high & !A15 & A14 & A13 & A12 & !A11
+     # C1571 & low & ram & off & high & A15 & !A14 & A13 & A12 & !A11
+     # C1571 & !low & ram & off & high & A15 & !A14 & A13 & A12 & !A11
+     # C1571 & low & !ram & off & high & A15 & !A14 & A13 & A12 & !A11
+     # C1571 & !low & !ram & off & high & A15 & !A14 & A13 & A12 & !A11
+     # C1571 & low & ram & off & !high & A15 & !A14 & A13 & A12 & !A11
+     # C1571 & !low & ram & off & !high & A15 & !A14 & A13 & A12 & !A11
+     # C1571 & low & !ram & off & !high & A15 & !A14 & A13 & A12 & !A11
+     # C1571 & !low & !ram & off & !high & A15 & !A14 & A13 & A12 & !A11
+     # C1571 & low & ram & off & high & !A15 & !A14 & A13 & A12 & !A11
+     # C1571 & !low & ram & off & high & !A15 & !A14 & A13 & A12 & !A11
+     # C1571 & low & !ram & off & high & !A15 & !A14 & A13 & A12 & !A11
+     # C1571 & !low & !ram & off & high & !A15 & !A14 & A13 & A12 & !A11
+     # C1571 & low & ram & off & !high & !A15 & !A14 & A13 & A12 & !A11
+     # C1571 & !low & ram & off & !high & !A15 & !A14 & A13 & A12 & !A11
+     # C1571 & low & !ram & off & !high & !A15 & !A14 & A13 & A12 & !A11
+     # C1571 & !low & !ram & off & !high & !A15 & !A14 & A13 & A12 & !A11
+     # C1571 & low & ram & off & high & A15 & A14 & !A13 & A12 & !A11
+     # C1571 & !low & ram & off & high & A15 & A14 & !A13 & A12 & !A11
+     # C1571 & low & !ram & off & high & A15 & A14 & !A13 & A12 & !A11
+     # C1571 & !low & !ram & off & high & A15 & A14 & !A13 & A12 & !A11
+     # C1571 & low & ram & off & !high & A15 & A14 & !A13 & A12 & !A11
+     # C1571 & !low & ram & off & !high & A15 & A14 & !A13 & A12 & !A11
+     # C1571 & low & !ram & off & !high & A15 & A14 & !A13 & A12 & !A11
+     # C1571 & !low & !ram & off & !high & A15 & A14 & !A13 & A12 & !A11
+     # C1571 & low & ram & off & high & !A15 & A14 & !A13 & A12 & !A11
+     # C1571 & !low & ram & off & high & !A15 & A14 & !A13 & A12 & !A11
+     # C1571 & low & !ram & off & high & !A15 & A14 & !A13 & A12 & !A11
+     # C1571 & !low & !ram & off & high & !A15 & A14 & !A13 & A12 & !A11
+     # C1571 & low & ram & off & !high & !A15 & A14 & !A13 & A12 & !A11
+     # C1571 & !low & ram & off & !high & !A15 & A14 & !A13 & A12 & !A11
+     # C1571 & low & !ram & off & !high & !A15 & A14 & !A13 & A12 & !A11
+     # C1571 & !low & !ram & off & !high & !A15 & A14 & !A13 & A12 & !A11
+     # C1571 & low & ram & off & high & A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & !low & ram & off & high & A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & low & !ram & off & high & A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & !low & !ram & off & high & A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & low & ram & off & !high & A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & !low & ram & off & !high & A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & low & !ram & off & !high & A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & !low & !ram & off & !high & A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & low & ram & off & high & !A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & !low & ram & off & high & !A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & low & !ram & off & high & !A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & !low & !ram & off & high & !A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & low & ram & off & !high & !A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & !low & ram & off & !high & !A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & low & !ram & off & !high & !A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & !low & !ram & off & !high & !A15 & !A14 & !A13 & A12 & !A11
+     # C1571 & low & ram & off & !high & A15 & A14 & A13 & !A12 & !A11
+     # C1571 & !low & ram & off & !high & A15 & A14 & A13 & !A12 & !A11
+     # C1571 & low & !ram & off & !high & A15 & A14 & A13 & !A12 & !A11
+     # C1571 & !low & !ram & off & !high & A15 & A14 & A13 & !A12 & !A11
+     # C1571 & low & ram & off & high & A15 & A14 & !A13 & !A12 & !A11
+     # C1571 & low & !ram & off & high & A15 & A14 & !A13 & !A12 & !A11
+     # C1571 & low & ram & off & !high & A15 & A14 & !A13 & !A12 & !A11
+     # C1571 & low & !ram & off & !high & A15 & A14 & !A13 & !A12 & !A11);
+
+O9 = (!C1571 & off & A15 & A14 & A13 & A12 & A11
+     # !C1571 & !off & A15 & A14 & A13 & A12 & A11
+     # !C1571 & off & !A15 & A14 & A13 & A12 & A11
+     # !C1571 & off & A15 & !A14 & A13 & A12 & A11
+     # !C1571 & !off & A15 & !A14 & A13 & A12 & A11
+     # !C1571 & off & !A15 & !A14 & A13 & A12 & A11
+     # !C1571 & !off & !A15 & !A14 & A13 & A12 & A11
+     # !C1571 & off & A15 & A14 & !A13 & A12 & A11
+     # !C1571 & !off & A15 & A14 & !A13 & A12 & A11
+     # !C1571 & off & !A15 & A14 & !A13 & A12 & A11
+     # !C1571 & off & A15 & !A14 & !A13 & A12 & A11
+     # !C1571 & !off & A15 & !A14 & !A13 & A12 & A11
+     # !C1571 & off & !A15 & !A14 & !A13 & A12 & A11
+     # !C1571 & !off & !A15 & !A14 & !A13 & A12 & A11
+     # !C1571 & off & A15 & A14 & A13 & !A12 & A11
+     # !C1571 & !off & A15 & A14 & A13 & !A12 & A11
+     # !C1571 & off & !A15 & A14 & A13 & !A12 & A11
+     # !C1571 & off & A15 & !A14 & A13 & !A12 & A11
+     # !C1571 & !off & A15 & !A14 & A13 & !A12 & A11
+     # !C1571 & off & !A15 & !A14 & A13 & !A12 & A11
+     # !C1571 & !off & !A15 & !A14 & A13 & !A12 & A11
+     # !C1571 & off & A15 & A14 & !A13 & !A12 & A11
+     # !C1571 & !off & A15 & A14 & !A13 & !A12 & A11
+     # !C1571 & off & !A15 & A14 & !A13 & !A12 & A11
+     # !C1571 & off & A15 & !A14 & !A13 & !A12 & A11
+     # !C1571 & !off & A15 & !A14 & !A13 & !A12 & A11
+     # !C1571 & off & !A15 & !A14 & !A13 & !A12 & A11
+     # !C1571 & !off & !A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & low & ram & !off & A15 & !A14 & A13 & A12 & A11
+     # C1571 & !low & ram & !off & A15 & !A14 & A13 & A12 & A11
+     # C1571 & low & !ram & !off & A15 & !A14 & A13 & A12 & A11
+     # C1571 & !low & !ram & !off & A15 & !A14 & A13 & A12 & A11
+     # C1571 & low & ram & !off & !A15 & !A14 & A13 & A12 & A11
+     # C1571 & !low & ram & !off & !A15 & !A14 & A13 & A12 & A11
+     # C1571 & low & !ram & !off & !A15 & !A14 & A13 & A12 & A11
+     # C1571 & !low & !ram & !off & !A15 & !A14 & A13 & A12 & A11
+     # C1571 & !low & ram & !off & A15 & A14 & !A13 & A12 & A11
+     # C1571 & !low & !ram & !off & A15 & A14 & !A13 & A12 & A11
+     # C1571 & low & ram & !off & A15 & !A14 & !A13 & A12 & A11
+     # C1571 & !low & ram & !off & A15 & !A14 & !A13 & A12 & A11
+     # C1571 & low & !ram & !off & A15 & !A14 & !A13 & A12 & A11
+     # C1571 & !low & !ram & !off & A15 & !A14 & !A13 & A12 & A11
+     # C1571 & low & ram & !off & !A15 & !A14 & !A13 & A12 & A11
+     # C1571 & !low & ram & !off & !A15 & !A14 & !A13 & A12 & A11
+     # C1571 & low & !ram & !off & !A15 & !A14 & !A13 & A12 & A11
+     # C1571 & !low & !ram & !off & !A15 & !A14 & !A13 & A12 & A11
+     # C1571 & low & ram & !off & A15 & !A14 & A13 & !A12 & A11
+     # C1571 & !low & ram & !off & A15 & !A14 & A13 & !A12 & A11
+     # C1571 & low & !ram & !off & A15 & !A14 & A13 & !A12 & A11
+     # C1571 & !low & !ram & !off & A15 & !A14 & A13 & !A12 & A11
+     # C1571 & low & ram & !off & !A15 & !A14 & A13 & !A12 & A11
+     # C1571 & !low & ram & !off & !A15 & !A14 & A13 & !A12 & A11
+     # C1571 & low & !ram & !off & !A15 & !A14 & A13 & !A12 & A11
+     # C1571 & !low & !ram & !off & !A15 & !A14 & A13 & !A12 & A11
+     # C1571 & !low & ram & !off & A15 & A14 & !A13 & !A12 & A11
+     # C1571 & !low & !ram & !off & A15 & A14 & !A13 & !A12 & A11
+     # C1571 & low & ram & !off & A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & !low & ram & !off & A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & low & !ram & !off & A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & !low & !ram & !off & A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & low & ram & !off & !A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & !low & ram & !off & !A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & low & !ram & !off & !A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & !low & !ram & !off & !A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & low & ram & off & high & A15 & A14 & A13 & A12 & A11
+     # C1571 & !low & ram & off & high & A15 & A14 & A13 & A12 & A11
+     # C1571 & low & !ram & off & high & A15 & A14 & A13 & A12 & A11
+     # C1571 & !low & !ram & off & high & A15 & A14 & A13 & A12 & A11
+     # C1571 & low & ram & off & high & !A15 & A14 & A13 & A12 & A11
+     # C1571 & !low & ram & off & high & !A15 & A14 & A13 & A12 & A11
+     # C1571 & low & !ram & off & high & !A15 & A14 & A13 & A12 & A11
+     # C1571 & !low & !ram & off & high & !A15 & A14 & A13 & A12 & A11
+     # C1571 & low & ram & off & !high & !A15 & A14 & A13 & A12 & A11
+     # C1571 & !low & ram & off & !high & !A15 & A14 & A13 & A12 & A11
+     # C1571 & low & !ram & off & !high & !A15 & A14 & A13 & A12 & A11
+     # C1571 & !low & !ram & off & !high & !A15 & A14 & A13 & A12 & A11
+     # C1571 & low & ram & off & high & A15 & !A14 & A13 & A12 & A11
+     # C1571 & !low & ram & off & high & A15 & !A14 & A13 & A12 & A11
+     # C1571 & low & !ram & off & high & A15 & !A14 & A13 & A12 & A11
+     # C1571 & !low & !ram & off & high & A15 & !A14 & A13 & A12 & A11
+     # C1571 & low & ram & off & !high & A15 & !A14 & A13 & A12 & A11
+     # C1571 & !low & ram & off & !high & A15 & !A14 & A13 & A12 & A11
+     # C1571 & low & !ram & off & !high & A15 & !A14 & A13 & A12 & A11
+     # C1571 & !low & !ram & off & !high & A15 & !A14 & A13 & A12 & A11
+     # C1571 & low & ram & off & high & !A15 & !A14 & A13 & A12 & A11
+     # C1571 & !low & ram & off & high & !A15 & !A14 & A13 & A12 & A11
+     # C1571 & low & !ram & off & high & !A15 & !A14 & A13 & A12 & A11
+     # C1571 & !low & !ram & off & high & !A15 & !A14 & A13 & A12 & A11
+     # C1571 & low & ram & off & !high & !A15 & !A14 & A13 & A12 & A11
+     # C1571 & !low & ram & off & !high & !A15 & !A14 & A13 & A12 & A11
+     # C1571 & low & !ram & off & !high & !A15 & !A14 & A13 & A12 & A11
+     # C1571 & !low & !ram & off & !high & !A15 & !A14 & A13 & A12 & A11
+     # C1571 & !low & ram & off & high & A15 & A14 & !A13 & A12 & A11
+     # C1571 & !low & !ram & off & high & A15 & A14 & !A13 & A12 & A11
+     # C1571 & !low & ram & off & !high & A15 & A14 & !A13 & A12 & A11
+     # C1571 & !low & !ram & off & !high & A15 & A14 & !A13 & A12 & A11
+     # C1571 & low & ram & off & high & !A15 & A14 & !A13 & A12 & A11
+     # C1571 & !low & ram & off & high & !A15 & A14 & !A13 & A12 & A11
+     # C1571 & low & !ram & off & high & !A15 & A14 & !A13 & A12 & A11
+     # C1571 & !low & !ram & off & high & !A15 & A14 & !A13 & A12 & A11
+     # C1571 & low & ram & off & !high & !A15 & A14 & !A13 & A12 & A11
+     # C1571 & !low & ram & off & !high & !A15 & A14 & !A13 & A12 & A11
+     # C1571 & low & !ram & off & !high & !A15 & A14 & !A13 & A12 & A11
+     # C1571 & !low & !ram & off & !high & !A15 & A14 & !A13 & A12 & A11
+     # C1571 & low & ram & off & high & A15 & !A14 & !A13 & A12 & A11
+     # C1571 & !low & ram & off & high & A15 & !A14 & !A13 & A12 & A11
+     # C1571 & low & !ram & off & high & A15 & !A14 & !A13 & A12 & A11
+     # C1571 & !low & !ram & off & high & A15 & !A14 & !A13 & A12 & A11
+     # C1571 & low & ram & off & !high & A15 & !A14 & !A13 & A12 & A11
+     # C1571 & !low & ram & off & !high & A15 & !A14 & !A13 & A12 & A11
+     # C1571 & low & !ram & off & !high & A15 & !A14 & !A13 & A12 & A11
+     # C1571 & !low & !ram & off & !high & A15 & !A14 & !A13 & A12 & A11
+     # C1571 & low & ram & off & high & !A15 & !A14 & !A13 & A12 & A11
+     # C1571 & !low & ram & off & high & !A15 & !A14 & !A13 & A12 & A11
+     # C1571 & low & !ram & off & high & !A15 & !A14 & !A13 & A12 & A11
+     # C1571 & !low & !ram & off & high & !A15 & !A14 & !A13 & A12 & A11
+     # C1571 & low & ram & off & !high & !A15 & !A14 & !A13 & A12 & A11
+     # C1571 & !low & ram & off & !high & !A15 & !A14 & !A13 & A12 & A11
+     # C1571 & low & !ram & off & !high & !A15 & !A14 & !A13 & A12 & A11
+     # C1571 & !low & !ram & off & !high & !A15 & !A14 & !A13 & A12 & A11
+     # C1571 & low & ram & off & high & A15 & A14 & A13 & !A12 & A11
+     # C1571 & !low & ram & off & high & A15 & A14 & A13 & !A12 & A11
+     # C1571 & low & !ram & off & high & A15 & A14 & A13 & !A12 & A11
+     # C1571 & !low & !ram & off & high & A15 & A14 & A13 & !A12 & A11
+     # C1571 & low & ram & off & high & !A15 & A14 & A13 & !A12 & A11
+     # C1571 & !low & ram & off & high & !A15 & A14 & A13 & !A12 & A11
+     # C1571 & low & !ram & off & high & !A15 & A14 & A13 & !A12 & A11
+     # C1571 & !low & !ram & off & high & !A15 & A14 & A13 & !A12 & A11
+     # C1571 & low & ram & off & !high & !A15 & A14 & A13 & !A12 & A11
+     # C1571 & !low & ram & off & !high & !A15 & A14 & A13 & !A12 & A11
+     # C1571 & low & !ram & off & !high & !A15 & A14 & A13 & !A12 & A11
+     # C1571 & !low & !ram & off & !high & !A15 & A14 & A13 & !A12 & A11
+     # C1571 & low & ram & off & high & A15 & !A14 & A13 & !A12 & A11
+     # C1571 & !low & ram & off & high & A15 & !A14 & A13 & !A12 & A11
+     # C1571 & low & !ram & off & high & A15 & !A14 & A13 & !A12 & A11
+     # C1571 & !low & !ram & off & high & A15 & !A14 & A13 & !A12 & A11
+     # C1571 & low & ram & off & !high & A15 & !A14 & A13 & !A12 & A11
+     # C1571 & !low & ram & off & !high & A15 & !A14 & A13 & !A12 & A11
+     # C1571 & low & !ram & off & !high & A15 & !A14 & A13 & !A12 & A11
+     # C1571 & !low & !ram & off & !high & A15 & !A14 & A13 & !A12 & A11
+     # C1571 & low & ram & off & high & !A15 & !A14 & A13 & !A12 & A11
+     # C1571 & !low & ram & off & high & !A15 & !A14 & A13 & !A12 & A11
+     # C1571 & low & !ram & off & high & !A15 & !A14 & A13 & !A12 & A11
+     # C1571 & !low & !ram & off & high & !A15 & !A14 & A13 & !A12 & A11
+     # C1571 & low & ram & off & !high & !A15 & !A14 & A13 & !A12 & A11
+     # C1571 & !low & ram & off & !high & !A15 & !A14 & A13 & !A12 & A11
+     # C1571 & low & !ram & off & !high & !A15 & !A14 & A13 & !A12 & A11
+     # C1571 & !low & !ram & off & !high & !A15 & !A14 & A13 & !A12 & A11
+     # C1571 & !low & ram & off & high & A15 & A14 & !A13 & !A12 & A11
+     # C1571 & !low & !ram & off & high & A15 & A14 & !A13 & !A12 & A11
+     # C1571 & !low & ram & off & !high & A15 & A14 & !A13 & !A12 & A11
+     # C1571 & !low & !ram & off & !high & A15 & A14 & !A13 & !A12 & A11
+     # C1571 & low & ram & off & high & !A15 & A14 & !A13 & !A12 & A11
+     # C1571 & !low & ram & off & high & !A15 & A14 & !A13 & !A12 & A11
+     # C1571 & low & !ram & off & high & !A15 & A14 & !A13 & !A12 & A11
+     # C1571 & !low & !ram & off & high & !A15 & A14 & !A13 & !A12 & A11
+     # C1571 & low & ram & off & !high & !A15 & A14 & !A13 & !A12 & A11
+     # C1571 & !low & ram & off & !high & !A15 & A14 & !A13 & !A12 & A11
+     # C1571 & low & !ram & off & !high & !A15 & A14 & !A13 & !A12 & A11
+     # C1571 & !low & !ram & off & !high & !A15 & A14 & !A13 & !A12 & A11
+     # C1571 & low & ram & off & high & A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & !low & ram & off & high & A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & low & !ram & off & high & A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & !low & !ram & off & high & A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & low & ram & off & !high & A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & !low & ram & off & !high & A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & low & !ram & off & !high & A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & !low & !ram & off & !high & A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & low & ram & off & high & !A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & !low & ram & off & high & !A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & low & !ram & off & high & !A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & !low & !ram & off & high & !A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & low & ram & off & !high & !A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & !low & ram & off & !high & !A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & low & !ram & off & !high & !A15 & !A14 & !A13 & !A12 & A11
+     # C1571 & !low & !ram & off & !high & !A15 & !A14 & !A13 & !A12 & A11);
+
+
+Reverse-Polarity Equations:
+

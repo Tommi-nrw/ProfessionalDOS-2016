@@ -1,0 +1,383 @@
+ispLEVER Classic 2.0.00.17.20.15 Linked Equations File
+Copyright(C), 1992-2015, Lattice Semiconductor Corp.
+All Rights Reserved.
+
+Design profdosv122dd created Sun Oct 15 15:49:23 2017
+
+
+ P-Terms   Fan-in  Fan-out  Type  Name (attributes)
+---------  ------  -------  ----  -----------------
+   1          7        1    Pin   O0 
+  16          8        1    Pin   O1 
+  99         10        1    Pin   O2 
+   1          7        1    Pin   O3 
+  77         10        1    Pin   O4 
+  82         10        1    Pin   O5 
+   2          7        1    Pin   O6 
+  16          7        1    Pin   O7 
+  24          9        1    Pin   O8 
+  24          9        1    Pin   O9 
+=========
+ 342                 P-Term Total: 342
+                       Total Pins: 20
+                      Total Nodes: 0
+            Average P-Term/Output: 34
+
+
+Equations:
+
+O0 = (Dolphin & !off & !A15 & A14 & A13 & !A12 & A11);
+
+O1 = (!Dolphin & A15 & A14 & A13 & A12 & A11
+     # !Dolphin & A15 & !A14 & A13 & A12 & A11
+     # !Dolphin & A15 & A14 & A13 & !A12 & A11
+     # !Dolphin & A15 & !A14 & A13 & !A12 & A11
+     # !Dolphin & A15 & A14 & A13 & A12 & !A11
+     # !Dolphin & A15 & !A14 & A13 & A12 & !A11
+     # !Dolphin & A15 & A14 & A13 & !A12 & !A11
+     # !Dolphin & A15 & !A14 & A13 & !A12 & !A11
+     # Dolphin & !off & A15 & A14 & A13 & A12 & A11
+     # Dolphin & !off & A15 & A14 & A13 & !A12 & A11
+     # Dolphin & !off & A15 & A14 & A13 & A12 & !A11
+     # Dolphin & !off & A15 & A14 & A13 & !A12 & !A11
+     # Dolphin & off & !high & A15 & A14 & A13 & A12 & A11
+     # Dolphin & off & !high & A15 & A14 & A13 & !A12 & A11
+     # Dolphin & off & !high & A15 & A14 & A13 & A12 & !A11
+     # Dolphin & off & !high & A15 & A14 & A13 & !A12 & !A11);
+
+O2 = (!A15 & !A14 & A13 & A12 & A11
+     # !A15 & !A14 & !A13 & A12 & A11
+     # !A15 & !A14 & A13 & !A12 & A11
+     # !A15 & !A14 & !A13 & !A12 & A11
+     # !A15 & !A14 & A13 & A12 & !A11
+     # !A15 & !A14 & !A13 & A12 & !A11
+     # !A15 & !A14 & A13 & !A12 & !A11
+     # !Dolphin & A15 & A14 & A13 & A12 & A11
+     # !Dolphin & !A15 & A14 & A13 & A12 & A11
+     # !Dolphin & A15 & !A14 & A13 & A12 & A11
+     # !Dolphin & A15 & A14 & !A13 & A12 & A11
+     # !Dolphin & !A15 & A14 & !A13 & A12 & A11
+     # !Dolphin & A15 & A14 & A13 & !A12 & A11
+     # !Dolphin & !A15 & A14 & A13 & !A12 & A11
+     # !Dolphin & A15 & !A14 & A13 & !A12 & A11
+     # !Dolphin & A15 & A14 & !A13 & !A12 & A11
+     # !Dolphin & !A15 & A14 & !A13 & !A12 & A11
+     # !Dolphin & A15 & A14 & A13 & A12 & !A11
+     # !Dolphin & !A15 & A14 & A13 & A12 & !A11
+     # !Dolphin & A15 & !A14 & A13 & A12 & !A11
+     # !Dolphin & A15 & A14 & !A13 & A12 & !A11
+     # !Dolphin & !A15 & A14 & !A13 & A12 & !A11
+     # !Dolphin & A15 & A14 & A13 & !A12 & !A11
+     # !Dolphin & !A15 & A14 & A13 & !A12 & !A11
+     # !Dolphin & A15 & !A14 & A13 & !A12 & !A11
+     # !Dolphin & A15 & A14 & !A13 & !A12 & !A11
+     # !Dolphin & !A15 & A14 & !A13 & !A12 & !A11
+     # !Dolphin & !A15 & !A14 & !A13 & !A12 & !A11
+     # Dolphin & !off & A15 & A14 & A13 & A12 & A11
+     # Dolphin & off & !A15 & A14 & A13 & A12 & A11
+     # Dolphin & !off & !A15 & A14 & A13 & A12 & A11
+     # Dolphin & !off & A15 & !A14 & A13 & A12 & A11
+     # Dolphin & off & !A15 & A14 & !A13 & A12 & A11
+     # Dolphin & !off & A15 & !A14 & !A13 & A12 & A11
+     # Dolphin & !off & A15 & A14 & A13 & !A12 & A11
+     # Dolphin & off & !A15 & A14 & A13 & !A12 & A11
+     # Dolphin & !off & !A15 & A14 & A13 & !A12 & A11
+     # Dolphin & !off & A15 & !A14 & A13 & !A12 & A11
+     # Dolphin & off & !A15 & A14 & !A13 & !A12 & A11
+     # Dolphin & !off & A15 & !A14 & !A13 & !A12 & A11
+     # Dolphin & !off & A15 & A14 & A13 & A12 & !A11
+     # Dolphin & off & !A15 & A14 & A13 & A12 & !A11
+     # Dolphin & !off & !A15 & A14 & A13 & A12 & !A11
+     # Dolphin & !off & A15 & !A14 & A13 & A12 & !A11
+     # Dolphin & off & !A15 & A14 & !A13 & A12 & !A11
+     # Dolphin & !off & A15 & !A14 & !A13 & A12 & !A11
+     # Dolphin & !off & A15 & A14 & A13 & !A12 & !A11
+     # Dolphin & off & !A15 & A14 & A13 & !A12 & !A11
+     # Dolphin & !off & !A15 & A14 & A13 & !A12 & !A11
+     # Dolphin & !off & A15 & !A14 & A13 & !A12 & !A11
+     # Dolphin & off & !A15 & A14 & !A13 & !A12 & !A11
+     # Dolphin & !off & A15 & !A14 & !A13 & !A12 & !A11
+     # Dolphin & off & high & A15 & A14 & A13 & A12 & A11
+     # Dolphin & off & !high & A15 & A14 & A13 & A12 & A11
+     # Dolphin & off & high & A15 & !A14 & A13 & A12 & A11
+     # Dolphin & off & !high & A15 & !A14 & A13 & A12 & A11
+     # Dolphin & low & !off & A15 & A14 & !A13 & A12 & A11
+     # Dolphin & !low & !off & A15 & A14 & !A13 & A12 & A11
+     # Dolphin & off & high & A15 & A14 & !A13 & A12 & A11
+     # Dolphin & off & high & A15 & !A14 & !A13 & A12 & A11
+     # Dolphin & off & !high & A15 & !A14 & !A13 & A12 & A11
+     # Dolphin & off & high & A15 & A14 & A13 & !A12 & A11
+     # Dolphin & off & !high & A15 & A14 & A13 & !A12 & A11
+     # Dolphin & off & high & A15 & !A14 & A13 & !A12 & A11
+     # Dolphin & off & !high & A15 & !A14 & A13 & !A12 & A11
+     # Dolphin & low & !off & A15 & A14 & !A13 & !A12 & A11
+     # Dolphin & !low & !off & A15 & A14 & !A13 & !A12 & A11
+     # Dolphin & off & high & A15 & A14 & !A13 & !A12 & A11
+     # Dolphin & off & high & A15 & !A14 & !A13 & !A12 & A11
+     # Dolphin & off & !high & A15 & !A14 & !A13 & !A12 & A11
+     # Dolphin & off & high & A15 & A14 & A13 & A12 & !A11
+     # Dolphin & off & !high & A15 & A14 & A13 & A12 & !A11
+     # Dolphin & off & high & A15 & !A14 & A13 & A12 & !A11
+     # Dolphin & off & !high & A15 & !A14 & A13 & A12 & !A11
+     # Dolphin & low & !off & A15 & A14 & !A13 & A12 & !A11
+     # Dolphin & !low & !off & A15 & A14 & !A13 & A12 & !A11
+     # Dolphin & off & high & A15 & A14 & !A13 & A12 & !A11
+     # Dolphin & off & high & A15 & !A14 & !A13 & A12 & !A11
+     # Dolphin & off & !high & A15 & !A14 & !A13 & A12 & !A11
+     # Dolphin & off & high & A15 & A14 & A13 & !A12 & !A11
+     # Dolphin & off & !high & A15 & A14 & A13 & !A12 & !A11
+     # Dolphin & off & high & A15 & !A14 & A13 & !A12 & !A11
+     # Dolphin & off & !high & A15 & !A14 & A13 & !A12 & !A11
+     # Dolphin & low & !off & A15 & A14 & !A13 & !A12 & !A11
+     # Dolphin & !low & !off & A15 & A14 & !A13 & !A12 & !A11
+     # Dolphin & off & high & A15 & A14 & !A13 & !A12 & !A11
+     # Dolphin & off & high & A15 & !A14 & !A13 & !A12 & !A11
+     # Dolphin & off & !high & A15 & !A14 & !A13 & !A12 & !A11
+     # Dolphin & !ram & !off & !A15 & !A14 & !A13 & !A12 & !A11
+     # Dolphin & off & high & !A15 & !A14 & !A13 & !A12 & !A11
+     # Dolphin & low & off & !high & A15 & A14 & !A13 & A12 & A11
+     # Dolphin & !low & off & !high & A15 & A14 & !A13 & A12 & A11
+     # Dolphin & low & off & !high & A15 & A14 & !A13 & !A12 & A11
+     # Dolphin & !low & off & !high & A15 & A14 & !A13 & !A12 & A11
+     # Dolphin & low & off & !high & A15 & A14 & !A13 & A12 & !A11
+     # Dolphin & !low & off & !high & A15 & A14 & !A13 & A12 & !A11
+     # Dolphin & low & off & !high & A15 & A14 & !A13 & !A12 & !A11
+     # Dolphin & !low & off & !high & A15 & A14 & !A13 & !A12 & !A11
+     # Dolphin & !ram & off & !high & !A15 & !A14 & !A13 & !A12 & !A11);
+
+O3 = (Dolphin & !off & !A15 & A14 & A13 & A12 & A11);
+
+O4 = (!A15 & !A14 & A13 & A12 & A11
+     # !A15 & !A14 & !A13 & A12 & A11
+     # !A15 & !A14 & A13 & !A12 & A11
+     # !A15 & !A14 & !A13 & !A12 & A11
+     # !A15 & !A14 & A13 & A12 & !A11
+     # !A15 & !A14 & !A13 & A12 & !A11
+     # !A15 & !A14 & A13 & !A12 & !A11
+     # !Dolphin & !A15 & A14 & A13 & A12 & A11
+     # !Dolphin & !A15 & A14 & !A13 & A12 & A11
+     # !Dolphin & A15 & !A14 & !A13 & A12 & A11
+     # !Dolphin & !A15 & A14 & A13 & !A12 & A11
+     # !Dolphin & !A15 & A14 & !A13 & !A12 & A11
+     # !Dolphin & A15 & !A14 & !A13 & !A12 & A11
+     # !Dolphin & !A15 & A14 & A13 & A12 & !A11
+     # !Dolphin & !A15 & A14 & !A13 & A12 & !A11
+     # !Dolphin & A15 & !A14 & !A13 & A12 & !A11
+     # !Dolphin & !A15 & A14 & A13 & !A12 & !A11
+     # !Dolphin & !A15 & A14 & !A13 & !A12 & !A11
+     # !Dolphin & A15 & !A14 & !A13 & !A12 & !A11
+     # !Dolphin & !A15 & !A14 & !A13 & !A12 & !A11
+     # Dolphin & off & !A15 & A14 & A13 & A12 & A11
+     # Dolphin & !off & A15 & !A14 & A13 & A12 & A11
+     # Dolphin & off & !A15 & A14 & !A13 & A12 & A11
+     # Dolphin & !off & !A15 & A14 & !A13 & A12 & A11
+     # Dolphin & !off & A15 & !A14 & !A13 & A12 & A11
+     # Dolphin & off & !A15 & A14 & A13 & !A12 & A11
+     # Dolphin & !off & A15 & !A14 & A13 & !A12 & A11
+     # Dolphin & off & !A15 & A14 & !A13 & !A12 & A11
+     # Dolphin & !off & !A15 & A14 & !A13 & !A12 & A11
+     # Dolphin & !off & A15 & !A14 & !A13 & !A12 & A11
+     # Dolphin & off & !A15 & A14 & A13 & A12 & !A11
+     # Dolphin & !off & A15 & !A14 & A13 & A12 & !A11
+     # Dolphin & off & !A15 & A14 & !A13 & A12 & !A11
+     # Dolphin & !off & !A15 & A14 & !A13 & A12 & !A11
+     # Dolphin & !off & A15 & !A14 & !A13 & A12 & !A11
+     # Dolphin & off & !A15 & A14 & A13 & !A12 & !A11
+     # Dolphin & !off & A15 & !A14 & A13 & !A12 & !A11
+     # Dolphin & off & !A15 & A14 & !A13 & !A12 & !A11
+     # Dolphin & !off & !A15 & A14 & !A13 & !A12 & !A11
+     # Dolphin & !off & A15 & !A14 & !A13 & !A12 & !A11
+     # Dolphin & off & high & A15 & A14 & A13 & A12 & A11
+     # Dolphin & off & high & A15 & !A14 & A13 & A12 & A11
+     # Dolphin & off & !high & A15 & !A14 & A13 & A12 & A11
+     # Dolphin & !low & !off & A15 & A14 & !A13 & A12 & A11
+     # Dolphin & off & high & A15 & A14 & !A13 & A12 & A11
+     # Dolphin & off & high & A15 & !A14 & !A13 & A12 & A11
+     # Dolphin & off & !high & A15 & !A14 & !A13 & A12 & A11
+     # Dolphin & off & high & A15 & A14 & A13 & !A12 & A11
+     # Dolphin & off & high & A15 & !A14 & A13 & !A12 & A11
+     # Dolphin & off & !high & A15 & !A14 & A13 & !A12 & A11
+     # Dolphin & !low & !off & A15 & A14 & !A13 & !A12 & A11
+     # Dolphin & off & high & A15 & A14 & !A13 & !A12 & A11
+     # Dolphin & off & high & A15 & !A14 & !A13 & !A12 & A11
+     # Dolphin & off & !high & A15 & !A14 & !A13 & !A12 & A11
+     # Dolphin & off & high & A15 & A14 & A13 & A12 & !A11
+     # Dolphin & off & high & A15 & !A14 & A13 & A12 & !A11
+     # Dolphin & off & !high & A15 & !A14 & A13 & A12 & !A11
+     # Dolphin & !low & !off & A15 & A14 & !A13 & A12 & !A11
+     # Dolphin & off & high & A15 & A14 & !A13 & A12 & !A11
+     # Dolphin & off & high & A15 & !A14 & !A13 & A12 & !A11
+     # Dolphin & off & !high & A15 & !A14 & !A13 & A12 & !A11
+     # Dolphin & off & high & A15 & A14 & A13 & !A12 & !A11
+     # Dolphin & off & high & A15 & !A14 & A13 & !A12 & !A11
+     # Dolphin & off & !high & A15 & !A14 & A13 & !A12 & !A11
+     # Dolphin & !low & !off & A15 & A14 & !A13 & !A12 & !A11
+     # Dolphin & off & high & A15 & A14 & !A13 & !A12 & !A11
+     # Dolphin & off & high & A15 & !A14 & !A13 & !A12 & !A11
+     # Dolphin & off & !high & A15 & !A14 & !A13 & !A12 & !A11
+     # Dolphin & ram & !off & !A15 & !A14 & !A13 & !A12 & !A11
+     # Dolphin & !ram & !off & !A15 & !A14 & !A13 & !A12 & !A11
+     # Dolphin & off & high & !A15 & !A14 & !A13 & !A12 & !A11
+     # Dolphin & !low & off & !high & A15 & A14 & !A13 & A12 & A11
+     # Dolphin & !low & off & !high & A15 & A14 & !A13 & !A12 & A11
+     # Dolphin & !low & off & !high & A15 & A14 & !A13 & A12 & !A11
+     # Dolphin & !low & off & !high & A15 & A14 & !A13 & !A12 & !A11
+     # Dolphin & ram & off & !high & !A15 & !A14 & !A13 & !A12 & !A11
+     # Dolphin & !ram & off & !high & !A15 & !A14 & !A13 & !A12 & !A11);
+
+O5 = (!A15 & !A14 & A13 & A12 & A11
+     # !A15 & !A14 & !A13 & A12 & A11
+     # !A15 & !A14 & A13 & A12 & !A11
+     # !A15 & !A14 & !A13 & A12 & !A11
+     # !Dolphin & A15 & A14 & A13 & A12 & A11
+     # !Dolphin & !A15 & A14 & A13 & A12 & A11
+     # !Dolphin & A15 & !A14 & A13 & A12 & A11
+     # !Dolphin & A15 & A14 & !A13 & A12 & A11
+     # !Dolphin & !A15 & A14 & !A13 & A12 & A11
+     # !Dolphin & A15 & !A14 & !A13 & A12 & A11
+     # !Dolphin & A15 & A14 & A13 & !A12 & A11
+     # !Dolphin & A15 & !A14 & A13 & !A12 & A11
+     # !Dolphin & A15 & A14 & !A13 & !A12 & A11
+     # !Dolphin & A15 & !A14 & !A13 & !A12 & A11
+     # !Dolphin & A15 & A14 & A13 & A12 & !A11
+     # !Dolphin & !A15 & A14 & A13 & A12 & !A11
+     # !Dolphin & A15 & !A14 & A13 & A12 & !A11
+     # !Dolphin & A15 & A14 & !A13 & A12 & !A11
+     # !Dolphin & !A15 & A14 & !A13 & A12 & !A11
+     # !Dolphin & A15 & !A14 & !A13 & A12 & !A11
+     # !Dolphin & A15 & A14 & A13 & !A12 & !A11
+     # !Dolphin & A15 & !A14 & A13 & !A12 & !A11
+     # !Dolphin & A15 & A14 & !A13 & !A12 & !A11
+     # !Dolphin & A15 & !A14 & !A13 & !A12 & !A11
+     # Dolphin & !off & A15 & A14 & A13 & A12 & A11
+     # Dolphin & off & !A15 & A14 & A13 & A12 & A11
+     # Dolphin & !off & !A15 & A14 & A13 & A12 & A11
+     # Dolphin & !off & A15 & !A14 & A13 & A12 & A11
+     # Dolphin & off & !A15 & A14 & !A13 & A12 & A11
+     # Dolphin & !off & !A15 & A14 & !A13 & A12 & A11
+     # Dolphin & !off & A15 & !A14 & !A13 & A12 & A11
+     # Dolphin & !off & A15 & A14 & A13 & !A12 & A11
+     # Dolphin & !off & !A15 & A14 & A13 & !A12 & A11
+     # Dolphin & !off & A15 & !A14 & A13 & !A12 & A11
+     # Dolphin & !off & !A15 & A14 & !A13 & !A12 & A11
+     # Dolphin & !off & A15 & !A14 & !A13 & !A12 & A11
+     # Dolphin & !off & A15 & A14 & A13 & A12 & !A11
+     # Dolphin & off & !A15 & A14 & A13 & A12 & !A11
+     # Dolphin & !off & !A15 & A14 & A13 & A12 & !A11
+     # Dolphin & !off & A15 & !A14 & A13 & A12 & !A11
+     # Dolphin & off & !A15 & A14 & !A13 & A12 & !A11
+     # Dolphin & !off & !A15 & A14 & !A13 & A12 & !A11
+     # Dolphin & !off & A15 & !A14 & !A13 & A12 & !A11
+     # Dolphin & !off & A15 & A14 & A13 & !A12 & !A11
+     # Dolphin & !off & !A15 & A14 & A13 & !A12 & !A11
+     # Dolphin & !off & A15 & !A14 & A13 & !A12 & !A11
+     # Dolphin & !off & !A15 & A14 & !A13 & !A12 & !A11
+     # Dolphin & !off & A15 & !A14 & !A13 & !A12 & !A11
+     # Dolphin & off & high & A15 & A14 & A13 & A12 & A11
+     # Dolphin & off & !high & A15 & A14 & A13 & A12 & A11
+     # Dolphin & off & high & A15 & !A14 & A13 & A12 & A11
+     # Dolphin & off & !high & A15 & !A14 & A13 & A12 & A11
+     # Dolphin & low & !off & A15 & A14 & !A13 & A12 & A11
+     # Dolphin & !low & !off & A15 & A14 & !A13 & A12 & A11
+     # Dolphin & off & high & A15 & A14 & !A13 & A12 & A11
+     # Dolphin & off & high & A15 & !A14 & !A13 & A12 & A11
+     # Dolphin & off & !high & A15 & !A14 & !A13 & A12 & A11
+     # Dolphin & off & !high & A15 & A14 & A13 & !A12 & A11
+     # Dolphin & off & !high & A15 & !A14 & A13 & !A12 & A11
+     # Dolphin & low & !off & A15 & A14 & !A13 & !A12 & A11
+     # Dolphin & off & !high & A15 & !A14 & !A13 & !A12 & A11
+     # Dolphin & off & high & A15 & A14 & A13 & A12 & !A11
+     # Dolphin & off & !high & A15 & A14 & A13 & A12 & !A11
+     # Dolphin & off & high & A15 & !A14 & A13 & A12 & !A11
+     # Dolphin & off & !high & A15 & !A14 & A13 & A12 & !A11
+     # Dolphin & low & !off & A15 & A14 & !A13 & A12 & !A11
+     # Dolphin & !low & !off & A15 & A14 & !A13 & A12 & !A11
+     # Dolphin & off & high & A15 & A14 & !A13 & A12 & !A11
+     # Dolphin & off & high & A15 & !A14 & !A13 & A12 & !A11
+     # Dolphin & off & !high & A15 & !A14 & !A13 & A12 & !A11
+     # Dolphin & off & !high & A15 & A14 & A13 & !A12 & !A11
+     # Dolphin & off & !high & A15 & !A14 & A13 & !A12 & !A11
+     # Dolphin & low & !off & A15 & A14 & !A13 & !A12 & !A11
+     # Dolphin & off & !high & A15 & !A14 & !A13 & !A12 & !A11
+     # Dolphin & ram & !off & !A15 & !A14 & !A13 & !A12 & !A11
+     # Dolphin & low & off & !high & A15 & A14 & !A13 & A12 & A11
+     # Dolphin & !low & off & !high & A15 & A14 & !A13 & A12 & A11
+     # Dolphin & low & off & !high & A15 & A14 & !A13 & !A12 & A11
+     # Dolphin & low & off & !high & A15 & A14 & !A13 & A12 & !A11
+     # Dolphin & !low & off & !high & A15 & A14 & !A13 & A12 & !A11
+     # Dolphin & low & off & !high & A15 & A14 & !A13 & !A12 & !A11
+     # Dolphin & ram & off & !high & !A15 & !A14 & !A13 & !A12 & !A11);
+
+O6 = (Dolphin & !off & !A15 & A14 & A13 & A12 & A11
+     # Dolphin & !off & !A15 & A14 & A13 & A12 & !A11);
+
+O7 = (!Dolphin & A15 & A14 & A13 & A12 & A11
+     # !Dolphin & A15 & A14 & !A13 & A12 & A11
+     # !Dolphin & A15 & A14 & A13 & !A12 & A11
+     # !Dolphin & A15 & A14 & !A13 & !A12 & A11
+     # !Dolphin & A15 & A14 & A13 & A12 & !A11
+     # !Dolphin & A15 & A14 & !A13 & A12 & !A11
+     # !Dolphin & A15 & A14 & A13 & !A12 & !A11
+     # !Dolphin & A15 & A14 & !A13 & !A12 & !A11
+     # Dolphin & !off & A15 & A14 & A13 & A12 & A11
+     # Dolphin & !off & !A15 & A14 & A13 & A12 & A11
+     # Dolphin & !off & A15 & A14 & A13 & !A12 & A11
+     # Dolphin & !off & !A15 & A14 & A13 & !A12 & A11
+     # Dolphin & !off & A15 & A14 & A13 & A12 & !A11
+     # Dolphin & !off & !A15 & A14 & A13 & A12 & !A11
+     # Dolphin & !off & A15 & A14 & A13 & !A12 & !A11
+     # Dolphin & !off & !A15 & A14 & A13 & !A12 & !A11);
+
+O8 = (Dolphin & off & high & A15 & A14 & A13 & A12 & A11
+     # Dolphin & off & high & A15 & !A14 & A13 & A12 & A11
+     # Dolphin & !low & !off & A15 & A14 & !A13 & A12 & A11
+     # Dolphin & off & high & A15 & A14 & !A13 & A12 & A11
+     # Dolphin & off & high & A15 & !A14 & !A13 & A12 & A11
+     # Dolphin & off & high & A15 & A14 & A13 & !A12 & A11
+     # Dolphin & off & high & A15 & !A14 & A13 & !A12 & A11
+     # Dolphin & !low & !off & A15 & A14 & !A13 & !A12 & A11
+     # Dolphin & off & high & A15 & A14 & !A13 & !A12 & A11
+     # Dolphin & off & high & A15 & !A14 & !A13 & !A12 & A11
+     # Dolphin & off & high & A15 & A14 & A13 & A12 & !A11
+     # Dolphin & off & high & A15 & !A14 & A13 & A12 & !A11
+     # Dolphin & !low & !off & A15 & A14 & !A13 & A12 & !A11
+     # Dolphin & off & high & A15 & A14 & !A13 & A12 & !A11
+     # Dolphin & off & high & A15 & !A14 & !A13 & A12 & !A11
+     # Dolphin & off & high & A15 & A14 & A13 & !A12 & !A11
+     # Dolphin & off & high & A15 & !A14 & A13 & !A12 & !A11
+     # Dolphin & !low & !off & A15 & A14 & !A13 & !A12 & !A11
+     # Dolphin & off & high & A15 & A14 & !A13 & !A12 & !A11
+     # Dolphin & off & high & A15 & !A14 & !A13 & !A12 & !A11
+     # Dolphin & !low & off & !high & A15 & A14 & !A13 & A12 & A11
+     # Dolphin & !low & off & !high & A15 & A14 & !A13 & !A12 & A11
+     # Dolphin & !low & off & !high & A15 & A14 & !A13 & A12 & !A11
+     # Dolphin & !low & off & !high & A15 & A14 & !A13 & !A12 & !A11);
+
+O9 = (!A15 & !A14 & A13 & A12 & A11
+     # !A15 & !A14 & !A13 & A12 & A11
+     # !A15 & !A14 & A13 & !A12 & A11
+     # !A15 & !A14 & !A13 & !A12 & A11
+     # !Dolphin & !A15 & A14 & A13 & A12 & A11
+     # !Dolphin & !A15 & A14 & !A13 & A12 & A11
+     # !Dolphin & !A15 & A14 & A13 & !A12 & A11
+     # !Dolphin & !A15 & A14 & !A13 & !A12 & A11
+     # Dolphin & off & !A15 & A14 & A13 & A12 & A11
+     # Dolphin & off & !A15 & A14 & !A13 & A12 & A11
+     # Dolphin & off & !A15 & A14 & A13 & !A12 & A11
+     # Dolphin & off & !A15 & A14 & !A13 & !A12 & A11
+     # Dolphin & off & high & A15 & A14 & A13 & A12 & A11
+     # Dolphin & off & high & A15 & !A14 & A13 & A12 & A11
+     # Dolphin & !low & !off & A15 & A14 & !A13 & A12 & A11
+     # Dolphin & off & high & A15 & A14 & !A13 & A12 & A11
+     # Dolphin & off & high & A15 & !A14 & !A13 & A12 & A11
+     # Dolphin & off & high & A15 & A14 & A13 & !A12 & A11
+     # Dolphin & off & high & A15 & !A14 & A13 & !A12 & A11
+     # Dolphin & !low & !off & A15 & A14 & !A13 & !A12 & A11
+     # Dolphin & off & high & A15 & A14 & !A13 & !A12 & A11
+     # Dolphin & off & high & A15 & !A14 & !A13 & !A12 & A11
+     # Dolphin & !low & off & !high & A15 & A14 & !A13 & A12 & A11
+     # Dolphin & !low & off & !high & A15 & A14 & !A13 & !A12 & A11);
+
+
+Reverse-Polarity Equations:
+

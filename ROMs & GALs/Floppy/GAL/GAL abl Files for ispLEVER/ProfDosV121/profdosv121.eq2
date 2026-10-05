@@ -1,0 +1,165 @@
+ispLEVER Classic 2.0.00.17.20.15 Linked Equations File
+Copyright(C), 1992-2015, Lattice Semiconductor Corp.
+All Rights Reserved.
+
+Design profdosv121 created Tue Jan 03 21:42:39 2017
+
+
+ P-Terms   Fan-in  Fan-out  Type  Name (attributes)
+---------  ------  -------  ----  -----------------
+   4/8        8        1    Pin   O0 
+   5/8        8        1    Pin   O1 
+   8/3        8        1    Pin   O2 
+   1/6        6        1    Pin   O3 
+   8/5        7        1    Pin   O4 
+  10/11      10        1    Pin   O5 
+   1/5        5        1    Pin   O6 
+   3/5        6        1    Pin   O7 
+   5/5        7        1    Pin   O8 
+   7/6        8        1    Pin   O9 
+=========
+  52/62         Best P-Term Total: 43
+                       Total Pins: 20
+                      Total Nodes: 0
+            Average P-Term/Output: 4
+
+
+Equations:
+
+O0 = (C1571 & !off & !A15 & A14 & A13 & !A12 & A11
+     # !C1571 & !A15 & !A14 & A13
+     # !C1571 & !high & A15 & A13
+     # !C1571 & off & A13);
+
+O1 = (off & high & A15 & A14 & A13
+     # C1571 & !off & A15 & A14 & A13
+     # !C1571 & !A15 & A14 & !A13 & !A12 & !A11
+     # !C1571 & !high & A15 & A14
+     # !C1571 & off & A14);
+
+O2 = (!C1571 & !A14
+     # !ram & !A14
+     # off & A14
+     # A15
+     # A13
+     # A14 & !A12 & !A11
+     # !A14 & A12
+     # !A14 & A11);
+
+O3 = (!off & !A15 & A14 & A13 & A12 & A11);
+
+O4 = (C1571 & !low & !A13
+     # off & !high & A13
+     # !A15 & !A13
+     # !A15 & !A14
+     # !C1571 & !high & A15
+     # off & !A15
+     # !C1571 & off
+     # C1571 & !A14);
+
+O5 = (C1571 & ram & !A15 & !A14 & !A13 & !A11
+     # C1571 & low & A15 & A14 & !A13
+     # C1571 & high & A15 & A14 & A13
+     # !C1571 & !off & high & A15
+     # A12
+     # !off & !A15 & A14 & A13
+     # !off & !A15 & A14 & A11
+     # C1571 & !off & !A15 & A14
+     # C1571 & !off & A14 & A13
+     # C1571 & A15 & !A14 & A13 & !A11);
+
+O6 = (!off & !A15 & A14 & A13 & A12);
+
+O7 = (!C1571 & !off & high & A15 & A14
+     # !off & !A15 & A14 & A13
+     # C1571 & !off & A14 & A13);
+
+O8 = (C1571 & !low & A15 & !A13
+     # off & !high & A15 & A13
+     # !C1571 & !high & A15
+     # !C1571 & off & A15
+     # C1571 & A15 & !A14);
+
+O9 = (C1571 & !low & A15 & !A13 & A11
+     # off & !high & A13 & A11
+     # !A15 & !A14 & A11
+     # !C1571 & !high & A15 & A11
+     # off & !A15 & A11
+     # !C1571 & off & A11
+     # C1571 & !A14 & A11);
+
+
+Reverse-Polarity Equations:
+
+!O0 = (C1571 & A12
+     # C1571 & !A11
+     # !C1571 & !off & !A15 & A14
+     # !off & high & A15
+     # C1571 & !A14
+     # C1571 & off
+     # C1571 & A15
+     # !A13);
+
+!O1 = (!C1571 & !off & high & A15
+     # C1571 & off & !high
+     # C1571 & !A15
+     # !off & !A15 & A13
+     # !off & !A15 & A12
+     # C1571 & !A13
+     # !off & !A15 & A11
+     # !A14);
+
+!O2 = (C1571 & ram & !A15 & !A14 & !A13 & !A12 & !A11
+     # !off & !A15 & A14 & !A13 & A12
+     # !off & !A15 & A14 & !A13 & A11);
+
+!O3 = (!A12
+     # !A13
+     # !A14
+     # A15
+     # off
+     # !A11);
+
+!O4 = (C1571 & low & A15 & A14 & !A13
+     # !C1571 & !off & high & A15
+     # C1571 & high & A15 & A14 & A13
+     # !off & !A15 & A14 & A13
+     # C1571 & !off & A14 & A13);
+
+!O5 = (!ram & !A15 & !A14 & !A12
+     # !C1571 & !A15 & !A14 & !A12
+     # C1571 & !low & A15 & !A13 & !A12
+     # off & !high & A14 & A13 & !A12
+     # C1571 & A15 & !A14 & !A13 & !A12
+     # !C1571 & !high & A15 & !A12
+     # !A15 & !A14 & A13 & !A12
+     # off & !A15 & A14 & !A12
+     # !C1571 & !A15 & !A13 & !A12 & !A11
+     # C1571 & !A14 & !A12 & A11
+     # !C1571 & off & !A12);
+
+!O6 = (!A12
+     # !A13
+     # !A14
+     # A15
+     # off);
+
+!O7 = (!C1571 & !high & A15
+     # !A15 & !A13
+     # C1571 & !A13
+     # !A14
+     # off);
+
+!O8 = (C1571 & low & A14 & !A13
+     # C1571 & high & A14 & A13
+     # !C1571 & !off & high
+     # C1571 & !off & A14 & A13
+     # !A15);
+
+!O9 = (C1571 & low & A15 & A14 & !A13
+     # C1571 & high & A15 & A14 & A13
+     # !C1571 & !off & high & A15
+     # C1571 & !off & A14 & A13
+     # !off & !A15 & A14
+     # !A11);
+

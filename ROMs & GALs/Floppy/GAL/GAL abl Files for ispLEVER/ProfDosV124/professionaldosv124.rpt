@@ -1,0 +1,200 @@
+
+
+                                                                      Page 1
+ispLEVER Classic 2.0.00.17.20.15  -  Device Utilization Chart         Mon Oct 08 22:34:25 2018
+
+
+
+--------------------------------------------------------------------------------
+
+Module                   : 'profdosv124'
+
+--------------------------------------------------------------------------------
+
+Input files:
+
+    ABEL PLA file        : professionaldosv124.tt3
+    Device library       : P22V10G.dev
+
+Output files:
+
+    Report file          : professionaldosv124.rpt
+    Programmer load file : professionaldosv124.jed
+
+--------------------------------------------------------------------------------
+
+
+                                                                      Page 2
+ispLEVER Classic 2.0.00.17.20.15  -  Device Utilization Chart         Mon Oct 08 22:34:25 2018
+
+P22V10G Programmed Logic:
+--------------------------------------------------------------------------------
+
+
+
+O8     = (  A15 & high & off & Dolphin 
+          #   !A13 & A14 & A15 & !low & Dolphin );
+
+O5     = !(  A11 & !A12 & !A14 & !A15 
+          #   !A12 & A13 & !A14 & !A15 
+          #   !A12 & A14 & !A15 & off 
+          #   !A12 & !A14 & !A15 & !ram 
+          #   !A12 & A15 & high & off & Dolphin 
+          #   !A12 & !A13 & A14 & A15 & !low & Dolphin 
+          #   !A12 & !A15 & !Dolphin );
+
+O9     = (  A11 & !A14 & !A15 
+          #   A11 & !A15 & off 
+          #   A11 & high & off & Dolphin 
+          #   A11 & !A13 & A14 & A15 & !low & Dolphin 
+          #   A11 & !A15 & !Dolphin );
+
+O7     = (  A13 & A14 & !off & Dolphin 
+          #   A14 & A15 & !Dolphin );
+
+O1     = (  A13 & A14 & A15 & !high 
+          #   A13 & A14 & A15 & !off 
+          #   A13 & A15 & !Dolphin );
+
+O4     = !(  A13 & A14 & A15 & !high 
+          #   A13 & A14 & !off & Dolphin 
+          #   A13 & A15 & !Dolphin 
+          #   A14 & A15 & !Dolphin 
+          #   A14 & A15 & !high & low 
+          #   A14 & A15 & !off & low );
+
+O2     = !(  !A13 & A14 & !A15 & !off & Dolphin 
+          #   !A11 & !A12 & !A13 & !A14 & !A15 & ram & Dolphin 
+          #   !A13 & !A14 & A15 & !Dolphin );
+
+O6     = (  A12 & A13 & A14 & !A15 & !off & Dolphin );
+
+O3     = (  A11 & A12 & A13 & A14 & !A15 & !off & Dolphin );
+
+O0     = (  A11 & !A12 & A13 & A14 & !A15 & !off & Dolphin );
+
+
+
+                                                                      Page 3
+ispLEVER Classic 2.0.00.17.20.15  -  Device Utilization Chart         Mon Oct 08 22:34:25 2018
+
+P22V10G Chip Diagram:
+--------------------------------------------------------------------------------
+
+
+
+
+                                   P22V10G
+
+                         +---------\       /---------+
+                         |          \     /          |
+                         |           -----           |
+                         |  1                    24  | Vcc                     
+                         |                           |
+                         |  2                    23  | O9                      
+                         |                           |
+                     A12 |  3                    22  | O8                      
+                         |                           |
+                     A13 |  4                    21  | O7                      
+                         |                           |
+                     A14 |  5                    20  | O6                      
+                         |                           |
+                     A15 |  6                    19  | !O5                     
+                         |                           |
+                     A11 |  7                    18  | !O4                     
+                         |                           |
+                 Dolphin |  8                    17  | O3                      
+                         |                           |
+                    high |  9                    16  | !O2                     
+                         |                           |
+                     low | 10                    15  | O1                      
+                         |                           |
+                     ram | 11                    14  | O0                      
+                         |                           |
+                     GND | 12                    13  | off                     
+                         |                           |
+                         |                           |
+                         `---------------------------'
+
+                        SIGNATURE: N/A
+
+
+                                                                      Page 4
+ispLEVER Classic 2.0.00.17.20.15  -  Device Utilization Chart         Mon Oct 08 22:34:25 2018
+
+P22V10G Resource Allocations:
+--------------------------------------------------------------------------------
+
+
+
+        Device        | Resource  |   Design    |
+       Resources      | Available | Requirement | Unused
+======================|===========|=============|==============
+                      |           |             |
+Input Pins:           |           |             |
+                      |           |             |
+          Input:      |     12    |     10      |    2 ( 16 %)
+                      |           |             |
+Output Pins:          |           |             |
+                      |           |             |
+          In/Out:     |     10    |     10      |    0 (  0 %)
+          Output:     |      -    |      -      |    -
+                      |           |             |
+Buried Nodes:         |           |             |
+                      |           |             |
+          Input Reg:  |      -    |      -      |    -
+          Pin Reg:    |     10    |      0      |   10 (100 %)
+          Buried Reg: |      -    |      -      |    -
+
+
+                                                                      Page 5
+ispLEVER Classic 2.0.00.17.20.15  -  Device Utilization Chart         Mon Oct 08 22:34:25 2018
+
+P22V10G Product Terms Distribution:
+--------------------------------------------------------------------------------
+
+
+
+            Signal                       |    Pin   | Terms | Terms | Terms
+             Name                        | Assigned | Used  |  Max  | Unused
+=========================================|==========|=======|=======|=======
+O8                                       |   22     |   2   |  10   |   8
+O5                                       |   19     |   7   |  16   |   9
+O9                                       |   23     |   5   |   8   |   3
+O7                                       |   21     |   2   |  12   |  10
+O1                                       |   15     |   3   |  10   |   7
+O4                                       |   18     |   6   |  16   |  10
+O2                                       |   16     |   3   |  12   |   9
+O6                                       |   20     |   1   |  14   |  13
+O3                                       |   17     |   1   |  14   |  13
+O0                                       |   14     |   1   |   8   |   7
+
+
+     ==== List of Inputs/Feedbacks ====
+
+Signal Name                              | Pin      | Pin Type
+=========================================|==========|=========
+A11                                      |    7     | INPUT
+A12                                      |    3     | INPUT
+A13                                      |    4     | INPUT
+A14                                      |    5     | INPUT
+A15                                      |    6     | INPUT
+high                                     |    9     | INPUT
+off                                      |   13     | INPUT
+ram                                      |   11     | INPUT
+low                                      |   10     | INPUT
+Dolphin                                  |    8     | INPUT
+
+
+                                                                      Page 6
+ispLEVER Classic 2.0.00.17.20.15  -  Device Utilization Chart         Mon Oct 08 22:34:25 2018
+
+P22V10G Unused Resources:
+--------------------------------------------------------------------------------
+
+
+
+ Pin   |  Pin   |   Product   | Flip-flop
+Number |  Type  |   Terms     |   Type
+=======|========|=============|==========
+    2  |  INPUT |      -      |    -   

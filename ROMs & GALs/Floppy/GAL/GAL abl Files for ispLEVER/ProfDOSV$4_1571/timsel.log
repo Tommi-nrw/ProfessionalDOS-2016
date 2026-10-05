@@ -1,0 +1,5 @@
+InFile:profdos_prototyp_v11.psl
+DBaseFile: C:\ispLEVER_Classic2_0\ispcpld\lib5\devices\Lattice.tim
+Outfile: -o profdos_prototyp_v11.tim
+Partname:$PARTNAME LAT GAL22V10D-25LP GAL P22V10
+Size:39

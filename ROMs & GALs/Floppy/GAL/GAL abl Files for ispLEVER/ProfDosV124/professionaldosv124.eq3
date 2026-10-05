@@ -1,0 +1,152 @@
+ispLEVER Classic 2.0.00.17.20.15 Linked Equations File
+Copyright(C), 1992-2015, Lattice Semiconductor Corp.
+All Rights Reserved.
+
+Design profdosv124 created Mon Oct 08 22:33:52 2018
+
+
+ P-Terms   Fan-in  Fan-out  Type  Name (attributes)
+---------  ------  -------  ----  -----------------
+   1/7        7        1    Pin   O0 
+   3/4        6        1    Pin   O1 
+   8/3        8        1    Pin   O2 
+   1/7        7        1    Pin   O3 
+   7/6        7        1    Pin   O4 
+  10/7       10        1    Pin   O5 
+   1/6        6        1    Pin   O6 
+   2/4        5        1    Pin   O7 
+   2/8        7        1    Pin   O8 
+   5/9        8        1    Pin   O9 
+=========
+  40/61         Best P-Term Total: 31
+                       Total Pins: 20
+                      Total Nodes: 0
+            Average P-Term/Output: 3
+
+
+Equations:
+
+O0 = (A11 & !A12 & A13 & A14 & !A15 & !off & Dolphin);
+
+O1 = (A13 & A15 & !Dolphin
+     # A13 & A14 & A15 & !high
+     # A13 & A14 & A15 & !off);
+
+O2 = (A13
+     # A14 & A15
+     # A14 & off
+     # A15 & Dolphin
+     # !A15 & !Dolphin
+     # A11 & !A14 & !A15
+     # A12 & !A14 & !A15
+     # !A14 & !A15 & !ram);
+
+O3 = (A11 & A12 & A13 & A14 & !A15 & !off & Dolphin);
+
+O4 = (!A13 & !A14
+     # !A13 & !A15
+     # !A15 & off
+     # !A14 & Dolphin
+     # !A15 & !Dolphin
+     # high & off & Dolphin
+     # !A13 & !low & Dolphin);
+
+O5 = (A12
+     # A15 & !Dolphin
+     # A13 & A15 & !high
+     # !A14 & A15 & !high
+     # A13 & A15 & !off
+     # !A14 & A15 & !off
+     # A15 & !high & low
+     # A15 & !off & low
+     # A14 & !A15 & !off & Dolphin
+     # !A11 & !A13 & !A14 & !A15 & ram & Dolphin);
+
+O6 = (A12 & A13 & A14 & !A15 & !off & Dolphin);
+
+O7 = (A14 & A15 & !Dolphin
+     # A13 & A14 & !off & Dolphin);
+
+O8 = (A15 & high & off & Dolphin
+     # !A13 & A14 & A15 & !low & Dolphin);
+
+O9 = (A11 & !A14 & !A15
+     # A11 & !A15 & off
+     # A11 & !A15 & !Dolphin
+     # A11 & high & off & Dolphin
+     # A11 & !A13 & A14 & A15 & !low & Dolphin);
+
+
+Reverse-Polarity Equations:
+
+!O0 = (!A11
+     # A12
+     # !A13
+     # !A14
+     # A15
+     # off
+     # !Dolphin);
+
+!O1 = (!A13
+     # !A15
+     # !A14 & Dolphin
+     # high & off & Dolphin);
+
+!O2 = (!A13 & !A14 & A15 & !Dolphin
+     # !A13 & A14 & !A15 & !off & Dolphin
+     # !A11 & !A12 & !A13 & !A14 & !A15 & ram & Dolphin);
+
+!O3 = (!A11
+     # !A12
+     # !A13
+     # !A14
+     # A15
+     # off
+     # !Dolphin);
+
+!O4 = (A13 & A15 & !Dolphin
+     # A14 & A15 & !Dolphin
+     # A13 & A14 & A15 & !high
+     # A14 & A15 & !high & low
+     # A14 & A15 & !off & low
+     # A13 & A14 & !off & Dolphin);
+
+!O5 = (!A12 & !A15 & !Dolphin
+     # A11 & !A12 & !A14 & !A15
+     # !A12 & A13 & !A14 & !A15
+     # !A12 & A14 & !A15 & off
+     # !A12 & !A14 & !A15 & !ram
+     # !A12 & A15 & high & off & Dolphin
+     # !A12 & !A13 & A14 & A15 & !low & Dolphin);
+
+!O6 = (!A12
+     # !A13
+     # !A14
+     # A15
+     # off
+     # !Dolphin);
+
+!O7 = (!A14
+     # !A13 & Dolphin
+     # off & Dolphin
+     # !A15 & !Dolphin);
+
+!O8 = (!A15
+     # !Dolphin
+     # A13 & !high
+     # !A14 & !high
+     # A13 & !off
+     # !A14 & !off
+     # !high & low
+     # !off & low);
+
+!O9 = (!A11
+     # A15 & !Dolphin
+     # A13 & A15 & !high
+     # !A14 & A15 & !high
+     # A13 & A15 & !off
+     # !A14 & A15 & !off
+     # A15 & !high & low
+     # A15 & !off & low
+     # A14 & !A15 & !off & Dolphin);
+

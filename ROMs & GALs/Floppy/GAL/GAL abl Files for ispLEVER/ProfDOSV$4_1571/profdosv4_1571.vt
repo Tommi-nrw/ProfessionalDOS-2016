@@ -1,0 +1,201 @@
+// Jed2vlog, ispLEVER version 2.00 
+// Header :
+//    File Name :
+//       profdosv4_1571 
+//    Circuit Name :
+//       PROFDOSV4_1571 
+//    Last Update :
+//       Tue Sep 06 18:23:06 2016
+//    Device Information :
+//       PLD Type P22V10G
+//    Delay Model Selected :TYP
+//    Jedec Information :
+//	ispLEVER Classic 2.0.00.17.20.15 Lattice Semiconductor Corp.
+//	JEDEC file for: P22V10G V9.0
+//	Created on: Tue Sep 06 18:23:03 2016
+//	
+//	
+// endHeader
+
+
+// Delay Assigments
+`timescale 1ns /100ps
+//----------------------------------------------------------------------//
+//                                                                      //
+//              MAIN PLD NETLIST MODULE                                 //
+//                                                                      //
+//----------------------------------------------------------------------//
+
+module PROFDOSV4_1571(off,PIN02,PIN03,A12,A13,A14,A15,A11,ram,low,high,PIN12,C1571,
+             O5,O0,O8,O3,O1,O4,O2,O7,O6,O9,PIN24);
+	inout O5, O0, O8, O3, O1, O4, O2, O7, O6, O9;
+	input off, PIN02, PIN03, A12, A13, A14, A15, A11, ram, low, high, PIN12, C1571
+             , PIN24;
+	supply0 GND;
+	supply1 PWR;
+
+//Pin Assignments:
+//        PIN01 = off;
+//        PIN04 = A12;
+//        PIN05 = A13;
+//        PIN06 = A14;
+//        PIN07 = A15;
+//        PIN08 = A11;
+//        PIN09 = ram;
+//        PIN10 = low;
+//        PIN11 = high;
+//        PIN13 = C1571;
+//        PIN14 = O5;
+//        PIN15 = O0;
+//        PIN16 = O8;
+//        PIN17 = O3;
+//        PIN18 = O1;
+//        PIN19 = O4;
+//        PIN20 = O2;
+//        PIN21 = O7;
+//        PIN22 = O6;
+//        PIN23 = O9;
+
+// Delay Parameters:
+//   TYP delay used
+parameter tpLH09 = 0:0:0;
+parameter tpHL09 = 0:0:0;
+parameter tpLH11 = 0:0:0;
+parameter tpHL11 = 0:0:0;
+parameter tpLH12 = 0:0:0;
+parameter tpHL12 = 0:0:0;
+parameter tpLH03 = 0:0:0;
+parameter tpHL03 = 0:0:0;
+parameter tpLH05 = 0:0:0;
+parameter tpHL05 = 0:0:0;
+parameter tpLH_inco_lump = 1:6:10;
+parameter tpHL_inco_lump = 1:6:10;
+parameter tpLH_oe = 0:0:0;
+parameter tpHL_oe = 0:0:0;
+parameter tpLH_oe_pterm = 1:6:10;
+parameter tpHL_oe_pterm = 1:6:10;
+
+//   Input Buffer:
+	andinv_PROFDOSV4_1571  CLKIN1( CLKIN1_o, CLKIN1_ob, off);
+	andinv_PROFDOSV4_1571  INBUF02( INBUF02_o, INBUF02_ob, PIN02);
+	andinv_PROFDOSV4_1571  INBUF03( INBUF03_o, INBUF03_ob, PIN03);
+	andinv_PROFDOSV4_1571  INBUF04( INBUF04_o, INBUF04_ob, A12);
+	andinv_PROFDOSV4_1571  INBUF05( INBUF05_o, INBUF05_ob, A13);
+	andinv_PROFDOSV4_1571  INBUF06( INBUF06_o, INBUF06_ob, A14);
+	andinv_PROFDOSV4_1571  INBUF07( INBUF07_o, INBUF07_ob, A15);
+	andinv_PROFDOSV4_1571  INBUF08( INBUF08_o, INBUF08_ob, A11);
+	andinv_PROFDOSV4_1571  INBUF09( INBUF09_o, INBUF09_ob, ram);
+	andinv_PROFDOSV4_1571  INBUF10( INBUF10_o, INBUF10_ob, low);
+	andinv_PROFDOSV4_1571  INBUF11( INBUF11_o, INBUF11_ob, high);
+	andinv_PROFDOSV4_1571  INBUF13( INBUF13_o, INBUF13_ob, C1571);
+	andinv_PROFDOSV4_1571  INBUF14( INBUF14_o, INBUF14_ob, O5);
+	andinv_PROFDOSV4_1571  INBUF15( INBUF15_o, INBUF15_ob, O0);
+	andinv_PROFDOSV4_1571  INBUF16( INBUF16_o, INBUF16_ob, O8);
+	andinv_PROFDOSV4_1571  INBUF17( INBUF17_o, INBUF17_ob, O3);
+	andinv_PROFDOSV4_1571  INBUF18( INBUF18_o, INBUF18_ob, O1);
+	andinv_PROFDOSV4_1571  INBUF19( INBUF19_o, INBUF19_ob, O4);
+	andinv_PROFDOSV4_1571  INBUF20( INBUF20_o, INBUF20_ob, O2);
+	andinv_PROFDOSV4_1571  INBUF21( INBUF21_o, INBUF21_ob, O7);
+	andinv_PROFDOSV4_1571  INBUF22( INBUF22_o, INBUF22_ob, O6);
+	andinv_PROFDOSV4_1571  INBUF23( INBUF23_o, INBUF23_ob, O9);
+
+//   Product Terms (AND array):
+	and  #(tpLH03,tpHL03) PT002_88( PT002_88_o, INBUF06_ob, INBUF08_o);
+	and  #(tpLH03,tpHL03) PT003_132( PT003_132_o, CLKIN1_o, INBUF07_ob, INBUF08_o);
+	and  #(tpLH03,tpHL03) PT004_176( PT004_176_o, CLKIN1_o, INBUF08_o, INBUF11_ob);
+	and  #(tpLH03,tpHL03) PT005_220( PT005_220_o, INBUF05_ob, INBUF07_o, INBUF08_o, INBUF10_ob);
+	and  #(tpLH03,tpHL03) PT006_264( PT006_264_o, INBUF07_o, INBUF08_o, INBUF13_ob);
+	and  #(tpLH03,tpHL03) PT011_484( PT011_484_o, CLKIN1_ob, INBUF04_o, INBUF05_o, INBUF06_o, INBUF07_ob);
+	and  #(tpLH03,tpHL03) PT012_528( PT012_528_o, INBUF04_o, INBUF05_o, INBUF06_o, INBUF07_ob, INBUF11_o, INBUF13_o);
+	and  #(tpLH03,tpHL03) PT022_968( PT022_968_o, INBUF04_ob, INBUF05_ob, INBUF06_ob, INBUF07_ob, INBUF08_ob);
+	and  #(tpLH03,tpHL03) PT023_1012( PT023_1012_o, CLKIN1_o, INBUF05_o, INBUF06_o, INBUF07_o, INBUF11_o);
+	and  #(tpLH03,tpHL03) PT024_1056( PT024_1056_o, INBUF05_ob, INBUF06_o, INBUF07_o, INBUF10_o, INBUF11_o);
+	and  #(tpLH03,tpHL03) PT025_1100( PT025_1100_o, CLKIN1_ob, INBUF05_ob, INBUF06_o, INBUF07_o, INBUF10_o);
+	and  #(tpLH03,tpHL03) PT026_1144( PT026_1144_o, INBUF13_ob);
+	and  #(tpLH03,tpHL03) PT035_1540( PT035_1540_o, CLKIN1_ob, INBUF04_o, INBUF05_ob, INBUF07_ob, INBUF08_ob, INBUF13_o);
+	and  #(tpLH03,tpHL03) PT036_1584( PT036_1584_o, INBUF04_ob, INBUF05_ob, INBUF06_ob, INBUF07_ob, INBUF08_ob, INBUF09_o, INBUF13_o);
+	and  #(tpLH03,tpHL03) PT037_1628( PT037_1628_o, CLKIN1_ob, INBUF05_ob, INBUF06_o, INBUF07_ob, INBUF08_o);
+	and  #(tpLH03,tpHL03) PT038_1672( PT038_1672_o, CLKIN1_ob, INBUF04_o, INBUF05_ob, INBUF06_o, INBUF07_ob);
+	and  #(tpLH03,tpHL03) PT039_1716( PT039_1716_o, CLKIN1_ob, INBUF05_ob, INBUF06_o, INBUF07_ob, INBUF09_ob, INBUF13_o);
+	and  #(tpLH03,tpHL03) PT050_2200( PT050_2200_o, CLKIN1_ob, INBUF05_o, INBUF06_o, INBUF07_ob);
+	and  #(tpLH03,tpHL03) PT051_2244( PT051_2244_o, INBUF05_o, INBUF06_o, INBUF07_o, INBUF11_o, INBUF13_o);
+	and  #(tpLH03,tpHL03) PT052_2288( PT052_2288_o, CLKIN1_ob, INBUF05_o, INBUF06_o, INBUF13_o);
+	and  #(tpLH03,tpHL03) PT053_2332( PT053_2332_o, INBUF06_o, INBUF07_o, INBUF10_o, INBUF11_o, INBUF13_o);
+	and  #(tpLH03,tpHL03) PT054_2376( PT054_2376_o, CLKIN1_ob, INBUF06_o, INBUF07_o, INBUF10_o, INBUF13_o);
+	and  #(tpLH03,tpHL03) PT067_2948( PT067_2948_o, INBUF05_o, INBUF06_o, INBUF07_o, INBUF13_o);
+	and  #(tpLH03,tpHL03) PT068_2992( PT068_2992_o, CLKIN1_ob, INBUF04_o, INBUF05_ob, INBUF07_ob, INBUF08_ob, INBUF13_o);
+	and  #(tpLH03,tpHL03) PT069_3036( PT069_3036_o, CLKIN1_ob, INBUF05_ob, INBUF06_o, INBUF07_ob, INBUF13_o);
+	and  #(tpLH03,tpHL03) PT070_3080( PT070_3080_o, INBUF04_ob, INBUF05_ob, INBUF06_ob, INBUF07_ob, INBUF08_ob, INBUF09_o, INBUF13_o);
+	and  #(tpLH03,tpHL03) PT071_3124( PT071_3124_o, CLKIN1_ob, INBUF06_o, INBUF07_ob, INBUF08_o, INBUF13_ob);
+	and  #(tpLH03,tpHL03) PT072_3168( PT072_3168_o, CLKIN1_ob, INBUF04_o, INBUF06_o, INBUF07_ob, INBUF13_ob);
+	and  #(tpLH03,tpHL03) PT073_3212( PT073_3212_o, CLKIN1_ob, INBUF05_o, INBUF06_o, INBUF07_ob, INBUF13_ob);
+	and  #(tpLH03,tpHL03) PT084_3696( PT084_3696_o, CLKIN1_ob, INBUF04_o, INBUF05_o, INBUF06_o, INBUF07_ob, INBUF08_o);
+	and  #(tpLH03,tpHL03) PT085_3740( PT085_3740_o, INBUF04_o, INBUF05_o, INBUF06_o, INBUF07_ob, INBUF08_o, INBUF11_o, INBUF13_o);
+	and  #(tpLH03,tpHL03) PT099_4356( PT099_4356_o, INBUF04_ob, INBUF06_ob, INBUF08_o);
+	and  #(tpLH03,tpHL03) PT100_4400( PT100_4400_o, INBUF04_ob, INBUF05_ob, INBUF06_ob, INBUF07_o);
+	and  #(tpLH03,tpHL03) PT101_4444( PT101_4444_o, INBUF04_ob, INBUF05_o, INBUF06_ob, INBUF07_ob);
+	and  #(tpLH03,tpHL03) PT102_4488( PT102_4488_o, CLKIN1_o, INBUF04_ob, INBUF05_o, INBUF06_ob);
+	and  #(tpLH03,tpHL03) PT103_4532( PT103_4532_o, CLKIN1_o, INBUF04_ob, INBUF06_o, INBUF07_ob);
+	and  #(tpLH03,tpHL03) PT104_4576( PT104_4576_o, CLKIN1_o, INBUF04_ob, INBUF07_o, INBUF11_ob);
+	and  #(tpLH03,tpHL03) PT105_4620( PT105_4620_o, INBUF04_ob, INBUF06_ob, INBUF07_ob, INBUF09_ob);
+	and  #(tpLH03,tpHL03) PT106_4664( PT106_4664_o, INBUF04_ob, INBUF05_ob, INBUF07_o, INBUF10_ob);
+	and  #(tpLH03,tpHL03) PT107_4708( PT107_4708_o, CLKIN1_ob, INBUF05_o, INBUF06_ob, INBUF07_o, INBUF08_o, INBUF13_o);
+	and  #(tpLH03,tpHL03) PT108_4752( PT108_4752_o, INBUF04_ob, INBUF05_ob, INBUF08_ob, INBUF13_ob);
+	and  #(tpLH03,tpHL03) PT109_4796( PT109_4796_o, INBUF04_ob, INBUF07_o, INBUF13_ob);
+	and  #(tpLH03,tpHL03) PT112_4928( PT112_4928_o, CLKIN1_ob, INBUF04_ob, INBUF05_o, INBUF06_o, INBUF07_ob, INBUF08_o, INBUF13_o);
+	and  #(tpLH03,tpHL03) PT113_4972( PT113_4972_o, INBUF05_o, INBUF06_ob, INBUF13_ob);
+	and  #(tpLH03,tpHL03) PT114_5016( PT114_5016_o, INBUF05_o, INBUF07_o, INBUF13_ob);
+	and  #(tpLH03,tpHL03) PT115_5060( PT115_5060_o, CLKIN1_o, INBUF05_o, INBUF13_ob);
+	and  #(tpLH03,tpHL03) PT123_5412( PT123_5412_o, CLKIN1_o, INBUF06_o, INBUF07_o, INBUF11_ob);
+	and  #(tpLH03,tpHL03) PT124_5456( PT124_5456_o, INBUF05_ob, INBUF06_o, INBUF07_o, INBUF10_ob);
+	and  #(tpLH03,tpHL03) PT125_5500( PT125_5500_o, INBUF05_ob, INBUF06_ob, INBUF07_o, INBUF13_o);
+	and  #(tpLH03,tpHL03) PT126_5544( PT126_5544_o, CLKIN1_o, INBUF06_ob, INBUF07_o, INBUF13_o);
+	and  #(tpLH03,tpHL03) PT127_5588( PT127_5588_o, INBUF04_ob, INBUF05_ob, INBUF06_o, INBUF08_ob, INBUF13_ob);
+	and  #(tpLH03,tpHL03) PT128_5632( PT128_5632_o, INBUF06_o, INBUF07_o, INBUF13_ob);
+	and  #(tpLH03,tpHL03) PT129_5676( PT129_5676_o, CLKIN1_o, INBUF06_o, INBUF13_ob);
+
+//   Sum Terms (OR arrray):
+	or  #(tpLH_inco_lump,tpHL_inco_lump) ST014( ST014_o, PT123_5412_o, PT124_5456_o, PT125_5500_o, PT126_5544_o, PT127_5588_o, PT128_5632_o, PT129_5676_o);
+	or  #(tpLH_inco_lump,tpHL_inco_lump) ST015( ST015_o, PT112_4928_o, PT113_4972_o, PT114_5016_o, PT115_5060_o);
+	or  #(tpLH_inco_lump,tpHL_inco_lump) ST016( ST016_o, PT099_4356_o, PT100_4400_o, PT101_4444_o, PT102_4488_o, PT103_4532_o, PT104_4576_o, PT105_4620_o, PT106_4664_o, PT107_4708_o, PT108_4752_o, PT109_4796_o);
+	or  #(tpLH_inco_lump,tpHL_inco_lump) ST017( ST017_o, PT084_3696_o, PT085_3740_o);
+	or  #(tpLH_inco_lump,tpHL_inco_lump) ST018( ST018_o, PT067_2948_o, PT068_2992_o, PT069_3036_o, PT070_3080_o, PT071_3124_o, PT072_3168_o, PT073_3212_o);
+	or  #(tpLH_inco_lump,tpHL_inco_lump) ST019( ST019_o, PT050_2200_o, PT051_2244_o, PT052_2288_o, PT053_2332_o, PT054_2376_o);
+	or  #(tpLH_inco_lump,tpHL_inco_lump) ST020( ST020_o, PT035_1540_o, PT036_1584_o, PT037_1628_o, PT038_1672_o, PT039_1716_o);
+	or  #(tpLH_inco_lump,tpHL_inco_lump) ST021( ST021_o, PT022_968_o, PT023_1012_o, PT024_1056_o, PT025_1100_o, PT026_1144_o);
+	or  #(tpLH_inco_lump,tpHL_inco_lump) ST022( ST022_o, PT011_484_o, PT012_528_o);
+	or  #(tpLH_inco_lump,tpHL_inco_lump) ST023( ST023_o, PT002_88_o, PT003_132_o, PT004_176_o, PT005_220_o, PT006_264_o);
+
+//   Macro Cells:
+
+//   Feedback Node:
+
+//   Output Buffer:
+	bufif1  #(tpLH11,tpHL11) OUTBUF14( O5, ST014_o, PWR);
+	bufif1  #(tpLH11,tpHL11) OUTBUF15( O0, ST015_o, PWR);
+	notif1  #(tpLH09,tpHL09) OUTBUF16( O8, ST016_o, PWR);
+	bufif1  #(tpLH11,tpHL11) OUTBUF17( O3, ST017_o, PWR);
+	bufif1  #(tpLH11,tpHL11) OUTBUF18( O1, ST018_o, PWR);
+	notif1  #(tpLH09,tpHL09) OUTBUF19( O4, ST019_o, PWR);
+	notif1  #(tpLH09,tpHL09) OUTBUF20( O2, ST020_o, PWR);
+	notif1  #(tpLH09,tpHL09) OUTBUF21( O7, ST021_o, PWR);
+	bufif1  #(tpLH11,tpHL11) OUTBUF22( O6, ST022_o, PWR);
+	bufif1  #(tpLH11,tpHL11) OUTBUF23( O9, ST023_o, PWR);
+	andinv_PROFDOSV4_1571  NODE25( NODE25_o, NODE25_ob, GND);
+	andinv_PROFDOSV4_1571  NODE26( NODE26_o, NODE26_ob, GND);
+endmodule
+/************************************************************************
+*                                                                       *
+*   MODULE: ANDINV                                                      *
+*     Input Buffer with dual outputs.                                   *
+*                                                                       *
+*************************************************************************/
+module andinv_PROFDOSV4_1571(out,outb,in);
+output out,outb;
+input  in;
+parameter tpLH_iob = 0:0:0; 
+parameter tpHL_iob = 0:0:0; 
+        
+   and #(tpLH_iob,tpHL_iob) n1(out,in);
+   not #(tpLH_iob,tpHL_iob) n2(outb,in);
+endmodule

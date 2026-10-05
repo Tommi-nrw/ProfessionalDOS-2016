@@ -1,0 +1,201 @@
+ispLEVER Classic 2.0.00.17.20.15 Linked Equations File
+Copyright(C), 1992-2015, Lattice Semiconductor Corp.
+All Rights Reserved.
+
+Design profdosv10_1541_1571 created Sun Nov 20 20:12:30 2016
+
+
+ P-Terms   Fan-in  Fan-out  Type  Name (attributes)
+---------  ------  -------  ----  -----------------
+   4/8        8        1    Pin   O0 
+   8/11       9        1    Pin   O1 
+   9/5        8        1    Pin-  O2 
+   2/7        8        1    Pin   O3 
+   8/6        7        1    Pin-  O4 
+   7/10       9        1    Pin   O5 
+   2/6        7        1    Pin   O6 
+   9/8        9        1    Pin-  O7 
+  14/12      10        1    Pin-  O8 
+   7/7        8        1    Pin   O9 
+=========
+  70/80         Best P-Term Total: 61
+                       Total Pins: 20
+                      Total Nodes: 0
+            Average P-Term/Output: 6
+
+
+Equations:
+
+O0 = (A13 & off & !C1571
+     # A13 & !A14 & !A15 & !C1571
+     # A13 & A15 & high & !C1571
+     # A11 & !A12 & A13 & A14 & !A15 & !off & C1571);
+
+O1 = (A13 & A14 & A15 & C1571
+     # A11 & !A13 & A14 & !A15 & !off
+     # A12 & !A13 & A14 & !A15 & !off
+     # !A13 & A14 & !A15 & !off & C1571
+     # A13 & A14 & !A15 & !off & !C1571
+     # A13 & A15 & !high & !off & !C1571
+     # !A11 & A12 & !A13 & !A15 & !off & C1571
+     # !A11 & !A12 & !A13 & !A14 & !A15 & ram & C1571);
+
+O2 = (A13
+     # A15
+     # A11 & !A14
+     # A12 & off
+     # A14 & off
+     # !A14 & !C1571
+     # !A12 & !A14 & !ram
+     # !A11 & !A12 & !C1571
+     # !A11 & !A12 & A14 & ram);
+
+O3 = (A11 & A12 & A13 & A14 & !A15 & !off
+     # A11 & A12 & A13 & A14 & !A15 & !high & C1571);
+
+O4 = (!A13 & !A15
+     # !A14 & !A15
+     # !A15 & off
+     # high & off
+     # !A14 & C1571
+     # off & !C1571
+     # !A13 & !low & C1571
+     # A15 & high & !C1571);
+
+O5 = (A14 & off & !C1571
+     # A14 & A15 & high & off
+     # !A13 & !A14 & A15 & C1571
+     # !A14 & A15 & off & C1571
+     # !A13 & A15 & !low & C1571
+     # A14 & A15 & high & !C1571
+     # !A11 & !A12 & !A13 & A14 & !A15 & !C1571);
+
+O6 = (A12 & A13 & A14 & !A15 & !off
+     # A12 & A13 & A14 & !A15 & !high & C1571);
+
+O7 = (A11 & !A14 & C1571
+     # A12 & !A14 & C1571
+     # A13 & !A14 & C1571
+     # !A14 & A15 & C1571
+     # A14 & !A15 & C1571
+     # A13 & !off & C1571
+     # A14 & high & off & C1571
+     # !A13 & A14 & !low & C1571
+     # A14 & A15 & !high & !off & !C1571);
+
+O8 = (A12 & !A13
+     # A12 & !A15
+     # A12 & off
+     # A12 & !C1571
+     # A11 & A14 & !A15 & !off
+     # A13 & A14 & !A15 & !off
+     # A13 & A14 & !off & C1571
+     # A14 & !A15 & !off & C1571
+     # A14 & !off & low & C1571
+     # A15 & !high & !off & !C1571
+     # A13 & A14 & A15 & !high & C1571
+     # !A11 & A13 & A15 & !off & C1571
+     # A14 & A15 & !high & low & C1571
+     # !A11 & !A13 & !A14 & !A15 & ram & C1571);
+
+O9 = (A11 & !A14 & !A15
+     # A11 & !A15 & off
+     # A11 & high & off
+     # A11 & !A14 & C1571
+     # A11 & off & !C1571
+     # A11 & A15 & high & !C1571
+     # A11 & !A13 & A15 & !low & C1571);
+
+
+Reverse-Polarity Equations:
+
+!O0 = (!A13
+     # !A11 & C1571
+     # A12 & C1571
+     # !A14 & C1571
+     # A15 & C1571
+     # off & C1571
+     # A15 & !high & !off
+     # A14 & !A15 & !off & !C1571);
+
+!O1 = (!A13 & A15
+     # off & !C1571
+     # A11 & !A14 & !A15
+     # A12 & !A13 & off
+     # !A13 & A14 & off
+     # A13 & !A14 & C1571
+     # A13 & !A15 & C1571
+     # !A14 & !A15 & !C1571
+     # A15 & high & !C1571
+     # !A12 & !A13 & !A14 & !ram
+     # !A11 & !A12 & !A13 & !C1571);
+
+!O2 = (A11 & !A13 & A14 & !A15 & !off
+     # A12 & !A13 & A14 & !A15 & !off
+     # !A11 & A12 & !A13 & !A15 & !off & C1571
+     # !A13 & A14 & !A15 & !off & !ram & C1571
+     # !A11 & !A12 & !A13 & !A14 & !A15 & ram & C1571);
+
+!O3 = (!A11
+     # !A12
+     # !A13
+     # !A14
+     # A15
+     # high & off
+     # off & !C1571);
+
+!O4 = (A13 & A14 & !A15 & !off
+     # A13 & A14 & !off & C1571
+     # A15 & !high & !off & !C1571
+     # A13 & A14 & A15 & !high & C1571
+     # A14 & A15 & !high & low & C1571
+     # A14 & A15 & !off & low & C1571);
+
+!O5 = (!A15 & C1571
+     # !A14 & !C1571
+     # A11 & !A15 & !off
+     # A12 & !A15 & !off
+     # A13 & !A15 & !off
+     # A13 & !off & C1571
+     # A13 & A14 & !high & C1571
+     # A14 & !high & low & C1571
+     # A14 & !off & low & C1571
+     # A15 & !high & !off & !C1571);
+
+!O6 = (!A12
+     # !A13
+     # !A14
+     # A15
+     # high & off
+     # off & !C1571);
+
+!O7 = (!A14 & !C1571
+     # !A15 & !C1571
+     # high & !C1571
+     # off & !C1571
+     # !A11 & !A12 & !A13 & !A14 & !A15
+     # A13 & A14 & A15 & !high & off
+     # A14 & A15 & !high & off & low
+     # !A13 & A14 & A15 & !off & low & C1571);
+
+!O8 = (!A12 & off & !C1571
+     # A11 & !A12 & !A14 & !A15
+     # !A12 & A13 & !A14 & !A15
+     # !A12 & A13 & !A14 & off
+     # !A12 & A14 & !A15 & off
+     # !A12 & A15 & high & off
+     # !A12 & !A14 & !A15 & !ram
+     # !A12 & A15 & high & !C1571
+     # !A12 & !A13 & !A14 & A15 & C1571
+     # !A12 & !A13 & A15 & !low & C1571
+     # !A11 & !A12 & !A13 & !A15 & !C1571
+     # A11 & A13 & !A14 & A15 & !off & C1571);
+
+!O9 = (!A11
+     # A14 & !A15 & !off
+     # A13 & A14 & !off & C1571
+     # A14 & !off & low & C1571
+     # A15 & !high & !off & !C1571
+     # A13 & A14 & A15 & !high & C1571
+     # A14 & A15 & !high & low & C1571);
+

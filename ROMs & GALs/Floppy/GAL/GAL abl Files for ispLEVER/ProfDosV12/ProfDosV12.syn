@@ -1,0 +1,11 @@
+JDF B
+// Created by Version 2.0 
+PROJECT ProfDosV12
+DESIGN profdosv12 Normal
+DEVKIT GAL22V10D-15LP
+ENTRY ABEL/Schematic
+MODULE profdosv12.abl
+MODSTYLE ProfDosV12 Normal
+SYNTHESIS_TOOL Synplify
+SIMULATOR_TOOL ActiveHDL
+TOPMODULE ProfDosV12

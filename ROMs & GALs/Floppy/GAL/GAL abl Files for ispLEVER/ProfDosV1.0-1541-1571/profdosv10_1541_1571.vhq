@@ -1,0 +1,291 @@
+-- Jed2svhdl, ispLEVER version 2.00 
+-- Header :
+--    File Name :
+--       profdosv10_1541_1571 
+--    Circuit Name :
+--       ProfDosV10_1541_1571 
+--    Last Update :
+--       Sun Nov 20 19:10:17 2016
+--    Device Information :
+--       PLD Type P22V10G
+--    Manufacturer and Part Information :
+--       1571.tim GAL22V10D-15LP GAL
+--    Delay Model Selected :MAX
+--    Jedec Information :
+--	ispLEVER Classic 2.0.00.17.20.15 Lattice Semiconductor Corp.
+--	JEDEC file for: P22V10G V9.0
+--	Created on: Sun Nov 20 19:09:33 2016
+--	
+--	
+-- endHeader
+
+LIBRARY j2svlib;
+USE j2svlib.j2svlib.all;
+LIBRARY IEEE;
+USE IEEE.std_logic_1164.all;
+USE std.textio.all;
+--------------------------------------------------------------------------
+--                                                                      --
+--              MAIN PLD NETLIST MODULE                                 --
+--                                                                      --
+--------------------------------------------------------------------------
+
+ENTITY ProfDosV10_1541_1571 IS
+   GENERIC (
+-- Delay Parameters:
+--   MAX delay used
+       tpLH09 : time := 0 ns;
+       tpHL09 : time := 0 ns;
+       tpLH11 : time := 0 ns;
+       tpHL11 : time := 0 ns;
+       tpLH_iob : time := 0 ns;
+       tpHL_iob : time := 0 ns;
+       tpLH03 : time := 0 ns;
+       tpHL03 : time := 0 ns;
+       tpLH05 : time := 0 ns;
+       tpHL05 : time := 0 ns;
+       tpLH_inco_lump : time := 15 ns;
+       tpHL_inco_lump : time := 15 ns;
+       tpLH_oe : time := 0 ns;
+       tpHL_oe : time := 0 ns;
+       tpLH_oe_pterm : time := 15 ns;
+       tpHL_oe_pterm : time := 15 ns);
+   PORT (
+
+	PIN01: IN STD_LOGIC := '0';
+	PIN02: IN STD_LOGIC := '0';
+	A12: IN STD_LOGIC := '0';
+	A13: IN STD_LOGIC := '0';
+	A14: IN STD_LOGIC := '0';
+	A15: IN STD_LOGIC := '0';
+	A11: IN STD_LOGIC := '0';
+	C1571: IN STD_LOGIC := '0';
+	high: IN STD_LOGIC := '0';
+	low: IN STD_LOGIC := '0';
+	ram: IN STD_LOGIC := '0';
+	off: IN STD_LOGIC := '0';
+	O0: OUT STD_LOGIC;
+	O1: OUT STD_LOGIC;
+	O2: OUT STD_LOGIC;
+	O3: OUT STD_LOGIC;
+	O4: OUT STD_LOGIC;
+	O8: OUT STD_LOGIC;
+	O6: OUT STD_LOGIC;
+	O7: OUT STD_LOGIC;
+	O5: OUT STD_LOGIC;
+	O9: OUT STD_LOGIC);
+
+--Pin Assignments:
+    -- alias PIN03 is: STD_LOGIC A12;
+    -- alias PIN04 is: STD_LOGIC A13;
+    -- alias PIN05 is: STD_LOGIC A14;
+    -- alias PIN06 is: STD_LOGIC A15;
+    -- alias PIN07 is: STD_LOGIC A11;
+    -- alias PIN08 is: STD_LOGIC C1571;
+    -- alias PIN09 is: STD_LOGIC high;
+    -- alias PIN10 is: STD_LOGIC low;
+    -- alias PIN11 is: STD_LOGIC ram;
+    -- alias PIN13 is: STD_LOGIC off;
+    -- alias PIN14 is: STD_LOGIC O0;
+    -- alias PIN15 is: STD_LOGIC O1;
+    -- alias PIN16 is: STD_LOGIC O2;
+    -- alias PIN17 is: STD_LOGIC O3;
+    -- alias PIN18 is: STD_LOGIC O4;
+    -- alias PIN19 is: STD_LOGIC O8;
+    -- alias PIN20 is: STD_LOGIC O6;
+    -- alias PIN21 is: STD_LOGIC O7;
+    -- alias PIN22 is: STD_LOGIC O5;
+    -- alias PIN23 is: STD_LOGIC O9;
+
+END ProfDosV10_1541_1571;
+
+ARCHITECTURE structure OF ProfDosV10_1541_1571 IS
+
+-- Signal Declaration :
+   SIGNAL  O9_ODUMMY, O5_ODUMMY, O7_ODUMMY, O6_ODUMMY,
+           O8_ODUMMY, O4_ODUMMY, O3_ODUMMY, O2_ODUMMY, O1_ODUMMY,
+           O0_ODUMMY, NODE26_ob, NODE26_o, NODE25_ob, NODE25_o, ST023_o,
+           ST022_o, ST021_o, ST020_o, ST019_o, ST018_o, ST017_o,
+           ST016_o, ST015_o, ST014_o, PT126_5544_o, PT125_5500_o,
+           PT124_5456_o, PT123_5412_o, PT119_5236_o, PT118_5192_o,
+           PT117_5148_o, PT116_5104_o, PT115_5060_o, PT114_5016_o,
+           PT113_4972_o, PT112_4928_o, PT103_4532_o, PT102_4488_o,
+           PT101_4444_o, PT100_4400_o, PT099_4356_o, PT085_3740_o,
+           PT084_3696_o, PT072_3168_o, PT071_3124_o, PT070_3080_o,
+           PT069_3036_o, PT068_2992_o, PT067_2948_o, PT061_2684_o,
+           PT060_2640_o, PT059_2596_o, PT058_2552_o, PT057_2508_o,
+           PT056_2464_o, PT055_2420_o, PT054_2376_o, PT053_2332_o,
+           PT052_2288_o, PT051_2244_o, PT050_2200_o, PT036_1584_o,
+           PT035_1540_o, PT029_1276_o, PT028_1232_o, PT027_1188_o,
+           PT026_1144_o, PT025_1100_o, PT024_1056_o, PT023_1012_o,
+           PT022_968_o, PT017_748_o, PT016_704_o, PT015_660_o, PT014_616_o,
+           PT013_572_o, PT012_528_o, PT011_484_o, PT008_352_o, PT007_308_o,
+           PT006_264_o, PT005_220_o, PT004_176_o, PT003_132_o, PT002_88_o,
+           INBUF23_ob, INBUF23_o, INBUF22_ob, INBUF22_o, INBUF21_ob,
+           INBUF21_o, INBUF20_ob, INBUF20_o, INBUF19_ob, INBUF19_o,
+           INBUF18_ob, INBUF18_o, INBUF17_ob, INBUF17_o, INBUF16_ob,
+           INBUF16_o, INBUF15_ob, INBUF15_o, INBUF14_ob, INBUF14_o,
+           INBUF13_ob, INBUF13_o, INBUF11_ob, INBUF11_o, INBUF10_ob,
+           INBUF10_o, INBUF09_ob, INBUF09_o, INBUF08_ob, INBUF08_o,
+           INBUF07_ob, INBUF07_o, INBUF06_ob, INBUF06_o, INBUF05_ob,
+           INBUF05_o, INBUF04_ob, INBUF04_o, INBUF03_ob, INBUF03_o,
+           INBUF02_ob, INBUF02_o, CLKIN1_ob, CLKIN1_o
+           : STD_LOGIC ;
+   SIGNAL  PWR : STD_LOGIC := '1' ;
+   SIGNAL  GND : STD_LOGIC := '0' ;
+   SIGNAL  PWRUPSTATE : STD_LOGIC := '0' ;
+
+--   PLD Netlist ---------
+  BEGIN
+
+--   Input Buffer:
+      CLKIN1_o <= PIN01 after g_delay ( CLKIN1_o,tpLH_iob,tpHL_iob);
+      CLKIN1_ob <=  not(PIN01) after g_delay ( CLKIN1_ob,tpLH_iob,tpHL_iob);
+      INBUF02_o <= PIN02 after g_delay ( INBUF02_o,tpLH_iob,tpHL_iob);
+      INBUF02_ob <=  not(PIN02) after g_delay ( INBUF02_ob,tpLH_iob,tpHL_iob);
+      INBUF03_o <= A12 after g_delay ( INBUF03_o,tpLH_iob,tpHL_iob);
+      INBUF03_ob <=  not(A12) after g_delay ( INBUF03_ob,tpLH_iob,tpHL_iob);
+      INBUF04_o <= A13 after g_delay ( INBUF04_o,tpLH_iob,tpHL_iob);
+      INBUF04_ob <=  not(A13) after g_delay ( INBUF04_ob,tpLH_iob,tpHL_iob);
+      INBUF05_o <= A14 after g_delay ( INBUF05_o,tpLH_iob,tpHL_iob);
+      INBUF05_ob <=  not(A14) after g_delay ( INBUF05_ob,tpLH_iob,tpHL_iob);
+      INBUF06_o <= A15 after g_delay ( INBUF06_o,tpLH_iob,tpHL_iob);
+      INBUF06_ob <=  not(A15) after g_delay ( INBUF06_ob,tpLH_iob,tpHL_iob);
+      INBUF07_o <= A11 after g_delay ( INBUF07_o,tpLH_iob,tpHL_iob);
+      INBUF07_ob <=  not(A11) after g_delay ( INBUF07_ob,tpLH_iob,tpHL_iob);
+      INBUF08_o <= C1571 after g_delay ( INBUF08_o,tpLH_iob,tpHL_iob);
+      INBUF08_ob <=  not(C1571) after g_delay ( INBUF08_ob,tpLH_iob,tpHL_iob);
+      INBUF09_o <= high after g_delay ( INBUF09_o,tpLH_iob,tpHL_iob);
+      INBUF09_ob <=  not(high) after g_delay ( INBUF09_ob,tpLH_iob,tpHL_iob);
+      INBUF10_o <= low after g_delay ( INBUF10_o,tpLH_iob,tpHL_iob);
+      INBUF10_ob <=  not(low) after g_delay ( INBUF10_ob,tpLH_iob,tpHL_iob);
+      INBUF11_o <= ram after g_delay ( INBUF11_o,tpLH_iob,tpHL_iob);
+      INBUF11_ob <=  not(ram) after g_delay ( INBUF11_ob,tpLH_iob,tpHL_iob);
+      INBUF13_o <= off after g_delay ( INBUF13_o,tpLH_iob,tpHL_iob);
+      INBUF13_ob <=  not(off) after g_delay ( INBUF13_ob,tpLH_iob,tpHL_iob);
+      INBUF14_o <= O0_ODUMMY after g_delay ( INBUF14_o,tpLH_iob,tpHL_iob);
+      INBUF14_ob <=  not(O0_ODUMMY) after g_delay ( INBUF14_ob,tpLH_iob,tpHL_iob);
+      INBUF15_o <= O1_ODUMMY after g_delay ( INBUF15_o,tpLH_iob,tpHL_iob);
+      INBUF15_ob <=  not(O1_ODUMMY) after g_delay ( INBUF15_ob,tpLH_iob,tpHL_iob);
+      INBUF16_o <= O2_ODUMMY after g_delay ( INBUF16_o,tpLH_iob,tpHL_iob);
+      INBUF16_ob <=  not(O2_ODUMMY) after g_delay ( INBUF16_ob,tpLH_iob,tpHL_iob);
+      INBUF17_o <= O3_ODUMMY after g_delay ( INBUF17_o,tpLH_iob,tpHL_iob);
+      INBUF17_ob <=  not(O3_ODUMMY) after g_delay ( INBUF17_ob,tpLH_iob,tpHL_iob);
+      INBUF18_o <= O4_ODUMMY after g_delay ( INBUF18_o,tpLH_iob,tpHL_iob);
+      INBUF18_ob <=  not(O4_ODUMMY) after g_delay ( INBUF18_ob,tpLH_iob,tpHL_iob);
+      INBUF19_o <= O8_ODUMMY after g_delay ( INBUF19_o,tpLH_iob,tpHL_iob);
+      INBUF19_ob <=  not(O8_ODUMMY) after g_delay ( INBUF19_ob,tpLH_iob,tpHL_iob);
+      INBUF20_o <= O6_ODUMMY after g_delay ( INBUF20_o,tpLH_iob,tpHL_iob);
+      INBUF20_ob <=  not(O6_ODUMMY) after g_delay ( INBUF20_ob,tpLH_iob,tpHL_iob);
+      INBUF21_o <= O7_ODUMMY after g_delay ( INBUF21_o,tpLH_iob,tpHL_iob);
+      INBUF21_ob <=  not(O7_ODUMMY) after g_delay ( INBUF21_ob,tpLH_iob,tpHL_iob);
+      INBUF22_o <= O5_ODUMMY after g_delay ( INBUF22_o,tpLH_iob,tpHL_iob);
+      INBUF22_ob <=  not(O5_ODUMMY) after g_delay ( INBUF22_ob,tpLH_iob,tpHL_iob);
+      INBUF23_o <= O9_ODUMMY after g_delay ( INBUF23_o,tpLH_iob,tpHL_iob);
+      INBUF23_ob <=  not(O9_ODUMMY) after g_delay ( INBUF23_ob,tpLH_iob,tpHL_iob);
+
+--   Product Terms (AND array):
+      PT002_88_o <= INBUF05_ob AND INBUF06_ob AND INBUF07_o after g_delay ( PT002_88_o,tpLH03,tpHL03);
+      PT003_132_o <= INBUF06_ob AND INBUF07_o AND INBUF13_o after g_delay ( PT003_132_o,tpLH03,tpHL03);
+      PT004_176_o <= INBUF07_o AND INBUF09_o AND INBUF13_o after g_delay ( PT004_176_o,tpLH03,tpHL03);
+      PT005_220_o <= INBUF05_ob AND INBUF07_o AND INBUF08_o after g_delay ( PT005_220_o,tpLH03,tpHL03);
+      PT006_264_o <= INBUF04_ob AND INBUF06_o AND INBUF07_o AND INBUF08_o AND INBUF10_ob after g_delay ( PT006_264_o,tpLH03,tpHL03);
+      PT007_308_o <= INBUF06_o AND INBUF07_o AND INBUF08_ob AND INBUF09_o after g_delay ( PT007_308_o,tpLH03,tpHL03);
+      PT008_352_o <= INBUF07_o AND INBUF08_ob AND INBUF13_o after g_delay ( PT008_352_o,tpLH03,tpHL03);
+      PT011_484_o <= INBUF05_o AND INBUF06_o AND INBUF09_o AND INBUF13_o after g_delay ( PT011_484_o,tpLH03,tpHL03);
+      PT012_528_o <= INBUF04_ob AND INBUF05_ob AND INBUF06_o AND INBUF08_o after g_delay ( PT012_528_o,tpLH03,tpHL03);
+      PT013_572_o <= INBUF05_ob AND INBUF06_o AND INBUF08_o AND INBUF13_o after g_delay ( PT013_572_o,tpLH03,tpHL03);
+      PT014_616_o <= INBUF04_ob AND INBUF06_o AND INBUF08_o AND INBUF10_ob after g_delay ( PT014_616_o,tpLH03,tpHL03);
+      PT015_660_o <= INBUF03_ob AND INBUF04_ob AND INBUF05_o AND INBUF06_ob AND INBUF07_ob AND INBUF08_ob after g_delay ( PT015_660_o,tpLH03,tpHL03);
+      PT016_704_o <= INBUF05_o AND INBUF06_o AND INBUF08_ob AND INBUF09_o after g_delay ( PT016_704_o,tpLH03,tpHL03);
+      PT017_748_o <= INBUF05_o AND INBUF08_ob AND INBUF13_o after g_delay ( PT017_748_o,tpLH03,tpHL03);
+      PT022_968_o <= INBUF05_ob AND INBUF08_ob after g_delay ( PT022_968_o,tpLH03,tpHL03);
+      PT023_1012_o <= INBUF08_ob AND INBUF13_o after g_delay ( PT023_1012_o,tpLH03,tpHL03);
+      PT024_1056_o <= INBUF03_ob AND INBUF04_ob AND INBUF05_ob AND INBUF06_ob AND INBUF07_ob after g_delay ( PT024_1056_o,tpLH03,tpHL03);
+      PT025_1100_o <= INBUF04_o AND INBUF05_o AND INBUF06_o AND INBUF09_ob AND INBUF13_o after g_delay ( PT025_1100_o,tpLH03,tpHL03);
+      PT026_1144_o <= INBUF05_o AND INBUF06_o AND INBUF09_ob AND INBUF10_o AND INBUF13_o after g_delay ( PT026_1144_o,tpLH03,tpHL03);
+      PT027_1188_o <= INBUF04_ob AND INBUF05_o AND INBUF06_o AND INBUF08_o AND INBUF10_o AND INBUF13_ob after g_delay ( PT027_1188_o,tpLH03,tpHL03);
+      PT028_1232_o <= INBUF06_ob AND INBUF08_ob after g_delay ( PT028_1232_o,tpLH03,tpHL03);
+      PT029_1276_o <= INBUF08_ob AND INBUF09_o after g_delay ( PT029_1276_o,tpLH03,tpHL03);
+      PT035_1540_o <= INBUF03_o AND INBUF04_o AND INBUF05_o AND INBUF06_ob AND INBUF13_ob after g_delay ( PT035_1540_o,tpLH03,tpHL03);
+      PT036_1584_o <= INBUF03_o AND INBUF04_o AND INBUF05_o AND INBUF06_ob AND INBUF08_o AND INBUF09_ob after g_delay ( PT036_1584_o,tpLH03,tpHL03);
+      PT050_2200_o <= INBUF03_ob AND INBUF05_ob AND INBUF06_ob AND INBUF07_o after g_delay ( PT050_2200_o,tpLH03,tpHL03);
+      PT051_2244_o <= INBUF03_ob AND INBUF04_o AND INBUF05_ob AND INBUF06_ob after g_delay ( PT051_2244_o,tpLH03,tpHL03);
+      PT052_2288_o <= INBUF03_ob AND INBUF04_o AND INBUF05_ob AND INBUF13_o after g_delay ( PT052_2288_o,tpLH03,tpHL03);
+      PT053_2332_o <= INBUF03_ob AND INBUF05_o AND INBUF06_ob AND INBUF13_o after g_delay ( PT053_2332_o,tpLH03,tpHL03);
+      PT054_2376_o <= INBUF03_ob AND INBUF06_o AND INBUF09_o AND INBUF13_o after g_delay ( PT054_2376_o,tpLH03,tpHL03);
+      PT055_2420_o <= INBUF03_ob AND INBUF05_ob AND INBUF06_ob AND INBUF11_ob after g_delay ( PT055_2420_o,tpLH03,tpHL03);
+      PT056_2464_o <= INBUF03_ob AND INBUF04_ob AND INBUF05_ob AND INBUF06_o AND INBUF08_o after g_delay ( PT056_2464_o,tpLH03,tpHL03);
+      PT057_2508_o <= INBUF04_o AND INBUF05_ob AND INBUF06_o AND INBUF07_o AND INBUF08_o AND INBUF13_ob after g_delay ( PT057_2508_o,tpLH03,tpHL03);
+      PT058_2552_o <= INBUF03_ob AND INBUF04_ob AND INBUF06_o AND INBUF08_o AND INBUF10_ob after g_delay ( PT058_2552_o,tpLH03,tpHL03);
+      PT059_2596_o <= INBUF03_ob AND INBUF04_ob AND INBUF06_ob AND INBUF07_ob AND INBUF08_ob after g_delay ( PT059_2596_o,tpLH03,tpHL03);
+      PT060_2640_o <= INBUF03_ob AND INBUF06_o AND INBUF08_ob AND INBUF09_o after g_delay ( PT060_2640_o,tpLH03,tpHL03);
+      PT061_2684_o <= INBUF03_ob AND INBUF08_ob AND INBUF13_o after g_delay ( PT061_2684_o,tpLH03,tpHL03);
+      PT067_2948_o <= INBUF04_o AND INBUF05_o AND INBUF06_ob AND INBUF13_ob after g_delay ( PT067_2948_o,tpLH03,tpHL03);
+      PT068_2992_o <= INBUF04_o AND INBUF05_o AND INBUF06_o AND INBUF08_o AND INBUF09_ob after g_delay ( PT068_2992_o,tpLH03,tpHL03);
+      PT069_3036_o <= INBUF04_o AND INBUF05_o AND INBUF08_o AND INBUF13_ob after g_delay ( PT069_3036_o,tpLH03,tpHL03);
+      PT070_3080_o <= INBUF05_o AND INBUF06_o AND INBUF08_o AND INBUF09_ob AND INBUF10_o after g_delay ( PT070_3080_o,tpLH03,tpHL03);
+      PT071_3124_o <= INBUF06_o AND INBUF08_ob AND INBUF09_ob AND INBUF13_ob after g_delay ( PT071_3124_o,tpLH03,tpHL03);
+      PT072_3168_o <= INBUF05_o AND INBUF06_o AND INBUF08_o AND INBUF10_o AND INBUF13_ob after g_delay ( PT072_3168_o,tpLH03,tpHL03);
+      PT084_3696_o <= INBUF03_o AND INBUF04_o AND INBUF05_o AND INBUF06_ob AND INBUF07_o AND INBUF13_ob after g_delay ( PT084_3696_o,tpLH03,tpHL03);
+      PT085_3740_o <= INBUF03_o AND INBUF04_o AND INBUF05_o AND INBUF06_ob AND INBUF07_o AND INBUF08_o AND INBUF09_ob after g_delay ( PT085_3740_o,tpLH03,tpHL03);
+      PT099_4356_o <= INBUF04_ob AND INBUF05_o AND INBUF06_ob AND INBUF07_o AND INBUF13_ob after g_delay ( PT099_4356_o,tpLH03,tpHL03);
+      PT100_4400_o <= INBUF03_o AND INBUF04_ob AND INBUF05_o AND INBUF06_ob AND INBUF13_ob after g_delay ( PT100_4400_o,tpLH03,tpHL03);
+      PT101_4444_o <= INBUF03_o AND INBUF04_ob AND INBUF06_ob AND INBUF07_ob AND INBUF08_o AND INBUF13_ob after g_delay ( PT101_4444_o,tpLH03,tpHL03);
+      PT102_4488_o <= INBUF03_ob AND INBUF04_ob AND INBUF05_ob AND INBUF06_ob AND INBUF07_ob AND INBUF08_o AND INBUF11_o after g_delay ( PT102_4488_o,tpLH03,tpHL03);
+      PT103_4532_o <= INBUF04_ob AND INBUF05_o AND INBUF06_ob AND INBUF08_o AND INBUF11_ob AND INBUF13_ob after g_delay ( PT103_4532_o,tpLH03,tpHL03);
+      PT112_4928_o <= INBUF04_ob AND INBUF05_o AND INBUF06_ob AND INBUF07_o AND INBUF13_ob after g_delay ( PT112_4928_o,tpLH03,tpHL03);
+      PT113_4972_o <= INBUF03_o AND INBUF04_ob AND INBUF05_o AND INBUF06_ob AND INBUF13_ob after g_delay ( PT113_4972_o,tpLH03,tpHL03);
+      PT114_5016_o <= INBUF04_o AND INBUF05_o AND INBUF06_o AND INBUF08_o after g_delay ( PT114_5016_o,tpLH03,tpHL03);
+      PT115_5060_o <= INBUF03_o AND INBUF04_ob AND INBUF06_ob AND INBUF07_ob AND INBUF08_o AND INBUF13_ob after g_delay ( PT115_5060_o,tpLH03,tpHL03);
+      PT116_5104_o <= INBUF04_ob AND INBUF05_o AND INBUF06_ob AND INBUF08_o AND INBUF13_ob after g_delay ( PT116_5104_o,tpLH03,tpHL03);
+      PT117_5148_o <= INBUF03_ob AND INBUF04_ob AND INBUF05_ob AND INBUF06_ob AND INBUF07_ob AND INBUF08_o AND INBUF11_o after g_delay ( PT117_5148_o,tpLH03,tpHL03);
+      PT118_5192_o <= INBUF04_o AND INBUF05_o AND INBUF06_ob AND INBUF08_ob AND INBUF13_ob after g_delay ( PT118_5192_o,tpLH03,tpHL03);
+      PT119_5236_o <= INBUF04_o AND INBUF06_o AND INBUF08_ob AND INBUF09_ob AND INBUF13_ob after g_delay ( PT119_5236_o,tpLH03,tpHL03);
+      PT123_5412_o <= INBUF03_ob AND INBUF04_o AND INBUF05_o AND INBUF06_ob AND INBUF07_o AND INBUF08_o AND INBUF13_ob after g_delay ( PT123_5412_o,tpLH03,tpHL03);
+      PT124_5456_o <= INBUF04_o AND INBUF05_ob AND INBUF06_ob AND INBUF08_ob after g_delay ( PT124_5456_o,tpLH03,tpHL03);
+      PT125_5500_o <= INBUF04_o AND INBUF06_o AND INBUF08_ob AND INBUF09_o after g_delay ( PT125_5500_o,tpLH03,tpHL03);
+      PT126_5544_o <= INBUF04_o AND INBUF08_ob AND INBUF13_o after g_delay ( PT126_5544_o,tpLH03,tpHL03);
+
+--   Sum Terms (OR arrray):
+      ST014_o <= PT123_5412_o OR PT124_5456_o OR PT125_5500_o OR PT126_5544_o after g_delay ( ST014_o,tpLH_inco_lump,tpHL_inco_lump);
+      ST015_o <= PT112_4928_o OR PT113_4972_o OR PT114_5016_o OR PT115_5060_o OR PT116_5104_o OR PT117_5148_o OR PT118_5192_o OR PT119_5236_o after g_delay ( ST015_o,tpLH_inco_lump,tpHL_inco_lump);
+      ST016_o <= PT099_4356_o OR PT100_4400_o OR PT101_4444_o OR PT102_4488_o OR PT103_4532_o after g_delay ( ST016_o,tpLH_inco_lump,tpHL_inco_lump);
+      ST017_o <= PT084_3696_o OR PT085_3740_o after g_delay ( ST017_o,tpLH_inco_lump,tpHL_inco_lump);
+      ST018_o <= PT067_2948_o OR PT068_2992_o OR PT069_3036_o OR PT070_3080_o OR PT071_3124_o OR PT072_3168_o after g_delay ( ST018_o,tpLH_inco_lump,tpHL_inco_lump);
+      ST019_o <= PT050_2200_o OR PT051_2244_o OR PT052_2288_o OR PT053_2332_o OR PT054_2376_o OR PT055_2420_o OR PT056_2464_o OR PT057_2508_o OR PT058_2552_o OR PT059_2596_o OR PT060_2640_o OR PT061_2684_o after g_delay ( ST019_o,tpLH_inco_lump,tpHL_inco_lump);
+      ST020_o <= PT035_1540_o OR PT036_1584_o after g_delay ( ST020_o,tpLH_inco_lump,tpHL_inco_lump);
+      ST021_o <= PT022_968_o OR PT023_1012_o OR PT024_1056_o OR PT025_1100_o OR PT026_1144_o OR PT027_1188_o OR PT028_1232_o OR PT029_1276_o after g_delay ( ST021_o,tpLH_inco_lump,tpHL_inco_lump);
+      ST022_o <= PT011_484_o OR PT012_528_o OR PT013_572_o OR PT014_616_o OR PT015_660_o OR PT016_704_o OR PT017_748_o after g_delay ( ST022_o,tpLH_inco_lump,tpHL_inco_lump);
+      ST023_o <= PT002_88_o OR PT003_132_o OR PT004_176_o OR PT005_220_o OR PT006_264_o OR PT007_308_o OR PT008_352_o after g_delay ( ST023_o,tpLH_inco_lump,tpHL_inco_lump);
+
+--   Macro Cells:
+
+--   Feedback Node:
+
+--   Output Buffer:
+      g_bufif1( O0_ODUMMY, ST014_o, PWR, tpLH11,tpHL11);
+      g_bufif1( O1_ODUMMY, ST015_o, PWR, tpLH11,tpHL11);
+      g_notif1( O2_ODUMMY, ST016_o, PWR, tpLH09,tpHL09);
+      g_bufif1( O3_ODUMMY, ST017_o, PWR, tpLH11,tpHL11);
+      g_notif1( O4_ODUMMY, ST018_o, PWR, tpLH09,tpHL09);
+      g_notif1( O8_ODUMMY, ST019_o, PWR, tpLH09,tpHL09);
+      g_bufif1( O6_ODUMMY, ST020_o, PWR, tpLH11,tpHL11);
+      g_notif1( O7_ODUMMY, ST021_o, PWR, tpLH09,tpHL09);
+      g_bufif1( O5_ODUMMY, ST022_o, PWR, tpLH11,tpHL11);
+      g_bufif1( O9_ODUMMY, ST023_o, PWR, tpLH11,tpHL11);
+      NODE25_o <= GND after g_delay ( NODE25_o,tpLH_iob,tpHL_iob);
+      NODE25_ob <=  not(GND) after g_delay ( NODE25_ob,tpLH_iob,tpHL_iob);
+      NODE26_o <= GND after g_delay ( NODE26_o,tpLH_iob,tpHL_iob);
+      NODE26_ob <=  not(GND) after g_delay ( NODE26_ob,tpLH_iob,tpHL_iob);
+      O0 <= O0_ODUMMY;
+      O1 <= O1_ODUMMY;
+      O2 <= O2_ODUMMY;
+      O3 <= O3_ODUMMY;
+      O4 <= O4_ODUMMY;
+      O8 <= O8_ODUMMY;
+      O6 <= O6_ODUMMY;
+      O7 <= O7_ODUMMY;
+      O5 <= O5_ODUMMY;
+      O9 <= O9_ODUMMY;
+END structure;
